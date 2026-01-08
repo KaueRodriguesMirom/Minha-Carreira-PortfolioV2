@@ -386,7 +386,7 @@ footer a:hover img[alt="GitHub"],
 footer a:hover img[alt="Instagram"],
 footer a:hover img[alt="LinkedIn"],
 footer a:hover img[alt="Facebook"],
-footer a:hover img[alt="WhatsApp"] {
+footer a:hover img[alt="Whatsapp"] {
   animation: girarBrilhar 0.8s ease-in-out forwards;
 }
 
@@ -839,6 +839,7 @@ footer {
     }
 
 footer:hover { color: #3aec0e; /* muda para verde no hover */ transition: color 0.3s ease; }
+
 
 
 
