@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minhas Conquistas em TI</title>
+
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0b1f16;
+      --bg-gradient-1: #0f9b0f;
+      --bg-gradient-2: #0a6a3b;
+      --bg-gradient-3: #072f27;
+      --card-bg: rgba(255, 255, 255, 0.08);
+      --card-border: rgba(255, 255, 255, 0.18);
+      --text-primary: #e8fff2;
+      --text-secondary: #bfe8cf;
+      --accent: #7be082;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text-primary);
+      background:
+        radial-gradient(1000px 500px at 10% 10%, rgba(123, 224, 130, 0.25), transparent 60%),
+        radial-gradient(800px 400px at 90% 20%, rgba(15, 155, 15, 0.18), transparent 55%),
+        linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 45%, var(--bg-gradient-3) 100%);
+      min-height: 100vh;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: saturate(140%) blur(8px);
+      background: linear-gradient(to right, rgba(12, 30, 24, 0.7), rgba(10, 45, 35, 0.55));
+      border-bottom: 1px solid var(--card-border);
+      padding: 16px 24px;
+      z-index: 50;
+    }
+
+    .brand {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: conic-gradient(from 180deg at 50% 50%, #00c853, #00e676, #00c853);
+      box-shadow: 0 0 22px rgba(0, 230, 118, 0.35);
+      border: 1px solid var(--card-border);
+    }
+
+    .title-group h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .title-group p {
+      margin: 2px 0 0;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 32px auto;
+      padding: 0 24px 60px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .hero-card {
+      background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero-card h2 {
+      margin: 0 0 8px;
+      font-size: 1.35rem;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .stat {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .stat .number {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .stat .label {
+      margin-top: 4px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin: 28px 0 16px;
+    }
+
+    .section-header h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      letter-spacing: 0.2px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.06) 100%);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-media {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body {
+      padding: 14px 14px 16px;
+    }
+
+    .card-body h4 {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .card-body p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .card-footer {
+      padding: 12px 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--card-border);
+    }
+
+    .tag {
+      background: rgba(123, 224, 130, 0.15);
+      color: var(--accent);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(123, 224, 130, 0.3);
+    }
+
+    .date {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    footer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--card-border);
+    }
+
+    /* Responsividade */
+    @media (max-width: 980px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .section-header {
+        flex-direction: column;
+        align-items: start;
+        gap: 8px;
+      }
+    }
+
+    .voltar-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #5BBE42;
+}
+
+    .voltar-btn {
+  display: inline-block;
+  margin: 30px 40px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #5BBE42, #4AAE35);
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+h1:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 12px #5BBE42, 0 0 24px #5BBE42;
+}
+  </style>
+</head>
+
+<body>
+  <a href="index.html" class="voltar-btn">← Voltar para a página inicial</a>
+  <header aria-label="Cabeçalho">
+    <div class="brand">
+      <!-- Aqui vai a logo -->
+      <img src="logo.png" alt="Logo" class="logo">
+      
+      <div class="title-group">
+        <h1>Minhas Conquistas em TI</h1>
+        <p>Resultados, inovação e impacto real em tecnologia</p>
+      </div>
+    </div>
+  </header>
+</body>
+
+
+  <main>
+    <section class="hero" aria-label="Resumo de conquistas">
+      <div class="hero-card">
+        <h2>Destaques da Carreira</h2>
+        <p>Este portfólio reúne as principais conquistas na área de TI, com foco em automação, qualidade, arquitetura de sistemas e entregas de alto impacto. Cada card abaixo traz uma foto e um breve resumo do que foi realizado.</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="number">+15</div>
+          <div class="label">Projetos</div>
+        </div>
+        <div class="stat">
+          <div class="number">+8</div>
+          <div class="label">Sistemas</div>
+        </div>
+        <div class="stat">
+          <div class="number">+233</div>
+          <div class="label">Certificações</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-header">
+      <h3>Conquistas</h3>
+      <span class="tag">Atualizado</span>
+    </div>
+
+    <section class="grid" aria-label="Lista de conquistas">
+      <!-- Card 1 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="Healtcheck.PNG" alt="Automação de checklists" />
+        </div>
+        <div class="card-body">
+          <h4>Automação de Health-Check</h4>
+          <p>Criação de checklist automático com leitura de URLs de saúde dos servidores (HTML, CSS, JavaScript), integrando front e back-end para monitoramento contínuo.</p>
+        </div>
+        <div class="card-footer">
+          <span class="tag">Automação</span>
+          <time class="date" datetime="2025-06">Jan 2026</time>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="Desenvolvimentopco.PNG" alt="Alinhamento de web com Product Owner" />
+        </div>
+        <div class="card-body">
+          <h4>Desenvolvimento Web com PO</h4>
+          <p>Criação de páginas web alinhadas com as mudanças da equipe de projetos e Product Owner, garantindo usabilidade e aderência aos requisitos.</p>
+        </div>
+        <div class="card-footer">
+          <span class="tag">Front-End</span>
+          <time class="date" datetime="2025-03">Dez 2025</time>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="Qualidadeprbs.PNG" alt="Análise de qualidade de PRBs" />
+        </div>
+        <div class="card-body">
+          <h4>Qualidade em PRBs</h4>
+          <p>Centralização e liderança da Análise de Qualidade de PRBs, com feedbacks e treinamentos que elevaram precisão e desempenho do time.</p>
+        </div>
+        <div class="card-footer">
+          <span class="tag">Qualidade</span>
+          <time class="date" datetime="2024-11">Nov 2025</time>
+        </div>
+      </article>
+
+            <!-- Card 4 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="Recovery.PNG" alt="Acompanhamento de logs de recovery" />
+        </div>
+        <div class="card-body">
+          <h4>Recovery e Portabilidade</h4>
+          <p>Acompanhamento de logs e tratamentos de portabilidade para garantir integridade e rastreabilidade dos dados.</p>
+        </div>
+        <div class="card-footer">
+          <span class="tag">Observabilidade</span>
+          <time class="date" datetime="2024-05">Out 2024</time>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="Estabilidade.PNG" alt="Operações com Oracle Server e Jenkins" />
+        </div>
+        <div class="card-body">
+          <h4>Estabilidade de Ambientes</h4>
+          <p>Stop/Start e limpeza de cache em Oracle Server e Jenkins para recuperação de ambientes e mitigação de incidentes.</p>
+        </div>
+        <div class="card-footer">
+          <span class="tag">DevOps</span>
+          <time class="date" datetime="2024-08">Mai 2024</time>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="card">
+        <div class="card-media">
+          <img src="ITSM.PNG" alt="Tratamento de solicitações via ServiceNow" />
+        </div>
+        <div class="card-body">
+          <h4>Fluxos no ServiceNow</h4>
+          <p>Tratamento de solicitações e alertas, analisando causa raiz e aplicando soluções de forma ágil e colaborativa.</p>
+        </div>
+        <div class="card-footer">
+          <span class="tag">ITSM</span>
+          <time class="date" datetime="2024-02">Fev 2024</time>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 • Portfólio de Kauê Rodrigues Mirom • TI • São Paulo, Brasil
+  </footer>
+</body>
+</html>

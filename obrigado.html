@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mensagem enviada | Kauê Rodrigues Mirom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0e0e0e;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 49px;
+  color: #5BBE42; /* verde claro */
+  font-weight: 700;
+  -webkit-text-stroke: 0.8px white; /* contorno branco */
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  cursor: default;
+}
+
+h1:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 12px #5BBE42, 0 0 24px #5BBE42;
+}
+
+    p {
+      font-size: 22px;
+      color: #ccc;
+      margin-bottom: 40px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .voltar-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #5BBE42, #4AAE35);
+      color: #000;
+      font-weight: bold;
+      font-size: 18px;
+      font-family: 'Montserrat', sans-serif;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .voltar-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #5BBE42;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 16px;
+      color: #888;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <h1>Mensagem enviada com sucesso!</h1>
+  <p>Obrigado por entrar em contato. Em breve responderei com atenção e carinho.</p>
+  <a href="index.html" class="voltar-btn">← Voltar para a página inicial</a>
+
+<script>
+  // Após 10 segundos (10000 ms), redireciona para a página inicial
+  setTimeout(function() {
+    window.location.href = "index.html";
+  }, 10000);
+</script>
+
+  <footer>
+    © 2025 • Portfólio de Kauê Rodrigues Mirom • TI • São Paulo, Brasil
+  </footer>
+
+</body>
+</html>

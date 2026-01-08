@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projetos | Kauê Rodrigues Mirom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0e0e0e;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background-color: #111;
+      border-bottom: 2px solid #5BBE42;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 48px;
+      color: #5BBE42;
+      -webkit-text-stroke: 0.8px white;
+      text-shadow: 1px 1px 3px #000;
+      transition: transform 0.3s ease, text-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    header h1:hover {
+      transform: scale(1.05);
+      text-shadow: 0 0 12px #5BBE42, 0 0 24px #5BBE42;
+    }
+
+    header p {
+      font-size: 22px;
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    .projetos-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .projeto-card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .projeto-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+    }
+
+    .projeto-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .projeto-conteudo {
+      padding: 20px;
+    }
+
+    .projeto-conteudo h3 {
+      font-size: 24px;
+      color: #5BBE42;
+      margin-bottom: 10px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .projeto-conteudo p {
+      font-size: 18px;
+      color: #ddd;
+      margin-bottom: 15px;
+    }
+
+    .projeto-conteudo a {
+      display: inline-block;
+      background-color: #5BBE42;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .projeto-conteudo a:hover {
+      background-color: #6FD850;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 16px;
+      color: #888;
+    }
+
+    .voltar-btn {
+  display: inline-block;
+  margin: 30px 40px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #5BBE42, #4AAE35);
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.voltar-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #5BBE42;
+}
+
+  </style>
+</head>
+<body>
+  <a href="index.html" class="voltar-btn">← Voltar para a página inicial</a>
+
+  <header>
+    <h1>Meus Projetos</h1>
+    <p>Veja os trabalhos que desenvolvi com dedicação, criatividade e tecnologia.</p>
+  </header>
+
+  <section class="projetos-container">
+    <!-- Projeto 1 -->
+    <div class="projeto-card">
+      <img src="projeto1.jpg" alt="Projeto 1" class="projeto-img" />
+      <div class="projeto-conteudo">
+        <h3>Resumo Inteligente de E-mails com Python + HTML + JS</h3>
+        <p>Desenvolvi uma aplicação web que resume e organiza e-mails automaticamente, separando mensagens relevantes de spams e exibindo gráficos interativos com estatísticas de envio.</p>
+        <a href="https://github.com/KaueRodriguesMirom/API---Resumo-Inteligente-de-E-mails-com-Python-HTML-JS" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+    <!-- Projeto 2 -->
+    <div class="projeto-card">
+      <img src="projeto2.jpg" alt="Projeto 2" class="projeto-img" />
+      <div class="projeto-conteudo">
+        <h3>Analisador OTZ – Otimização e Monitoramento de Sistema</h3>
+        <p>Uma aplicação desktop voltada para otimização e análise de desempenho de sistemas Windows, com foco em eficiência, leveza e usabilidade. O projeto nasceu da necessidade de automatizar tarefas de manutenção e oferecer uma visão clara do comportamento do sistema em tempo real.</p>
+        <a href="https://github.com/KaueRodriguesMirom/-Analisador-OTZ-Otimiza-o-e-Monitoramento-de-Sistema" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+    <!-- Projeto 3 -->
+    <div class="projeto-card">
+      <img src="projeto3.jpg" alt="Projeto 3" class="projeto-img" />
+      <div class="projeto-conteudo">
+        <h3>Meu Primeiro - Site Pessoal com HTML/CSS</h3>
+        <p>Desenvolvi um site responsivo voltado para minha apresentação profissional e portfólio. Esse projeto foi fundamental para minha evolução na programação web — após lançar a versão inicial, me dediquei intensamente e consegui alcançar a versão atual, muito mais completa e refinada.</p>
+        <a href="https://github.com/KaueRodriguesMirom/Site-Profissional-V1" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+        <!-- Projeto 4 -->
+    <div class="projeto-card">
+      <img src="projeto4.jpg" alt="Projeto 3" class="projeto-img" />
+      <div class="projeto-conteudo">
+        <h3>Automação Linux com Telegram: CPU, Memória, Disco e Mais!</h3>
+        <p>Agora consigo acompanhar o uso de CPU, memória, disco, conexão com a internet e até processos críticos — tudo em tempo real, direto no meu celular 📱. O script roda no Linux (via WSL) e está agendado com cron para verificar o sistema a cada 5 minutos. Se algo ultrapassa os limites definidos, recebo uma notificação instantânea no Telegram</p>
+        <a href="https://github.com/seuusuario/projeto3" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+
+    <!-- Adicione mais projetos aqui -->
+  </section>
+
+  <footer>
+    &copy; 2025 Kauê Rodrigues Mirom. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

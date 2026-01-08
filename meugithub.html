@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Perfil no GitHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+        :root {
+            --bg1: #0f1224;
+            --bg2: #2a2d4e;
+            --accent: #7c5cff;
+            --accent2: #00e0b8;
+            --text: #f2f2f7;
+            --muted: #b8b9c9;
+            --card: rgba(255, 255, 255, 0.06);
+            --border: rgba(255, 255, 255, 0.14);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            color: var(--text);
+            background:
+                radial-gradient(1200px 600px at 10% 10%, rgba(124, 92, 255, 0.20), transparent 60%),
+                radial-gradient(900px 500px at 90% 20%, rgba(0, 224, 184, 0.20), transparent 60%),
+                linear-gradient(135deg, var(--bg1), var(--bg2));
+        }
+
+        header {
+            max-width: 1000px;
+            margin: 48px auto 24px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(124, 92, 255, 0.18);
+            border: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            margin: 16px 0 8px;
+            letter-spacing: -0.02em;
+            font-weight: 800;
+        }
+
+        p.lead {
+            max-width: 780px;
+            margin: 0 auto;
+            font-size: clamp(16px, 2.5vw, 18px);
+            color: var(--muted);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 28px auto 48px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--card);
+            backdrop-filter: saturate(130%) blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            box-shadow: 0 0 20px rgba(124, 92, 255, 0.6);
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            background: rgba(255, 255, 255, 0.10);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        }
+
+        .placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: 2px dashed rgba(184, 185, 201, 0.45);
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            color: var(--muted);
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0)),
+                repeating-linear-gradient(135deg, transparent 0 8px, rgba(255,255,255,0.03) 8px 16px);
+            overflow: hidden;
+        }
+
+        .placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none; /* Altere para block depois de inserir sua imagem */
+        }
+
+        .placeholder .hint {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            text-align: center;
+            padding: 16px;
+        }
+
+        .hint small {
+            color: var(--muted);
+        }
+
+        .meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .chip {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 10px 14px;
+            font-size: 13px;
+            color: var(--text);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 24px 20px 48px;
+        }
+
+        .signature {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(119, 13, 190, 0.15);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 8px 12px;
+        }
+
+        @media (max-width: 720px) {
+            .meta { grid-template-columns: 1fr; }
+        }
+
+            footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 16px;
+      color: #888;
+    }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <span class="badge">🚀 Showcase • GitHub</span>
+        <h1>Meu GitHub, Kaue Rodrigues Mirom</h1>
+        <p class="lead">
+Explore uma prévia do meu perfil no GitHub — o espaço onde publico e evoluo meus projetos de programação. Logo abaixo você encontra o print que mostra minha jornada em código.
+</p>
+
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <div class="card-header">
+                <div class="title">
+                    <span class="dot"></span>
+                    <strong>Prévia do perfil @KaueRodriguesMirom</strong>
+                </div>
+                <div class="actions">
+                    <div class="actions">
+    <!-- Botão para ir ao perfil -->
+    <a class="btn" href="https://github.com/KaueRodriguesMirom" target="_blank">
+        Ir para meu perfil
+    </a>
+
+    <!-- Botão para ver os repositórios -->
+    <a class="btn" href="https://github.com/KaueRodriguesMirom?tab=repositories" target="_blank">
+        Ver os meus repositórios
+    </a>
+</div>
+
+                </div>
+            </div>
+
+            <div class="placeholder" id="perfil">
+                <!-- Substitua o src abaixo pelo caminho da sua imagem e troque display: block no CSS -->
+                <img id="perfilImagem" src="Meugit.PNG" alt="Print do perfil do GitHub">
+                <div class="hint">
+                    <strong>Espaço reservado</strong>
+                    <small>Adicione o print do seu perfil do GitHub aqui (PNG/JPG).</small>
+                </div>
+            </div>
+
+            <div class="meta">
+                <span class="chip">✨ Foco: Open Source</span>
+                <span class="chip">🧠 Stack: JS • TS • Python</span>
+                <span class="chip">🌱 Em evolução contínua</span>
+            </div>
+        </section>
+    </main>
+
+<footer>
+    <div class="signature">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            Criado com ❤️ por Kauê — Voltar à página principal
+        </a>
+    </div>
+</footer>
+
+<footer>
+    &copy; 2025 Kauê Rodrigues Mirom. Todos os direitos reservados.
+  </footer>
+
+    <script>
+        // Exemplo simples: se você definir um src, mostramos a imagem e ocultamos a dica
+        const img = document.getElementById('perfilImagem');
+        const hint = document.querySelector('.placeholder .hint');
+        if (img && img.src && img.src.trim() !== '') {
+            img.style.display = 'block';
+            hint.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

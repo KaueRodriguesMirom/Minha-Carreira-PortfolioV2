@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habilidades Técnicas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <a href="index.html" class="voltar-btn">← Voltar para a página inicial</a>
+  <style>
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #5BBE42;
+    }
+
+    section {
+      margin: 40px auto;
+      max-width: 1000px;
+      padding: 20px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+      animation: fadeInUp 1.5s ease;
+    }
+
+    h3 {
+      color: #4AAEFD;
+      margin-bottom: 15px;
+    }
+
+    /* Linha do tempo */
+    .timeline {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 40px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #5BBE42;
+    }
+    .timeline li {
+      margin: 20px 0;
+      list-style: none;
+      position: relative;
+    }
+    .timeline li::before {
+      content: '⬤';
+      position: absolute;
+      left: -25px;
+      color: #4AAEFD;
+      font-size: 18px;
+    }
+    .timeline span {
+      font-weight: bold;
+      color: #5BBE42;
+    }
+
+    /* Ícones de habilidades */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .skill-card {
+      flex: 1 1 200px;
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+    .skill-card h4 {
+      margin-bottom: 10px;
+      color: #5BBE42;
+    }
+
+    /* Badges */
+.badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.badge {
+  background: linear-gradient(135deg, #4AAEFD, #5BBE42);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #5BBE42, #4AAEFD);
+}
+
+
+    /* Animações */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .skill-card img {
+  width: 32px;     /* largura do ícone */
+  height: 32px;    /* altura do ícone */
+  margin-bottom: 8px;
+  object-fit: contain;
+}
+
+body {
+  background: radial-gradient(circle at top left, #1a1a1a, #0d0d0d);
+  color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 16px;
+      color: #888;
+    }
+
+        .voltar-btn {
+  display: inline-block;
+  margin: 30px 40px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #5BBE42, #4AAE35);
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.voltar-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #5BBE42;
+}
+
+.voltar-topo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #5BBE42;
+  color: #000;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 49px;
+  color: #5BBE42; /* verde claro */
+  font-weight: 700;
+  -webkit-text-stroke: 0.8px white; /* contorno branco */
+  text-shadow: 1px 1px 3px #000;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  cursor: default;
+}
+
+h1:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 12px #5BBE42, 0 0 24px #5BBE42;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfólio Técnico</h1>
+    <p>Minha evolução como Programador, Analista de Dados e Suporte em T.I.</p>
+  </header>
+
+<!-- Gráfico de barras --> <section> <h3>📊 Evolução por Áreas de Conhecimento</h3> <canvas id="graficoBarras" width="600" height="400"></canvas> </section>
+
+  <!-- Linha do tempo -->
+  <section>
+    <h3>🗂️ Linha do Tempo da Carreira</h3>
+<ul class="timeline">
+  <li><span>Set - 2023</span> - 👨‍💻 Início como Jovem Aprendiz na área de Infraestrutura de Sistemas.</li>
+  <li><span>Out - 2024</span> - 🏆 Troféu conquistado pelo "Projeto Lótus" em parceria com a Accenture.</li>
+  <li><span>Jan - 2025</span> - 🎓 Entrei na Uninove fazendo Tecnólogo em Análise e Desenvolvimento de Sistemas.</li>
+  <li><span>Mai - 2025</span> - 🚀 Promoção como Estagiário de Sistemas em Observabilidade.</li>
+  <li><span>Ago - 2025</span> - 🔧 Badget de SRE, Engenheiro de Confiabilidade pela Vivo.</li>
+  <li><span>Jan - 2026</span> - 📚 Comecei um Bacharelado em Engenharia de Software pela Cruzeiro do Sul.</li>
+</ul>
+
+  </section>
+
+ <!-- Habilidades com ícones -->
+<section id="habilidades-tecnicas">
+  <h3>💻 Habilidades Técnicas</h3>
+  <div class="skills-grid">
+    <!-- Linguagens de Programação -->
+    <div class="skill-card"><img src="icons/python/python-original.svg" alt="Python"><h4>Python</h4><p>Automação, análise de dados e scripts eficientes.</p></div>
+    <div class="skill-card"><img src="icons/javascript/javascript-original.svg" alt="JavaScript"><h4>JavaScript</h4><p>Interatividade e aplicações web dinâmicas.</p></div>
+    <div class="skill-card"><img src="icons/java/java-original.svg" alt="Java"><h4>Java</h4><p>Aplicações robustas e escaláveis para empresas.</p></div>
+    <div class="skill-card"><img src="icons/php/php-original.svg" alt="PHP"><h4>PHP</h4><p>Desenvolvimento de sistemas e sites dinâmicos.</p></div>
+    <div class="skill-card"><img src="icons/typescript/typescript-original.svg" alt="TypeScript"><h4>TypeScript</h4><p>JavaScript tipado para maior segurança e escalabilidade.</p></div>
+
+    <!-- Frameworks e Bibliotecas -->
+    <div class="skill-card"><img src="icons/react/react-original.svg" alt="React"><h4>React</h4><p>Construção de interfaces modernas e responsivas.</p></div>
+    <div class="skill-card"><img src="icons/django/django-plain.svg" alt="Django"><h4>Django</h4><p>Framework ágil para aplicações web em Python.</p></div>
+
+    <!-- Banco de Dados -->
+    <div class="skill-card"><img src="icons/mysql/mysql-original.svg" alt="MySQL"><h4>MySQL</h4><p>Banco relacional para sistemas e aplicações web.</p></div>
+    <div class="skill-card"><img src="icons/mongodb/mongodb-original.svg" alt="MongoDB"><h4>MongoDB</h4><p>Banco NoSQL para dados flexíveis e escaláveis.</p></div>
+
+    <!-- DevOps e Monitoramento -->
+    <div class="skill-card"><img src="icons/docker/docker-original.svg" alt="Docker"><h4>Docker</h4><p>Containerização para ambientes portáteis e ágeis.</p></div>
+    <div class="skill-card"><img src="icons/kubernetes/kubernetes-original.svg" alt="Kubernetes"><h4>Kubernetes</h4><p>Orquestração de containers em larga escala.</p></div>
+    <div class="skill-card"><img src="icons/grafana/grafana-original.svg" alt="Grafana"><h4>Grafana</h4><p>Dashboards interativos para métricas e observabilidade.</p></div>
+
+    <!-- Cloud & Plataformas -->
+    <div class="skill-card"><img src="icons/azure/azure-original.svg" alt="Azure"><h4>Azure</h4><p>Plataforma Microsoft para soluções corporativas.</p></div>
+    <div class="skill-card"><img src="icons/firebase/firebase-original.svg" alt="Firebase"><h4>Firebase</h4><p>Backend rápido para apps móveis e web.</p></div>
+
+    <!-- Ferramentas -->
+    <div class="skill-card"><img src="icons/github/github-original.svg" alt="GitHub"><h4>GitHub</h4><p>Controle de versão e colaboração em projetos.</p></div>
+    <div class="skill-card"><img src="icons/git/git-original.svg" alt="Git"><h4>Git</h4><p>Versionamento de código e integração contínua.</p></div>
+    <div class="skill-card"><img src="icons/postman/postman-original.svg" alt="Postman"><h4>Postman</h4><p>Testes e documentação de APIs.</p></div>
+    <div class="skill-card"><img src="icons/vscode/vscode-original.svg" alt="VS Code"><h4>VS Code</h4><p>Editor leve e poderoso para desenvolvimento.</p></div>
+    <div class="skill-card"><img src="icons/canva/canva-original.svg" alt="Canva"><h4>Canva</h4><p>Design gráfico rápido e intuitivo.</p></div>
+
+    <!-- Sistemas Operacionais -->
+    <div class="skill-card"><img src="icons/linux/linux-original.svg" alt="Linux"><h4>Linux</h4><p>Administração de servidores e ambientes corporativos.</p></div>
+    <div class="skill-card"><img src="icons/windows11/windows11-original.svg" alt="Windows"><h4>Windows</h4><p>Sistema operacional para uso corporativo e pessoal.</p></div>
+    <div class="skill-card"><img src="icons/ubuntu/ubuntu-original.svg" alt="Ubuntu"><h4>Ubuntu</h4><p>Distribuição Linux voltada para servidores e desktop.</p></div>
+    <div class="skill-card"><img src="icons/apple/apple-original.svg" alt="Apple"><h4>Apple</h4><p>Ecossistema macOS e iOS para desenvolvimento.</p></div>
+
+    <!-- Mobile -->
+    <div class="skill-card"><img src="icons/android/android-original.svg" alt="Android"><h4>Android</h4><p>Desenvolvimento de aplicativos móveis.</p></div>
+  </div>
+</section>
+
+
+
+<!-- Certificações -->
+<section id="certificacoes">
+  <h3>🎖️ Certificações | Cursos</h3>
+  <div class="badges">
+    <div class="badge">Elasticsearch Engineer</div>
+    <div class="badge">Sistemas de Informação Computacionais</div>
+    <div class="badge">ANS (Acordo de Nível de Serviço)</div>
+    <div class="badge">Criação de Dashboard no Zabbix</div>
+    <div class="badge">Monitoring com Datadog</div>
+    <div class="badge">Data Analysis com Kibana</div>
+    <div class="badge">Microsoft SharePoint</div>
+    <div class="badge">Análise de Dados Estatísticos</div>
+    <div class="badge">Planejamento de Sistemas</div>
+    <div class="badge">Gestão de Relacionamento com o Cliente (CRM)</div>
+    <div class="badge">Programação (Java, Python, C#, C++, .NET, Node.js, Shell)</div>
+    <div class="badge">Desenvolvimento Web (HTML, CSS, JavaScript, React)</div>
+    <div class="badge">Banco de Dados (SQL, MySQL, PostgreSQL)</div>
+    <div class="badge">Design de Interfaces (UX/UI)</div>
+    <div class="badge">Testes de Software (Unitários, Funcionais)</div>
+    <div class="badge">Metodologias Ágeis (Scrum, Kanban)</div>
+    <div class="badge">Hardware</div>
+    <div class="badge">Redes LAN-WAN</div>
+    <div class="badge">ServiceNow</div>
+    <div class="badge">Monitoramento de Sistemas</div>
+    <div class="badge">Control M</div>
+    <div class="badge">Extração de Relatório - Sitef</div>
+    <div class="badge">Trabalho em Equipe</div>
+    <div class="badge">Oracle Cloud</div>
+  </div>
+</section>
+
+<script>
+  const ctx = document.getElementById('graficoBarras').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [
+        'Programação',
+        'Banco de Dados',
+        'DevOps/Cloud',
+        'Monitoramento',
+        'Soft Skills'
+      ],
+      datasets: [{
+        label: 'Nível de Domínio (1 a 10)',
+        data: [10, 6, 7, 8, 9], // valores definidos
+        backgroundColor: [
+          '#5BBE42', // verde - programação
+          '#4AAEFD', // azul - banco de dados
+          '#9B59B6', // roxo - DevOps/Cloud
+          '#FF5733', // laranja - monitoramento
+          '#FFD700'  // dourado - soft skills
+        ],
+        borderRadius: 8
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          labels: {
+            color: '#ccc',
+            font: { size: 14 }
+          }
+        },
+        title: {
+          display: true,
+          text: 'Evolução por Áreas de Conhecimento',
+          color: '#5BBE42',
+          font: { size: 18, weight: 'bold' }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: '#ccc', font: { size: 13 } },
+          grid: { color: '#333' }
+        },
+        y: {
+          beginAtZero: true,
+          max: 10,
+          ticks: { color: '#ccc', stepSize: 1 },
+          grid: { color: '#333' }
+        }
+      }
+    }
+  });
+</script>
+
+  <footer>
+    &copy; 2025 Kauê Rodrigues Mirom. Todos os direitos reservados.
+  </footer>
+
+  <button class="voltar-topo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Voltar ao topo">↑</button>
+
+</body>
+</html>
