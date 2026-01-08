@@ -9,7 +9,7 @@
 }
 
 body {
-  background-image: url('/FundoHTML.png'); /* atualize com o caminho correto */
+  background-image: url('FundoHTML.png'); /* atualize com o caminho correto */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -839,3 +839,4 @@ footer {
     }
 
 footer:hover { color: #3aec0e; /* muda para verde no hover */ transition: color 0.3s ease; }
+
