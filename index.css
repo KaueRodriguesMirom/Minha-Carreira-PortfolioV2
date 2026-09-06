@@ -1090,3 +1090,109 @@ color: #022c22;
   }
 }
 
+/* AJUSTES PARA TELAS DE CELULAR (até 768px) */
+@media (max-width: 768px) {
+
+  /* Ajusta o container principal */
+  body, .conteiner {
+    padding: 10px !important;
+    overflow-x: hidden;
+  }
+
+  /* Reduz o Padding das Seções */
+  main section, 
+  .sobre, 
+  .formacao, 
+  .cursos, 
+  .experiencia {
+    padding: 10px 8px !important;
+    margin-bottom: 25px !important;
+  }
+
+  /* Ajusta a Foto de Perfil e remove o scale gigante */
+  header .center img, 
+  header img {
+    width: 130px !important;
+    height: 130px !important;
+    max-width: 130px !important;
+    transform: none !important;
+    margin: 0 auto 15px auto !important;
+  }
+
+  /* Reduz o Nome Kauê Rodrigues Mirom */
+  h1, header h1 {
+    font-size: 1.6rem !important;
+    line-height: 1.2 !important;
+    margin-top: 10px !important;
+  }
+
+  /* Reduz os Títulos das Seções (Sobre Mim, Formação, etc.) */
+  h3, 
+  .sobre h3, 
+  .formacao h3, 
+  .cursos h3, 
+  .experiencia h3 {
+    font-size: 1.5rem !important;
+    margin-bottom: 12px !important;
+    text-align: center !important;
+  }
+
+  /* REDUZ O TEXTO PRINCIPAL (Resolve o problema do print) */
+  p, 
+  .sobre p, 
+  .formacao p, 
+  .cursos p, 
+  .descricao, 
+  .topicos p, 
+  .cargo, 
+  .periodo, 
+  .local {
+    font-size: 0.95rem !important; /* ~15px */
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+    -webkit-text-stroke: 0px !important; /* Remove o contorno grosso */
+    text-align: left !important;
+  }
+
+  /* Ajusta as Listas (Bulleted lists) */
+  ul li, 
+  .sobre li, 
+  .cursos li {
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    margin-bottom: 8px !important;
+    -webkit-text-stroke: 0px !important;
+  }
+
+  /* Ajusta os Cards de Experiência */
+  .grid-blocos {
+    gap: 20px !important;
+  }
+
+  .experiencia-bloco {
+    padding: 14px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Menu e Navegação */
+  nav ul {
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+
+  nav ul li a {
+    font-size: 0.85rem !important;
+    padding: 4px 6px !important;
+  }
+
+  /* Botão Voltar ao Topo */
+  .voltar-topo {
+    bottom: 15px !important;
+    right: 15px !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1rem !important;
+  }
+}
