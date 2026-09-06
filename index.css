@@ -910,6 +910,95 @@ background: rgba(247, 120, 186, 0.15);
 color: #f778ba;
 border: 1px solid rgba(247, 120, 186, 0.4);
 }
+.tech-matrix-card {
+background: #0d1117;
+border: 1px solid #1f2937;
+border-radius: 12px;
+padding: 24px;
+font-family: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
+color: #e5e7eb;
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(16, 185, 129, 0.1);
+max-width: 100%;
+margin-top: 12px;
+}
+.tech-matrix-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-bottom: 1px solid #1f2937;
+padding-bottom: 16px;
+margin-bottom: 20px;
+}
+.tech-matrix-header h2 {
+color: #10b981;
+font-size: 1.25rem;
+font-weight: 700;
+margin: 0;
+text-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+letter-spacing: -0.5px;
+}
+.status-dot {
+display: inline-block;
+width: 8px;
+height: 8px;
+background-color: #10b981;
+border-radius: 50%;
+box-shadow: 0 0 8px #10b981;
+margin-right: 6px;
+}
+.status-text {
+font-size: 0.75rem;
+color: #6b7280;
+text-transform: uppercase;
+}
+.tech-section-title {
+color: #059669;
+font-size: 0.75rem;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-top: 18px;
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+}
+.tech-section-title::before {
+content: ">";
+margin-right: 8px;
+color: #10b981;
+}
+.tech-tags {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+}
+.tag {
+background: #022c22;
+color: #34d399;
+border: 1px solid #065f46;
+padding: 6px 12px;
+border-radius: 6px;
+font-size: 0.825rem;
+font-weight: 500;
+transition: all 0.2s ease;
+}
+.tag:hover {
+background: #064e3b;
+border-color: #10b981;
+color: #a7f3d0;
+box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+transform: translateY(-1px);
+}
+.tag-highlight {
+background: #10b981;
+color: #022c22;
+border: 1px solid #34d399;
+font-weight: 700;
+}
+.tag-highlight:hover {
+background: #34d399;
+color: #022c22;
+}
 
 
 
