@@ -1000,5 +1000,34 @@ background: #34d399;
 color: #022c22;
 }
 
+/* No seu arquivo CSS */
+@media (max-width: 768px) {
+  .menu-desktop {
+    display: none; /* Esconde o menu expandido no mobile */
+  }
+  .menu-hamburguer {
+    display: block; /* Mostra o botão do menu */
+  }
+}
+
+.bot-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999; /* Fica por cima, mas sem cobrir interações */
+}
+
+@media (max-width: 768px) {
+  .profile-avatar {
+    width: 140px;
+    height: 140px;
+  }
+  .profile-name {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
