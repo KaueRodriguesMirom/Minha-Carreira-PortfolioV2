@@ -1028,6 +1028,65 @@ color: #022c22;
   }
 }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* Ajustes para telas de celular (até 768px) */
+@media (max-width: 768px) {
+  
+  /* Reduz o container principal e evita rolagem lateral */
+  body, .conteiner {
+    padding: 10px !important;
+    overflow-x: hidden;
+  }
 
+  /* Diminui a Foto de Perfil */
+  header .center img, 
+  header img {
+    max-width: 140px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* Reduz o Título Kauê Rodrigues Mirom */
+  header h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+    margin-top: 10px !important;
+    margin-bottom: 5px !important;
+  }
+
+  /* Ajusta o Subtítulo H2 do cargo */
+  header h2 {
+    font-size: 0.95rem !important;
+    margin: 8px auto 16px auto !important;
+    padding: 0 10px !important;
+  }
+
+  /* Reduz o padding dos cards para não ocupar a tela toda */
+  section, header div[style*="background-color"] {
+    padding: 14px !important;
+    margin: 12px 0 !important;
+  }
+
+  /* Ajusta o Menu para não ocupar a tela inteira */
+  nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 10px !important;
+  }
+
+  nav ul li a {
+    font-size: 0.85rem !important;
+    padding: 4px 8px !important;
+  }
+
+  /* Afasta o botão flutuante 'Voltar ao Topo' do texto */
+  .voltar-topo {
+    bottom: 15px !important;
+    right: 15px !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1rem !important;
+  }
+}
 
