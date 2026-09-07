@@ -254,355 +254,169 @@ const translations = {
     lang_btn_title: "Change Language",
     back_to_top: "Back to top"
   },
-  es: {
-    doc_title: "¡Mi Carrera En Un Sitio Web!",
-    nav_about: "Sobre mí",
-    nav_projects: "Proyectos",
-    nav_contact: "Contacto",
-    nav_skills: "Habilidades Técnicas",
-    nav_achievements: "Logros",
-    nav_github: "Github",
-    header_role: "Analista de Soporte de Sistemas Jr",
-    header_subtitle_text: "Especialista en <strong style=\"color: #00ff88; font-weight: 700;\">SRE & DevOps</strong> en <span style=\"color: #ffffff; font-weight: 700; border-bottom: 2px solid #00ff88; padding-bottom: 2px;\">Vivo (Telefônica Brasil)</span>",
-    status_online: "SISTEMA ONLINE",
-    core_title: "> Core y Metodologías",
-    obs_title: "> Observabilidad y Monitoreo",
-    tag_monit: "Monitoreo",
-    auto_title: "> Automatización y Entrega Continua",
-    tag_auto: "Automatización",
-    infra_title: "> Infraestructura y Base",
-    tag_infra: "Infraestructura",
-    download_cv: "¡Descargar Currículum!",
-    about_title: "Sobre mí",
-    about_p1: "Mi trayectoria en Tecnologías de la Información comenzó con mi formación técnica en Megatoc, donde construí mi base en desarrollo, infraestructura y soporte.",
-    about_p2: "Durante aproximadamente <strong>3 años de experiencia en Vivo (Telefônica Brasil)</strong>, inicié mi carrera como Joven Aprendiz en Infraestructura de Sistemas, evolucionando a Pasante de Sistemas en la Gerencia de Observabilidad con el <strong>Emergency Response Team (ERT)</strong>.",
-    about_p3: "Trabajé en <strong>entornos críticos de producción</strong>, adquiriendo experiencia en observabilidad, monitoreo, gestión de incidentes y prácticas de <strong>Site Reliability Engineering (SRE)</strong>.",
-    about_p4: "Mi trabajo combina <strong>desarrollo de software, infraestructura y automatización</strong> para crear soluciones operativas eficientes y escalables.",
-    about_p5: "Actualmente estudio <strong>Ingeniería de Software</strong>, profundizando en desarrollo Full-Stack, Cloud Computing, bases de datos e <strong>Inteligencia Artificial</strong>.",
-    about_p6: "Mi objetivo es seguir evolucionando en la intersección entre <strong>Software, SRE, Observabilidad y Cloud</strong>.",
-    edu_title: "Educación",
-    edu_c1_inst: "Universidad Nove de Julho",
-    edu_c1_title: "Tecnólogo en Análisis y Desarrollo de Sistemas",
-    edu_c1_period: "ene de 2025 – ago de 2027",
-    edu_c1_p1: "Formación enfocada en el <strong>análisis, desarrollo e implementación de sistemas</strong> computacionales.",
-    edu_c1_p2: "Desarrollo de proyectos con <strong>Java, Python y SQL</strong>.",
-    edu_c1_p3: "Conocimientos aplicados en metodologías ágiles <strong>Scrum y Kanban</strong>.",
-    edu_c1_p4: "Contacto con temas de <strong>Inteligencia Artificial y seguridad de la información</strong>.",
-    edu_skills_title: "Principales competencias:",
-    edu_c1_k1: "Programación y desarrollo de software",
-    edu_c1_k2: "Java, Python y SQL",
-    edu_c1_k3: "Modelado de bases de datos",
-    edu_c1_k4: "Ingeniería y arquitectura de software",
-    edu_c1_k5: "Gestión ágil con Scrum y Kanban",
-    edu_c1_k6: "Resolución de problemas computacionales",
-    edu_c1_k7: "Desarrollo de proyectos tecnológicos",
-    edu_c1_k8: "Inteligencia Artificial aplicada",
-    edu_c1_k9: "Desarrollo de aplicaciones móviles",
-    edu_c1_k10: "Seguridad de la información",
+  // Adicione esta continuação no objeto 'fr' dentro do script.js
+  fr: {
+    // ... (Manter as chaves da Parte 1) ...
+
+    // Seção Sobre mim
+    about_p1: "Mon parcours dans le domaine des Technologies de l'Information a commencé par ma formation technique en Informatique et TI chez Megatoc, où j'ai acquis mes bases en développement, infrastructure, systèmes et support technique.",
+    about_p2: "Au cours de mes environ <strong>3 ans d'expérience chez Vivo (Telefônica Brasil)</strong>, j'ai débuté comme Jeune Apprenti en Infrastructure Système au Command Center (Production B2C), évoluant ensuite vers un poste de Stagiaire Système dans la Direction d'Observabilité, au sein de l'<strong>Emergency Response Team (ERT)</strong>.",
+    about_p3: "Durant ce parcours, j'ai travaillé dans des <strong>environnements de production critiques</strong>, développant une expertise en observabilité, supervision, réponse aux incidents, analyse de logs, gestion des problèmes, automatisation et pratiques <strong>SRE (Site Reliability Engineering)</strong>.",
+    about_p4: "Mon approche combine des connaissances en <strong>développement logiciel, infrastructure, observabilité et automatisation</strong>, visant à transformer les processus opérationnels en solutions plus efficaces, fiables et évolutives.",
+    about_p5: "Actuellement, je me spécialise en <strong>Génie Logiciel</strong>, en approfondissant mes compétences en développement Full-Stack, architecture système, Cloud, bases de données, sécurité, méthodologies agiles et <strong>Intelligence Artificielle</strong>.",
+    about_p6: "Mon objectif est de continuer à évoluer à l'intersection entre le <strong>Logiciel, le SRE, l'Observabilité, l'Automatisation et le Cloud</strong>, en utilisant la technologie pour résoudre des problèmes réels et accroître la fiabilité des systèmes.",
+
+    // Seção Formação
+    edu_title: "Formation",
+    edu_c1_inst: "Universidade Nove de Julho",
+    edu_c1_title: "Technologue en Analyse et Développement de Systèmes",
+    edu_c1_period: "janv. 2025 – août 2027",
+    edu_c1_p1: "Formation axée sur l'<strong>analyse, le développement et la mise en œuvre de systèmes informatiques</strong>, offrant des bases solides en programmation, génie logiciel, modélisation de données et architecture système.",
+    edu_c1_p2: "Au cours de mes études, j'ai réalisé des projets académiques et pratiques en utilisant des technologies telles que <strong>Java, Python et SQL</strong>.",
+    edu_c1_p3: "J'ai également développé des connaissances en <strong>Scrum et Kanban</strong> appliquées à la gestion de projet et au travail collaboratif.",
+    edu_c1_p4: "La formation aborde aussi l'<strong>Intelligence Artificielle, le développement mobile et la sécurité de l'information</strong>.",
+    edu_skills_title: "Compétences clés :",
+    edu_c1_k1: "Programmation et développement de systèmes",
+    edu_c1_k2: "Java, Python et SQL",
+    edu_c1_k3: "Modélisation et bases de données",
+    edu_c1_k4: "Génie logiciel et architecture",
+    edu_c1_k5: "Scrum et Kanban",
+    edu_c1_k6: "Résolution de problèmes informatiques",
+    edu_c1_k7: "Développement de projets logiciels",
+    edu_c1_k8: "Intelligence Artificielle et nouvelles technologies",
+    edu_c1_k9: "Développement mobile",
+    edu_c1_k10: "Sécurité de l'information",
+
     edu_c2_inst: "Cruzeiro do Sul Virtual",
-    edu_c2_title: "Licenciatura en Ingeniería de Software",
-    edu_c2_period: "ene de 2026 – dic de 2029",
-    edu_c2_p1: "Formación universitaria para dominar todo el <strong>ciclo de vida del desarrollo de software (SDLC)</strong>.",
-    edu_c2_p2: "Enfoque en <strong>arquitectura escalable, Full-Stack, Cloud y calidad de software</strong>.",
-    edu_areas_title: "Áreas clave de conocimiento:",
-    edu_c2_k1: "<strong>Desarrollo Full-Stack:</strong> Web y Mobile (Front-End y Back-End).",
-    edu_c2_k2: "<strong>Bases de Datos y Ciencia de Datos:</strong> Modelado y gestión de información.",
-    edu_c2_k3: "<strong>Arquitectura Cloud:</strong> Sistemas distribuidos y alta disponibilidad.",
-    edu_c2_k4: "<strong>Calidad y Ciberseguridad:</strong> Pruebas unitarias, funcionales y seguridad.",
-    edu_c2_k5: "<strong>Gestión Ágil:</strong> Metodologías Scrum y Kanban.",
-    edu_c2_k6: "<strong>Inteligencia Artificial:</strong> Automatización e Ingeniería de Prompts.",
-    edu_c2_p3: "Desarrollo de una <strong>herramienta automatizada de monitoreo de producción</strong> para servidores WebLogic.",
-    edu_c2_p4: "Transformación de un proceso manual en una rutina automática de alta velocidad.",
-    edu_kpi_title: "Resultado e Impacto (KPI)",
-    edu_kpi_val: "1 hora → 5 minutos",
-    edu_kpi_desc: "Reducción del <strong>92% en el tiempo de inspección</strong>.",
-    edu_skills_dev: "Competencias desarrolladas:",
-    edu_c2_s1: "Diseño de Interfaces (UX/UI)",
-    edu_c2_s2: "Computación en la Nube",
-    edu_c2_s3: "Pruebas de Software Funcionales",
-    edu_c2_s4: "Arquitectura de Sistemas",
-    edu_c2_s5: "Desarrollo Front-End y Back-End",
-    edu_c2_s6: "Automatización de Procesos",
-    edu_c2_s7: "Control de Calidad de Software",
-    edu_c2_s8: "Seguridad en Aplicaciones",
-    edu_c2_s9: "Soluciones con IA",
-    edu_c2_s10: "Metodologías Ágiles",
-    courses_title: "Cursos y Certificaciones",
-    courses_p1: "Cursos de especialización en plataformas como <strong>Alura, LinkedIn Learning, Fundação Bradesco y Vivo</strong>.",
-    courses_topics_title: "Principales temas estudiados:",
-    courses_t1: "<strong>Programación:</strong> JavaScript, Java, POO, Git/GitHub y APIs.",
-    courses_t2: "<strong>Infraestructura:</strong> Linux, Docker, PowerShell, Zabbix y Elastic.",
-    courses_t3: "<strong>Orquestación:</strong> Kubernetes (Pods, Services, Deployments).",
-    courses_t4: "<strong>Bases de Datos:</strong> Consultas SQL y gestión de datos.",
-    courses_t5: "<strong>Soft Skills:</strong> Trabajo en equipo, Scrum y liderazgo.",
-    courses_t6: "<strong>Fundamentos de TI:</strong> Redes, SDLC y sistemas operativos.",
-    courses_p2: "Formación continua para garantizar excelencia técnica.",
-    exp_title: "Experiencia Profesional",
-    exp1_role: "Pasante de Sistemas - Observabilidad & ERT (SRE)",
-    exp1_period: "mar de 2025 – presente · 1 año y 7 meses",
-    exp1_location: "São Paulo, Brasil · Híbrido",
-    exp1_desc: "Trabajo en la Gerencia de Observabilidad enfocado en la disponibilidad de sistemas críticos, monitoreo y automatización de procesos.",
-    exp1_t1: "Creación de <strong>paneles de control y alarmas</strong> en ServiceNow y Zabbix.",
-    exp1_t2: "Análisis de <strong>métricas, eventos y logs</strong> para solución de fallas.",
-    exp1_t3: "Respuesta operativa a <strong>incidentes críticos B2C</strong>.",
-    exp1_t4: "Análisis de <strong>Causa Raíz (RCA)</strong> de problemas complejos.",
-    exp1_t5: "Gestión de <strong>Registros de Problemas (PRBs)</strong>.",
-    exp1_t6: "Automatización de flujos de trabajo para <strong>alertas críticas</strong>.",
-    exp1_t7: "Desarrollo de herramientas web con <strong>HTML, CSS y JS</strong>.",
-    exp1_t8: "Creación de un <strong>Health Check automatizado</strong> para servidores.",
-    exp1_t9: "Monitoreo de <strong>servidores WebLogic y colas de datos</strong>.",
-    exp1_t10: "Administración con <strong>Oracle DB y Jenkins</strong>.",
-    exp1_t11: "Ejecución de procedimentos <strong>Stop/Start y limpieza de logs</strong>.",
-    exp1_t12: "Gestión de plataformas SharePoint internas.",
-    exp1_t13: "Integración entre áreas de <strong>Operaciones y Product Owners</strong>.",
-    exp1_t14: "Especialista en estándares de calidad de <strong>PRBs</strong>.",
-    exp1_t15: "Desarrollo de automatizaciones operativas.",
-    exp2_role: "Joven Aprendiz - Infraestructura de Sistemas (PCP)",
-    exp2_period: "sep de 2023 – mar de 2025 · 1 año y 7 meses",
-    exp2_location: "São Paulo, Brasil · Híbrido",
-    exp2_desc: "Primera experiencia técnica en Vivo apoyando la operación e infraestructura del Command Center.",
-    exp2_t1: "Monitoreo con <strong>Grafana, Dynatrace, Kibana y Splunk</strong>.",
-    exp2_t2: "Diagnóstico operativo mediante <strong>logs del sistema</strong>.",
-    exp2_t3: "Seguimiento de tareas por lotes con <strong>Control-M</strong>.",
-    exp2_t4: "Gestión de acceso mediante <strong>SiTef Web</strong>.",
-    exp2_t5: "Atención de solicitudes con <strong>ServiceNow</strong>.",
-    exp2_t6: "Ejecución de checklists diários de producción.",
-    exp2_t7: "Supervisión del proceso de <strong>Portabilidad en Linux</strong>.",
-    exp2_t8: "Control de colas de procesamiento nacional.",
-    exp2_t9: "Verificación de componentes del sistema <strong>Siebel</strong>.",
-    exp2_t10: "Escalamiento y comunicación de <strong>alertas técnicas</strong>.",
-    exp2_t11: "Soporte al análisis de causa raíz.",
-    exp2_t12: "Elaboración de manuales y documentos técnicos.",
-    exp2_t13: "Capacitación de nuevos integrantes del equipo.",
-    exp2_t14: "Operación en la línea de comandos <strong>Linux</strong>.",
-    exp2_t15: "Monitoreo de la estabilidad del entorno.",
-    footer_rights: "© 2026 • Portafolio de Kauê Rodrigues Mirom • TI • São Paulo, Brasil",
-    lang_btn_title: "Cambiar Idioma",
-    back_to_top: "Volver arriba"
-  },
-  it: {
-    doc_title: "La Mia Carriera In Un Sito Web!",
-    nav_about: "Su di me",
-    nav_projects: "Progetti",
-    nav_contact: "Contatto",
-    nav_skills: "Competenze Tecniche",
-    nav_achievements: "Traguardi",
-    nav_github: "Github",
-    header_role: "Analista di Supporto Sistemi Jr",
-    header_subtitle_text: "Specialista in <strong style=\"color: #00ff88; font-weight: 700;\">SRE & DevOps</strong> presso <span style=\"color: #ffffff; font-weight: 700; border-bottom: 2px solid #00ff88; padding-bottom: 2px;\">Vivo (Telefônica Brasil)</span>",
-    status_online: "SISTEMA ONLINE",
-    core_title: "> Core e Metodologie",
-    obs_title: "> Osservabilità e Monitoraggio",
-    tag_monit: "Monitoraggio",
-    auto_title: "> Automazione e Continuous Delivery",
-    tag_auto: "Automazione",
-    infra_title: "> Infrastruttura e Base",
-    tag_infra: "Infrastruttura",
-    download_cv: "Scarica Curriculum!",
-    about_title: "Su di me",
-    about_p1: "Il mio percorso nell'Informatica è iniziato con la formazione tecnica presso Megatoc, costruendo le mie basi nello sviluppo e supporto.",
-    about_p2: "In circa <strong>3 anni presso Vivo (Telefônica Brasil)</strong>, ho iniziato come Giovane Apprendista, evolvendo a Tirocinante Sistemi in Osservabilità con il team <strong>Emergency Response Team (ERT)</strong>.",
-    about_p3: "Ho lavorato in <strong>ambienti di produzione critici</strong>, acquisendo esperienza in osservabilità, gestione incidenti e <strong>Site Reliability Engineering (SRE)</strong>.",
-    about_p4: "Il mio lavoro unisce <strong>sviluppo software, infrastruttura e automazione</strong> per creare soluzioni efficienti e scalabili.",
-    about_p5: "Attualmente continuo i miei studi in <strong>Ingegneria del Software</strong>, approfondendo Full-Stack, Cloud e <strong>Intelligenza Artificiale</strong>.",
-    about_p6: "Il mio obiettivo è continuare a crescere tra <strong>Software, SRE, Osservabilità e Cloud</strong>.",
-    edu_title: "Istruzione",
-    edu_c1_inst: "Università Nove de Julho",
-    edu_c1_title: "Laurea Breve in Analisi e Sviluppo Sistemi",
-    edu_c1_period: "gen 2025 – ago 2027",
-    edu_c1_p1: "Percorso incentrato su <strong>analisi, sviluppo e implementazione di sistemi informatici</strong>.",
-    edu_c1_p2: "Sviluppo di progetti pratici con <strong>Java, Python e SQL</strong>.",
-    edu_c1_p3: "Applicazione di metodologie agili <strong>Scrum e Kanban</strong>.",
-    edu_c1_p4: "Studio di <strong>Intelligenza Artificiale e sicurezza informatica</strong>.",
-    edu_skills_title: "Competenze principali:",
-    edu_c1_k1: "Programmazione e sviluppo sistemi",
-    edu_c1_k2: "Java, Python e SQL",
-    edu_c1_k3: "Progettazione database",
-    edu_c1_k4: "Ingegneria del software",
-    edu_c1_k5: "Gestione agile Scrum e Kanban",
-    edu_c1_k6: "Risoluzione di problemi complessi",
-    edu_c1_k7: "Sviluppo progetti software",
-    edu_c1_k8: "Intelligenza Artificiale applicata",
-    edu_c1_k9: "Sviluppo di applicazioni mobile",
-    edu_c1_k10: "Sicurezza delle informazioni",
-    edu_c2_inst: "Cruzeiro do Sul Virtual",
-    edu_c2_title: "Laurea Magistrale in Ingegneria del Software",
-    edu_c2_period: "gen 2026 – dic 2029",
-    edu_c2_p1: "Percorso completo sul <strong>ciclo di vita dello sviluppo software (SDLC)</strong>.",
-    edu_c2_p2: "Focus su <strong>architetture scalabili, Cloud Computing e qualità del software</strong>.",
-    edu_areas_title: "Aree di conoscenza principali:",
-    edu_c2_k1: "<strong>Sviluppo Full-Stack:</strong> Web e Mobile (Front-End e Back-End).",
-    edu_c2_k2: "<strong>Database e Scienza dei Dati:</strong> Gestione e modellazione dati.",
-    edu_c2_k3: "<strong>Cloud e Architettura:</strong> Sistemi distribuiti ad alta disponibilità.",
-    edu_c2_k4: "<strong>Qualità e Sicurezza:</strong> Test del software e cibersicurezza.",
-    edu_c2_k5: "<strong>Metodologie Agili:</strong> Framework Scrum e Kanban.",
-    edu_c2_k6: "<strong>Intelligenza Artificiale:</strong> Automazione e Prompt Engineering.",
-    edu_c2_p3: "Sviluppo di uno <strong>strumento automatico di monitoraggio per ambienti di produzione WebLogic</strong>.",
-    edu_c2_p4: "Trasformazione di processi manuali in routine automatiche ad alta efficienza.",
-    edu_kpi_title: "Risultato e Impatto (KPI)",
-    edu_kpi_val: "1 ora → 5 minuti",
-    edu_kpi_desc: "Riduzione del <strong>92% nei tempi di ispezione</strong>.",
-    edu_skills_dev: "Competenze sviluppate:",
-    edu_c2_s1: "Progettazione UI/UX",
+    edu_c2_title: "Baccalauréat en Génie Logiciel",
+    edu_c2_period: "janv. 2026 – déc. 2029",
+    edu_c2_p1: "Ma formation en <strong>Génie Logiciel</strong> vise à approfondir les compétences techniques et maîtriser l'ensemble du <strong>cycle de vie du développement logiciel (SDLC)</strong>.",
+    edu_c2_p2: "Le programme couvre les concepts d'<strong>architecture système évolutive, développement Full-Stack, Cloud Computing, bases de données, qualité, sécurité et IA</strong>.",
+    edu_areas_title: "Domaines de connaissances principaux :",
+    edu_c2_k1: "<strong>Développement Full-Stack :</strong> applications Web et Mobiles, Front-End, Back-End et bonnes pratiques.",
+    edu_c2_k2: "<strong>Données et Systèmes :</strong> modélisation, bases de données, Science des Données.",
+    edu_c2_k3: "<strong>Architecture et Cloud :</strong> bases du Cloud Computing, haute disponibilité et résilience.",
+    edu_c2_k4: "<strong>Qualité et Sécurité :</strong> tests logiciels, performances et fiabilité.",
+    edu_c2_k5: "<strong>Méthodologies et Gestion :</strong> gestion agile avec Scrum et Kanban.",
+    edu_c2_k6: "<strong>Intelligence Artificielle :</strong> Prompt Engineering et applications d'IA pour l'automatisation.",
+    edu_c2_p3: "Au cours de cette formation, j'ai développé un <strong>outil d'automatisation pour la surveillance de la santé des environnements de production</strong> (serveurs WebLogic et files d'attente).",
+    edu_c2_p4: "Ce projet a transformé une inspection manuelle en une routine automatisée rapide.",
+    edu_kpi_title: "Résultat et Impact (KPI)",
+    edu_kpi_val: "1 heure → 5 minutes",
+    edu_kpi_desc: "Réduction d'environ <strong>92% du temps d'inspection</strong> grâce à l'exécution automatisée.",
+    edu_skills_dev: "Compétences développées :",
+    edu_c2_s1: "Design d'interfaces (UX/UI)",
     edu_c2_s2: "Cloud Computing",
-    edu_c2_s3: "Test Software Unitari e Funzionali",
-    edu_c2_s4: "Pianificazione Architetturale",
-    edu_c2_s5: "Sviluppo Front-End e Back-End",
-    edu_c2_s6: "Automazione dei Sistemi",
-    edu_c2_s7: "Controllo Qualità Software",
-    edu_c2_s8: "Sicurezza delle Applicazioni",
-    edu_c2_s9: "Soluzioni di Intelligenza Artificiale",
-    edu_c2_s10: "Metodologie Agili",
-    courses_title: "Corsi e Certificazioni",
-    courses_p1: "Corsi di specializzazione completati su piattaforme come <strong>Alura, LinkedIn Learning, Fundação Bradesco e Vivo</strong>.",
-    courses_topics_title: "Principali argomenti trattati:",
-    courses_t1: "<strong>Programmazione:</strong> JavaScript, Java, OOP, Git/GitHub e API.",
-    courses_t2: "<strong>Infrastruttura:</strong> Linux, Docker, PowerShell, Zabbix ed Elastic.",
-    courses_t3: "<strong>Orchestrazione:</strong> Kubernetes (Pods, Services, Deployments).",
-    courses_t4: "<strong>Database:</strong> Concetti SQL e gestione dati.",
-    courses_t5: "<strong>Soft Skills:</strong> Gestione del tempo, Scrum e lavoro di squadra.",
-    courses_t6: "<strong>Fondamenti IT:</strong> Reti, SDLC e sistemi operativi.",
-    courses_p2: "Impegno continuo per la crescita e l'eccellenza tecnica.",
-    exp_title: "Esperienza Lavorativa",
-    exp1_role: "Tirocinante Sistemi - Osservabilità & ERT (SRE)",
-    exp1_period: "mar 2025 – presente · 1 anno e 7 mesi",
-    exp1_location: "San Paolo, Brasile · Ibrido",
-    exp1_desc: "Lavoro nella Gestione Osservabilità focalizzato sulla disponibilità di sistemi critici e automazione.",
-    exp1_t1: "Creazione di <strong>dashboard e allarmi</strong> in ServiceNow e Zabbix.",
-    exp1_t2: "Analisi di <strong>metriche e log</strong> per la diagnosi dei guasti.",
-    exp1_t3: "Supporto operativo durante <strong>incidenti critici B2C</strong>.",
-    exp1_t4: "Analisi delle <strong>Cause Radice (RCA)</strong>.",
-    exp1_t5: "Gestione dei <strong>Registro Problemi (PRB)</strong>.",
-    exp1_t6: "Sviluppo di workflow per <strong>notifiche critiche</strong>.",
-    exp1_t7: "Sviluppo di interfacce web con <strong>HTML, CSS e JS</strong>.",
-    exp1_t8: "Creazione di un <strong>Health Check automatico</strong> per server.",
-    exp1_t9: "Monitoraggio di <strong>server WebLogic e code di dati</strong>.",
-    exp1_t10: "Amministrazione con <strong>Oracle DB e Jenkins</strong>.",
-    exp1_t11: "Esecuzione di procedure di <strong>Stop/Start e pulizia log</strong>.",
-    exp1_t12: "Gestione portali SharePoint interni.",
-    exp1_t13: "Integrazione tra i team di <strong>Operazioni e Product Owner</strong>.",
-    exp1_t14: "Riferimento per gli standard di qualità dei <strong>PRB</strong>.",
-    exp1_t15: "Automazione e ottimizzazione dei processi operativi.",
-    exp2_role: "Giovane Apprendista - Infrastruttura Sistemi (PCP)",
-    exp2_period: "set 2023 – mar 2025 · 1 anno e 7 mesi",
-    exp2_location: "San Paolo, Brasile · Ibrido",
-    exp2_desc: "Prima esperienza tecnica presso Vivo a supporto delle operazioni e infrastruttura nel Command Center.",
-    exp2_t1: "Monitoraggio con <strong>Grafana, Dynatrace, Kibana e Splunk</strong>.",
-    exp2_t2: "Analisi diagnostica tramite <strong>log di sistema</strong>.",
-    exp2_t3: "Monitoraggio dei processi batch con <strong>Control-M</strong>.",
-    exp2_t4: "Gestione accessi tramite <strong>SiTef Web</strong>.",
-    exp2_t5: "Gestione richieste e ticket tramite <strong>ServiceNow</strong>.",
-    exp2_t6: "Esecuzione di checklist giornaliere di produzione.",
-    exp2_t7: "Supervisione del recupero della <strong>Portabilità su Linux</strong>.",
-    exp2_t8: "Controllo delle code di elaborazione dati.",
-    exp2_t9: "Verifica dei componenti del sistema <strong>Siebel</strong>.",
-    exp2_t10: "Notifica ed escalation degli <strong>allarmi operativi</strong>.",
-    exp2_t11: "Supporto nell'analisi delle cause dei guasti.",
-    exp2_t12: "Redazione di documentazione tecnica e guide.",
-    exp2_t13: "Formazione dei nuovi membri del team.",
-    exp2_t14: "Operazioni tramite riga di comando <strong>Linux</strong>.",
-    exp2_t15: "Monitoraggio dello stato di salute degli ambienti.",
-    footer_rights: "© 2026 • Portfolio di Kauê Rodrigues Mirom • IT • San Paolo, Brasile",
-    lang_btn_title: "Cambia lingua",
-    back_to_top: "Torna in alto"
+    edu_c2_s3: "Tests Logiciels — Unitaires et Fonctionnels",
+    edu_c2_s4: "Planification et Architecture Système",
+    edu_c2_s5: "Développement Front-End et Back-End",
+    edu_c2_s6: "Automatisation de Systèmes",
+    edu_c2_s7: "Qualité Logicielle",
+    edu_c2_s8: "Sécurité des Applications",
+    edu_c2_s9: "Intelligence Artificielle",
+    edu_c2_s10: "Méthodologies Agiles",
+
+    // Seção Cursos
+    courses_title: "Formations & Certifications",
+    courses_p1: "J'ai suivi plusieurs formations complémentaires sur des plateformes réputées comme <strong>Alura</strong>, <strong>Fundação Bradesco</strong>, <strong>LinkedIn Learning</strong>, <strong>Enabley UK & ROI</strong>, <strong>Vivae</strong> et via <strong>Vivo (Telefônica Brasil)</strong>.",
+    courses_topics_title: "Principaux sujets étudiés :",
+    courses_t1: "<strong>Programmation et Développement :</strong> JavaScript, POO Java, Git/GitHub, API et CI/CD.",
+    courses_t2: "<strong>Infrastructure et DevOps :</strong> PowerShell, Docker, Linux, ServiceNow, Zabbix, Elastic et Datadog.",
+    courses_t3: "<strong>Orchestration et Conteneurs :</strong> Kubernetes (Pods, Services, Deployments).",
+    courses_t4: "<strong>Bases de Données :</strong> Fondations SQL et gestion des données.",
+    courses_t5: "<strong>Méthodologies Agiles & Soft Skills :</strong> Scrum/Kanban, gestion du stress et soft skills.",
+    courses_t6: "<strong>Bases de la TI :</strong> Réseaux mobiles, SDLC et architectures applicatives.",
+    courses_p2: "Ces formations renforcent mon engagement envers l'apprentissage continu et l'efficacité opérationnelle.",
+
+    // Seção Experiência
+    exp_title: "Expérience",
+    exp1_role: "Stagiaire Système - Observabilité & ERT (SRE)",
+    exp1_period: "mars 2025 – présent · 1 an et 7 mois",
+    exp1_location: "São Paulo, Brésil · Hybride",
+    exp1_desc: "Stagiaire au sein de la Direction d'Observabilité, membre de l'équipe de réponse d'urgence B2C (ERT). Focus sur la fiabilité des environnements critiques, l'observabilité, l'automatisation et l'analyse d'incidents.",
+    exp1_t1: "Création et évolution d'<strong>alarmes et dashboards</strong> sous ServiceNow, Elastic et Zabbix.",
+    exp1_t2: "Surveillance d'environnements critiques et analyse de <strong>métriques, événements et logs</strong>.",
+    exp1_t3: "Participation à la <strong>réponse aux incidents critiques B2C</strong>.",
+    exp1_t4: "Analyse des causes racines <strong>(RCA)</strong> pour résoudre les problèmes récurrents.",
+    exp1_t5: "Gestion et suivi des <strong>PRB (Problem Records)</strong>.",
+    exp1_t6: "Développement de <strong>workflows d'alerte critique</strong>.",
+    exp1_t7: "Développement d'automatisations web avec <strong>HTML, CSS et JavaScript</strong>.",
+    exp1_t8: "Création d'un <strong>Health Check automatisé</strong> pour vérifier les serveurs.",
+    exp1_t9: "Solutions pour le suivi des <strong>serveurs WebLogic et files d'attente</strong>.",
+    exp1_t10: "Administration opérationnelle avec <strong>Oracle Server et Jenkins</strong>.",
+    exp1_t11: "Procédures de <strong>Stop/Start, purge de cache et analyse de logs</strong> en production.",
+    exp1_t12: "Création de SharePoint pour la gestion de projets et la formation.",
+    exp1_t13: "Création d'outils web pour faciliter l'intégration entre Projets et Opérations.",
+    exp1_t14: "Référent sur la <strong>qualité des PRB</strong> (analyses, retours et formations).",
+    exp1_t15: "Automatisation et optimisation des processus opérationnels.",
+
+    exp2_role: "Jeune Apprenti - Infrastructure Système (PCP)",
+    exp2_period: "sept. 2023 – mars 2025 · 1 an et 7 mois",
+    exp2_location: "São Paulo, Brésil · Hybride",
+    exp2_desc: "Première expérience en TI au Command Center B2C chez Vivo. Développement de bases solides en supervision, infrastructure et support aux environnements critiques.",
+    exp2_t1: "Supervision B2C via <strong>Grafana, Dynatrace, Elastic, Kibana, Splunk et Zabbix</strong>.",
+    exp2_t2: "Analyse de <strong>métriques, événements et logs</strong>.",
+    exp2_t3: "Gestion des traitements et jobs sous <strong>Control-M</strong>.",
+    exp2_t4: "Gestion des rapports et accès via <strong>SiTef Web</strong>.",
+    exp2_t5: "Traitement des tickets et incidents sous <strong>ServiceNow</strong>.",
+    exp2_t6: "Réalisation des <strong>checklists opérationnelles quotidiennes</strong>.",
+    exp2_t7: "Suivi des processus de <strong>Recovery de Portabilité sur Linux</strong>.",
+    exp2_t8: "Supervision des files d'attente pour São Paulo et le reste du Brésil.",
+    exp2_t9: "Validation des <strong>composants et nœuds Siebel</strong>.",
+    exp2_t10: "Escalade et communication des <strong>alertes opérationnelles</strong>.",
+    exp2_t11: "Analyse des logs pour appuyer la recherche de la cause racine.",
+    exp2_t12: "Création et mise à jour de documentations et procédures.",
+    exp2_t13: "Formation et intégration des nouveaux collaborateurs.",
+    exp2_t14: "Exploitation d'<strong>environnements Linux</strong> pour l'analyse de logs.",
+    exp2_t15: "Suivi de la santé globale des plateformes.",
+
+    footer_rights: "© 2026 • Portfolio de Kauê Rodrigues Mirom • TI • São Paulo, Brésil"
   }
-};
+  // Cole estas chaves dentro do objeto 'fr' no seu script.js
+  
+  // Página: Projetos (project.html)
+  projects_title: "Projets & Automatisations",
+  projects_intro: "Découvrez ici quelques-uns des principaux projets et automatisations développés pour optimiser les processus opérationnels, la surveillance et l'efficacité des systèmes.",
+  proj1_title: "Santé & Surveillance des Serveurs (Health Check)",
+  proj1_desc: "Outil automatisé développé pour la validation de la santé des serveurs WebLogic et le suivi des files d'attente de traitement en temps réel.",
+  proj1_feat1: "Automatisations d'inspection réduisant le temps d'exécution de 1 heure à 5 minutes.",
+  proj1_feat2: "Tableau de bord personnalisé pour la visualisation rapide des métriques d'état et de disponibilité.",
+  proj1_feat3: "Alertes préventives pour l'équipe SRE et d'exploitation.",
 
-/**
- * Mapeamento das bandeiras para o botão do seletor
- */
-const flags = {
-  pt: "fi-br",
-  en: "fi-us",
-  es: "fi-es",
-  it: "fi-it"
-};
+  proj2_title: "SharePoint & Portail de Gestion Opérationnelle",
+  proj2_desc: "Portail centralisé développé pour la gestion des projets en production, le partage de connaissances et l'intégration entre les équipes.",
+  proj2_feat1: "Amélioration de la communication entre les équipes de Projet, d'Exploitation et les PO (Product Owners).",
+  proj2_feat2: "Espace dédié à la formation initiale et à la montée en compétences des collaborateurs.",
+  proj2_feat3: "Standardisation des flux et de la documentation sur la qualité des PRB (Problem Records).",
 
-/**
- * Abre / Fecha o menu dropdown de idiomas
- */
-function toggleLangMenu() {
-  const dropdown = document.getElementById('langDropdown');
-  if (dropdown) {
-    dropdown.classList.toggle('show');
-  }
-}
+  // Página: Habilidades Técnicas (habilidades.html)
+  skills_page_title: "Compétences Techniques",
+  skills_page_intro: "Un aperçu détaillé des technologies, outils et méthodologies que je maîtrise et utilise au quotidien.",
+  skill_cat_obs: "Observabilité & Supervision",
+  skill_cat_auto: "Automatisation & DevOps",
+  skill_cat_dev: "Développement & Bases de données",
+  skill_cat_infra: "Infrastructure & Systèmes",
 
-/**
- * Oculta o dropdown ao clicar fora da caixa do seletor
- */
-window.addEventListener('click', function(event) {
-  if (!event.target.closest('.lang-selector')) {
-    const dropdown = document.getElementById('langDropdown');
-    if (dropdown && dropdown.classList.contains('show')) {
-      dropdown.classList.remove('show');
-    }
-  }
-});
+  // Página: Conquistas (conquistas.html)
+  achieve_title: "Réalisations & Jalons",
+  achieve_intro: "Principaux jalons professionnels et reconnaissances obtenues au cours de mon parcours en Technologie.",
+  achieve_1_year_title: "1 An de Parcours chez Vivo",
+  achieve_1_year_desc: "Célébration d'une année d'impact, de croissance et de contributions aux environnements critiques et à l'observabilité.",
+  achieve_kpi_title: "Réduction des Temps d'Inspection (KPI)",
+  achieve_kpi_desc: "Optimisation majeure des processus grâce à l'automatisation, réduisant de 92 % le temps d'analyse des serveurs.",
 
-/**
- * Executa a troca de idioma e atualiza todos os elementos marcados
- * @param {string} lang - Código do idioma ('pt', 'en', 'es', 'it')
- */
-function changeLanguage(lang) {
-  if (!translations[lang]) return;
+  // Página: Contato (contact.html)
+  contact_title: "Entretons en Contact",
+  contact_intro: "Vous souhaitez discuter d'opportunités, de collaborations ou en savoir plus sur mes projets ? Envoyez-moi un message !",
+  contact_form_name: "Nom complet",
+  contact_form_email: "Adresse e-mail",
+  contact_form_msg: "Votre message",
+  contact_form_btn: "Envoyer le message",
 
-  // 1. Atualização dos Textos e Estruturas HTML (via data-i18n)
-  const elements = document.querySelectorAll('[data-i18n]');
-  elements.forEach(element => {
-    const key = element.getAttribute('data-i18n');
-    if (translations[lang][key] !== undefined) {
-      element.innerHTML = translations[lang][key];
-    }
-  });
+  // Modais e Auxiliares
+  lang_btn_title: "Changer de langue",
+  back_to_top: "Retour en haut"
 
-  // 2. Atualização dos Atributos "title" (via data-i18n-title)
-  const titleElements = document.querySelectorAll('[data-i18n-title]');
-  titleElements.forEach(element => {
-    const key = element.getAttribute('data-i18n-title');
-    if (translations[lang][key] !== undefined) {
-      element.setAttribute('title', translations[lang][key]);
-    }
-  });
 
-  // 3. Atualização dos Atributos "alt" das Imagens (via data-i18n-alt)
-  const altElements = document.querySelectorAll('[data-i18n-alt]');
-  altElements.forEach(element => {
-    const key = element.getAttribute('data-i18n-alt');
-    if (translations[lang][key] !== undefined) {
-      element.setAttribute('alt', translations[lang][key]);
-    }
-  });
-
-  // 4. Atualização visual do botão do seletor de idiomas
-  const btnLang = document.getElementById('btnLang');
-  const btnFlag = document.getElementById('btnFlag');
-
-  if (btnLang) btnLang.innerText = lang.toUpperCase();
-  if (btnFlag) btnFlag.className = `fi ${flags[lang]}`;
-
-  // 5. Configuração da tag <html lang="...">
-  const htmlLangMap = { pt: 'pt-br', en: 'en', es: 'es', it: 'it' };
-  document.documentElement.lang = htmlLangMap[lang] || 'pt-br';
-
-  // 6. Atualização da tag <title> se definida no JSON
-  if (translations[lang].doc_title) {
-    document.title = translations[lang].doc_title;
-  }
-
-  // 7. Salva a preferência no LocalStorage do navegador
-  localStorage.setItem('preferred_language', lang);
-
-  // 8. Fecha o dropdown após a seleção
-  const dropdown = document.getElementById('langDropdown');
-  if (dropdown) dropdown.classList.remove('show');
-}
-
-/**
- * Inicialização ao carregar o DOM
- */
-document.addEventListener('DOMContentLoaded', () => {
-  // Recupera o idioma salvo ou aplica 'pt' como padrão
-  const savedLang = localStorage.getItem('preferred_language') || 'pt';
-  changeLanguage(savedLang);
-});
+    
+  
