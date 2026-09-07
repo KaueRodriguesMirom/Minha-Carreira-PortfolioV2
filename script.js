@@ -418,5 +418,77 @@ const translations = {
   back_to_top: "Retour en haut"
 
 
+// Função para abrir e fechar o menu de idiomas
+function toggleLangMenu() {
+  const dropdown = document.getElementById('langDropdown');
+  if (dropdown) {
+    dropdown.classList.toggle('show');
+  }
+}
+
+// Fecha o dropdown se o usuário clicar fora dele
+window.onclick = function(event) {
+  if (!event.target.matches('.lang-btn') && !event.target.closest('.lang-btn')) {
+    const dropdowns = document.getElementsByClassName('lang-dropdown');
+    for (let i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+};
+
+// Função principal de alteração de idioma
+function changeLanguage(lang) {
+  const flags = {
+    pt: { flag: 'fi-br', text: 'PT' },
+    en: { flag: 'fi-us', text: 'EN' },
+    es: { flag: 'fi-es', text: 'ES' },
+    it: { flag: 'fi-it', text: 'IT' },
+    fr: { flag: 'fi-fr', text: 'FR' }
+  };
+
+  // Atualiza bandeira e texto do botão principal
+  const btnFlag = document.getElementById('btnFlag');
+  const btnLang = document.getElementById('btnLang');
+
+  if (btnFlag && btnLang && flags[lang]) {
+    btnFlag.className = `fi ${flags[lang].flag}`;
+    btnLang.textContent = flags[lang].text;
+  }
+
+  // Substitui os textos com base na chave data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      element.innerHTML = translations[lang][key];
+    }
+  });
+
+  // Atualiza títulos/atributos de botões (data-i18n-title)
+  document.querySelectorAll('[data-i18n-title]').forEach(element => {
+    const key = element.getAttribute('data-i18n-title');
+    if (translations[lang] && translations[lang][key]) {
+      element.setAttribute('title', translations[lang][key]);
+    }
+  });
+
+  // Salva a preferência do usuário no navegador
+  localStorage.setItem('selectedLang', lang);
+
+  // Fecha o dropdown
+  const dropdown = document.getElementById('langDropdown');
+  if (dropdown) {
+    dropdown.classList.remove('show');
+  }
+}
+
+// Inicializa com o idioma salvo ou padrão (PT) ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('selectedLang') || 'pt';
+  changeLanguage(savedLang);
+});
+
     
   
