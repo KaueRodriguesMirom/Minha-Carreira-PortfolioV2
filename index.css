@@ -1208,4 +1208,68 @@ header .center img {
   /* Filtro para integrar o tom da foto com o tema */
   filter: contract(105%) drop-shadow(0 0 10px rgba(0, 255, 136, 0.2));
 }
+/* Container do botão de idioma no canto inferior esquerdo */
+.lang-selector {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+/* Botão Principal */
+.lang-btn {
+  background-color: #132a1c;
+  color: #00ff88;
+  border: 1px solid #00ff88;
+  padding: 10px 16px;
+  border-radius: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background-color: #00ff88;
+  color: #000;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+}
+
+/* Menu Dropdown com as opções */
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  background-color: #0a0d0a;
+  border: 1px solid #1b382b;
+  border-radius: 8px;
+  min-width: 140px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.lang-dropdown.show {
+  display: flex;
+}
+
+.lang-dropdown a {
+  color: #e5e7eb;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.lang-dropdown a:hover {
+  background-color: #132a1c;
+  color: #00ff88;
+}
+
 
