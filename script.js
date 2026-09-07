@@ -254,10 +254,7 @@ const translations = {
     lang_btn_title: "Change Language",
     back_to_top: "Back to top"
   },
-  // Adicione esta continuação no objeto 'fr' dentro do script.js
   fr: {
-    // ... (Manter as chaves da Parte 1) ...
-
     // Seção Sobre mim
     about_p1: "Mon parcours dans le domaine des Technologies de l'Information a commencé par ma formation technique en Informatique et TI chez Megatoc, où j'ai acquis mes bases en développement, infrastructure, systèmes et support technique.",
     about_p2: "Au cours de mes environ <strong>3 ans d'expérience chez Vivo (Telefônica Brasil)</strong>, j'ai débuté comme Jeune Apprenti en Infrastructure Système au Command Center (Production B2C), évoluant ensuite vers un poste de Stagiaire Système dans la Direction d'Observabilité, au sein de l'<strong>Emergency Response Team (ERT)</strong>.",
@@ -370,53 +367,52 @@ const translations = {
     exp2_t14: "Exploitation d'<strong>environnements Linux</strong> pour l'analyse de logs.",
     exp2_t15: "Suivi de la santé globale des plateformes.",
 
-    footer_rights: "© 2026 • Portfolio de Kauê Rodrigues Mirom • TI • São Paulo, Brésil"
+    footer_rights: "© 2026 • Portfolio de Kauê Rodrigues Mirom • TI • São Paulo, Brésil",
+
+    // Página: Projetos (project.html)
+    projects_title: "Projets & Automatisations",
+    projects_intro: "Découvrez ici quelques-uns des principaux projets et automatisations développés pour optimiser les processus opérationnels, la surveillance et l'efficacité des systèmes.",
+    proj1_title: "Santé & Surveillance des Serveurs (Health Check)",
+    proj1_desc: "Outil automatisé développé pour la validation de la santé des serveurs WebLogic et le suivi des files d'attente de traitement en temps réel.",
+    proj1_feat1: "Automatisations d'inspection réduisant le temps d'exécution de 1 heure à 5 minutes.",
+    proj1_feat2: "Tableau de bord personnalisé pour la visualisation rapide des métriques d'état et de disponibilité.",
+    proj1_feat3: "Alertes préventives pour l'équipe SRE et d'exploitation.",
+
+    proj2_title: "SharePoint & Portail de Gestion Opérationnelle",
+    proj2_desc: "Portail centralisé développé pour la gestion des projets en production, le partage de connaissances et l'intégration entre les équipes.",
+    proj2_feat1: "Amélioration de la communication entre les équipes de Projet, d'Exploitation et les PO (Product Owners).",
+    proj2_feat2: "Espace dédié à la formation initiale et à la montée en compétences des collaborateurs.",
+    proj2_feat3: "Standardisation des flux et de la documentation sur la qualité des PRB (Problem Records).",
+
+    // Página: Habilidades Técnicas (habilidades.html)
+    skills_page_title: "Compétences Techniques",
+    skills_page_intro: "Un aperçu détaillé des technologies, outils et méthodologies que je maîtrise et utilise au quotidien.",
+    skill_cat_obs: "Observabilité & Supervision",
+    skill_cat_auto: "Automatisation & DevOps",
+    skill_cat_dev: "Développement & Bases de données",
+    skill_cat_infra: "Infrastructure & Systèmes",
+
+    // Página: Conquistas (conquistas.html)
+    achieve_title: "Réalisations & Jalons",
+    achieve_intro: "Principaux jalons professionnels et reconnaissances obtenues au cours de mon parcours en Technologie.",
+    achieve_1_year_title: "1 An de Parcours chez Vivo",
+    achieve_1_year_desc: "Célébration d'une année d'impact, de croissance et de contributions aux environnements critiques et à l'observabilité.",
+    achieve_kpi_title: "Réduction des Temps d'Inspection (KPI)",
+    achieve_kpi_desc: "Optimisation majeure des processus grâce à l'automatisation, réduisant de 92 % le temps d'analyse des serveurs.",
+
+    // Página: Contato (contact.html)
+    contact_title: "Entretons en Contact",
+    contact_intro: "Vous souhaitez discuter d'opportunités, de collaborations ou en savoir plus sur mes projets ? Envoyez-moi un message !",
+    contact_form_name: "Nom complet",
+    contact_form_email: "Adresse e-mail",
+    contact_form_msg: "Votre message",
+    contact_form_btn: "Envoyer le message",
+
+    // Modais e Auxiliares
+    lang_btn_title: "Changer de langue",
+    back_to_top: "Retour en haut"
   }
-  // Cole estas chaves dentro do objeto 'fr' no seu script.js
-  
-  // Página: Projetos (project.html)
-  projects_title: "Projets & Automatisations",
-  projects_intro: "Découvrez ici quelques-uns des principaux projets et automatisations développés pour optimiser les processus opérationnels, la surveillance et l'efficacité des systèmes.",
-  proj1_title: "Santé & Surveillance des Serveurs (Health Check)",
-  proj1_desc: "Outil automatisé développé pour la validation de la santé des serveurs WebLogic et le suivi des files d'attente de traitement en temps réel.",
-  proj1_feat1: "Automatisations d'inspection réduisant le temps d'exécution de 1 heure à 5 minutes.",
-  proj1_feat2: "Tableau de bord personnalisé pour la visualisation rapide des métriques d'état et de disponibilité.",
-  proj1_feat3: "Alertes préventives pour l'équipe SRE et d'exploitation.",
-
-  proj2_title: "SharePoint & Portail de Gestion Opérationnelle",
-  proj2_desc: "Portail centralisé développé pour la gestion des projets en production, le partage de connaissances et l'intégration entre les équipes.",
-  proj2_feat1: "Amélioration de la communication entre les équipes de Projet, d'Exploitation et les PO (Product Owners).",
-  proj2_feat2: "Espace dédié à la formation initiale et à la montée en compétences des collaborateurs.",
-  proj2_feat3: "Standardisation des flux et de la documentation sur la qualité des PRB (Problem Records).",
-
-  // Página: Habilidades Técnicas (habilidades.html)
-  skills_page_title: "Compétences Techniques",
-  skills_page_intro: "Un aperçu détaillé des technologies, outils et méthodologies que je maîtrise et utilise au quotidien.",
-  skill_cat_obs: "Observabilité & Supervision",
-  skill_cat_auto: "Automatisation & DevOps",
-  skill_cat_dev: "Développement & Bases de données",
-  skill_cat_infra: "Infrastructure & Systèmes",
-
-  // Página: Conquistas (conquistas.html)
-  achieve_title: "Réalisations & Jalons",
-  achieve_intro: "Principaux jalons professionnels et reconnaissances obtenues au cours de mon parcours en Technologie.",
-  achieve_1_year_title: "1 An de Parcours chez Vivo",
-  achieve_1_year_desc: "Célébration d'une année d'impact, de croissance et de contributions aux environnements critiques et à l'observabilité.",
-  achieve_kpi_title: "Réduction des Temps d'Inspection (KPI)",
-  achieve_kpi_desc: "Optimisation majeure des processus grâce à l'automatisation, réduisant de 92 % le temps d'analyse des serveurs.",
-
-  // Página: Contato (contact.html)
-  contact_title: "Entretons en Contact",
-  contact_intro: "Vous souhaitez discuter d'opportunités, de collaborations ou en savoir plus sur mes projets ? Envoyez-moi un message !",
-  contact_form_name: "Nom complet",
-  contact_form_email: "Adresse e-mail",
-  contact_form_msg: "Votre message",
-  contact_form_btn: "Envoyer le message",
-
-  // Modais e Auxiliares
-  lang_btn_title: "Changer de langue",
-  back_to_top: "Retour en haut"
-
+};
 
 // Função para abrir e fechar o menu de idiomas
 function toggleLangMenu() {
@@ -489,6 +485,3 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('selectedLang') || 'pt';
   changeLanguage(savedLang);
 });
-
-    
-  
