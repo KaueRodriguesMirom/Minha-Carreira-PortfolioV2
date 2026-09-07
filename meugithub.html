@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Meu Perfil no GitHub</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
@@ -18,10 +18,15 @@
             --border: rgba(255, 255, 255, 0.14);
         }
 
-        * { box-sizing: border-box; }
+        * { 
+            box-sizing: border-box; 
+        }
 
         body {
             margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden; /* Evita rolagem horizontal indesejada */
             font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
             color: var(--text);
             background:
@@ -32,8 +37,8 @@
 
         header {
             max-width: 1000px;
-            margin: 48px auto 24px;
-            padding: 0 20px;
+            margin: 32px auto 24px;
+            padding: 0 16px;
             text-align: center;
         }
 
@@ -41,60 +46,67 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 12px;
+            padding: 8px 14px;
             border-radius: 999px;
             background: rgba(124, 92, 255, 0.18);
             border: 1px solid var(--border);
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text);
         }
 
         h1 {
-            font-size: clamp(32px, 5vw, 52px);
+            font-size: clamp(26px, 6vw, 48px);
             margin: 16px 0 8px;
             letter-spacing: -0.02em;
             font-weight: 800;
+            line-height: 1.2;
         }
 
         p.lead {
             max-width: 780px;
             margin: 0 auto;
-            font-size: clamp(16px, 2.5vw, 18px);
+            font-size: clamp(14px, 3vw, 17px);
             color: var(--muted);
+            line-height: 1.5;
         }
 
         .container {
             max-width: 1000px;
-            margin: 28px auto 48px;
-            padding: 0 20px;
+            margin: 20px auto 40px;
+            padding: 0 16px;
         }
 
         .card {
             background: var(--card);
             backdrop-filter: saturate(130%) blur(10px);
+            -webkit-backdrop-filter: saturate(130%) blur(10px);
             border: 1px solid var(--border);
             border-radius: 16px;
-            padding: 24px;
+            padding: 20px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
         }
 
         .card-header {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
             gap: 16px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
         .title {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
+            font-size: 15px;
+            word-break: break-word;
         }
 
         .dot {
             width: 12px;
             height: 12px;
+            flex-shrink: 0;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--accent), var(--accent2));
             box-shadow: 0 0 20px rgba(124, 92, 255, 0.6);
@@ -102,30 +114,37 @@
 
         .actions {
             display: flex;
+            flex-wrap: wrap;
             gap: 10px;
+            width: auto;
         }
 
         .btn {
-            padding: 10px 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
             border-radius: 10px;
             border: 1px solid var(--border);
             background: rgba(255, 255, 255, 0.06);
             color: var(--text);
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
+            text-decoration: none;
             cursor: pointer;
-            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+            text-align: center;
+            transition: all 0.2s ease;
         }
 
         .btn:hover {
             transform: translateY(-1px);
-            background: rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.12);
             box-shadow: 0 8px 20px rgba(0,0,0,0.25);
         }
 
         .placeholder {
             width: 100%;
-            aspect-ratio: 16 / 9;
+            min-height: 200px;
             border: 2px dashed rgba(184, 185, 201, 0.45);
             border-radius: 14px;
             display: grid;
@@ -139,9 +158,9 @@
 
         .placeholder img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: none; /* Altere para block depois de inserir sua imagem */
+            height: auto;
+            object-fit: contain;
+            display: none;
         }
 
         .placeholder .hint {
@@ -160,7 +179,7 @@
         .meta {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
+            gap: 10px;
             margin-top: 18px;
         }
 
@@ -168,18 +187,21 @@
             background: rgba(255, 255, 255, 0.07);
             border: 1px solid var(--border);
             border-radius: 999px;
-            padding: 10px 14px;
-            font-size: 13px;
+            padding: 10px 12px;
+            font-size: 12px;
             color: var(--text);
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            text-align: center;
+            gap: 6px;
         }
 
         footer {
             text-align: center;
             color: var(--muted);
-            padding: 24px 20px 48px;
+            padding: 24px 16px 40px;
+            font-size: 14px;
         }
 
         .signature {
@@ -189,20 +211,43 @@
             background: rgba(119, 13, 190, 0.15);
             border: 1px solid var(--border);
             border-radius: 999px;
-            padding: 8px 12px;
+            padding: 8px 16px;
+            margin-bottom: 12px;
+            max-width: 100%;
         }
 
+        .signature a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           AJUSTES RESPONSIVOS (CELULAR)
+           ========================================================= */
         @media (max-width: 720px) {
-            .meta { grid-template-columns: 1fr; }
-        }
+            .card {
+                padding: 16px;
+            }
 
-            footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 16px;
-      color: #888;
-    }
-    
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .actions {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .meta { 
+                grid-template-columns: 1fr; 
+            }
+        }
     </style>
 </head>
 <body>
@@ -210,9 +255,8 @@
         <span class="badge">🚀 Showcase • GitHub</span>
         <h1>Meu GitHub, Kaue Rodrigues Mirom</h1>
         <p class="lead">
-Explore uma prévia do meu perfil no GitHub — o espaço onde publico e evoluo meus projetos de programação. Logo abaixo você encontra o print que mostra minha jornada em código.
-</p>
-
+            Explore uma prévia do meu perfil no GitHub — o espaço onde publico e evoluo meus projetos de programação. Logo abaixo você encontra o print que mostra minha jornada em código.
+        </p>
     </header>
 
     <main class="container">
@@ -222,24 +266,18 @@ Explore uma prévia do meu perfil no GitHub — o espaço onde publico e evoluo 
                     <span class="dot"></span>
                     <strong>Prévia do perfil @KaueRodriguesMirom</strong>
                 </div>
+                
                 <div class="actions">
-                    <div class="actions">
-    <!-- Botão para ir ao perfil -->
-    <a class="btn" href="https://github.com/KaueRodriguesMirom" target="_blank">
-        Ir para meu perfil
-    </a>
-
-    <!-- Botão para ver os repositórios -->
-    <a class="btn" href="https://github.com/KaueRodriguesMirom?tab=repositories" target="_blank">
-        Ver os meus repositórios
-    </a>
-</div>
-
+                    <a class="btn" href="https://github.com/KaueRodriguesMirom" target="_blank">
+                        Ir para meu perfil
+                    </a>
+                    <a class="btn" href="https://github.com/KaueRodriguesMirom?tab=repositories" target="_blank">
+                        Ver os meus repositórios
+                    </a>
                 </div>
             </div>
 
             <div class="placeholder" id="perfil">
-                <!-- Substitua o src abaixo pelo caminho da sua imagem e troque display: block no CSS -->
                 <img id="perfilImagem" src="Meugit.PNG" alt="Print do perfil do GitHub">
                 <div class="hint">
                     <strong>Espaço reservado</strong>
@@ -255,23 +293,20 @@ Explore uma prévia do meu perfil no GitHub — o espaço onde publico e evoluo 
         </section>
     </main>
 
-<footer>
-    <div class="signature">
-        <a href="index.html" style="text-decoration: none; color: inherit;">
-            Criado com ❤️ por Kauê — Voltar à página principal
-        </a>
-    </div>
-</footer>
-
-<footer>
-    &copy; 2025 Kauê Rodrigues Mirom. Todos os direitos reservados.
-  </footer>
+    <footer>
+        <div class="signature">
+            <a href="index.html">
+                Criado com ❤️ por Kauê — Voltar à página principal
+            </a>
+        </div>
+        <br>
+        <small>&copy; 2026 Kauê Rodrigues Mirom. Todos os direitos reservados.</small>
+    </footer>
 
     <script>
-        // Exemplo simples: se você definir um src, mostramos a imagem e ocultamos a dica
         const img = document.getElementById('perfilImagem');
         const hint = document.querySelector('.placeholder .hint');
-        if (img && img.src && img.src.trim() !== '') {
+        if (img && img.getAttribute('src') && img.getAttribute('src').trim() !== '') {
             img.style.display = 'block';
             hint.style.display = 'none';
         }
