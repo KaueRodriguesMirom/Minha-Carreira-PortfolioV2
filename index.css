@@ -1551,4 +1551,89 @@ div[data-i18n="infra_title"] {
     padding: 1px 4px;
   }
 }
+/* =========================================================
+   1. BOTÃO DE BAIXAR CURRÍCULO (ESTILO GLOSSY NEON)
+   ========================================================= */
+.curriculo-btn, 
+.btn-download {
+  position: relative;
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(180deg, #82c96b 0%, #61a648 100%);
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #9ef083;
+  box-shadow: 0 0 20px rgba(122, 206, 99, 0.45);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Reflexo de luz diagonal no topo do botão */
+.curriculo-btn::before,
+.btn-download::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 50%;
+  background: linear-gradient(
+    135deg, 
+    rgba(255, 255, 255, 0.4) 0%, 
+    rgba(255, 255, 255, 0) 60%
+  );
+  pointer-events: none;
+}
+
+.curriculo-btn:hover,
+.btn-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(122, 206, 99, 0.7);
+  filter: brightness(1.1);
+}
+
+/* =========================================================
+   2. LINKS DO TOPO (HEADER) COM SEPARADOR '>' VERDE NEON
+   ========================================================= */
+.nav-links, 
+.topper-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 10px;
+  background: #0d0d0d;
+}
+
+.nav-links a, 
+.topper-links a {
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover, 
+.topper-links a:hover {
+  color: #00ff88;
+}
+
+/* Insere o '>' verde estilo terminal entre cada link */
+.nav-links a:not(:last-child)::after,
+.topper-links a:not(:last-child)::after {
+  content: '>';
+  margin-left: 12px;
+  color: #00ff88;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+}
 
