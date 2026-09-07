@@ -1636,34 +1636,54 @@ div[data-i18n="infra_title"] {
   font-weight: bold;
   text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
 }
-/* =========================================================
-   ESTILOS DE NAVEGAÇÃO E BOTÃO DE CURRÍCULO (ESTILO NEON / SRE)
+/* /* =========================================================
+   ESTILOS DE NAVEGAÇÃO E BOTÃO DE CURRÍCULO (CYBERPUNK / TECH HUD)
    ========================================================= */
 
 :root {
-  --nav-bg: rgba(15, 23, 18, 0.85);
-  --accent-green: #00ff88;
-  --accent-glow: rgba(0, 255, 136, 0.4);
-  --text-main: #f2f2f7;
-  --text-muted: #a0a5b5;
-  --border-neon: rgba(0, 255, 136, 0.25);
+  --hud-bg: rgba(10, 15, 12, 0.9);
+  --neon-green: #5BBE42;
+  --neon-glow: rgba(91, 190, 66, 0.5);
+  --text-main: #ffffff;
+  --text-dim: #8fa394;
+  --border-tech: rgba(91, 190, 66, 0.4);
 }
 
-/* Container Principal do Menu */
+/* Container Principal do Menu com Estilo de HUD Futurista */
 nav[aria-label="Navegação principal"] {
-  display: flex;
-  justify-content: center;
+  position: relative;
+  display: inline-flex;
   align-items: center;
-  background: var(--nav-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-neon);
-  border-radius: 16px;
-  padding: 12px 24px;
-  max-width: 1000px;
+  background: var(--hud-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-tech);
+  border-radius: 4px;
+  padding: 10px 20px;
   margin: 20px auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
-              0 0 15px rgba(0, 255, 136, 0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8),
+              inset 0 0 15px rgba(91, 190, 66, 0.08);
+}
+
+/* Detalhes de cantos estilo painel sci-fi (opcional) */
+nav[aria-label="Navegação principal"]::before,
+nav[aria-label="Navegação principal"]::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-color: var(--neon-green);
+  border-style: solid;
+}
+nav[aria-label="Navegação principal"]::before {
+  top: -1px;
+  left: -1px;
+  border-width: 2px 0 0 2px;
+}
+nav[aria-label="Navegação principal"]::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 2px 2px 0;
 }
 
 /* Lista de Links */
@@ -1671,9 +1691,8 @@ nav[aria-label="Navegação principal"] ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 8px 16px;
+  gap: 12px;
   margin: 0;
   padding: 0;
 }
@@ -1681,33 +1700,44 @@ nav[aria-label="Navegação principal"] ul {
 /* Links Individuais */
 nav[aria-label="Navegação principal"] ul li a {
   position: relative;
-  color: var(--text-muted);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 0.95rem;
+  color: var(--text-dim);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
   font-weight: 600;
+  text-transform: uppercase;
   text-decoration: none;
-  padding: 6px 10px;
-  transition: color 0.3s ease;
+  padding: 6px 12px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
 }
 
-/* Efeito de separador '>' verde neon inspirado no terminal entre os itens */
-nav[aria-label="Navegação principal"] ul li:not(:last-child) a::after {
-  content: '>';
+/* Linha indicadora inferior que expande no hover */
+nav[aria-label="Navegação principal"] ul li a::after {
+  content: '';
   position: absolute;
-  right: -12px;
-  color: var(--accent-green);
-  font-weight: bold;
-  text-shadow: 0 0 8px var(--accent-glow);
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--neon-green);
+  transition: width 0.3s ease, left 0.3s ease;
+  box-shadow: 0 0 8px var(--neon-green);
 }
 
 /* Hover nos Links */
 nav[aria-label="Navegação principal"] ul li a:hover {
-  color: var(--accent-green);
-  text-shadow: 0 0 10px var(--accent-glow);
+  color: var(--text-main);
+  text-shadow: 0 0 10px var(--neon-green);
+}
+
+nav[aria-label="Navegação principal"] ul li a:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 /* =========================================================
-   BOTÃO DE BAIXAR CURRÍCULO (ESTILO GLOSSY NEON)
+   BOTÃO DE BAIXAR CURRÍCULO (ESTILO GLITCH / CYBER BUTTON)
    ========================================================= */
 
 .curriculo-btn {
@@ -1716,59 +1746,76 @@ nav[aria-label="Navegação principal"] ul li a:hover {
   align-items: center;
   justify-content: center;
   padding: 12px 28px;
-  background: linear-gradient(180deg, #82c96b 0%, #61a648 100%);
-  color: #000000;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 1rem;
-  font-weight: 800;
+  background: rgba(91, 190, 66, 0.1);
+  color: var(--neon-green);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
-  border-radius: 12px;
-  border: 1px solid #9ef083;
-  box-shadow: 0 0 20px rgba(122, 206, 99, 0.45);
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  border: 1px solid var(--neon-green);
+  box-shadow: 0 0 15px rgba(91, 190, 66, 0.2);
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
 }
 
-/* Reflexo de luz diagonal estilo vidro (Glossy) */
+/* Efeito de preenchimento energético ao passar o mouse */
 .curriculo-btn::before {
   content: '';
   position: absolute;
   top: 0;
-  left: -50%;
-  width: 200%;
-  height: 50%;
-  background: linear-gradient(
-    135deg, 
-    rgba(255, 255, 255, 0.45) 0%, 
-    rgba(255, 255, 255, 0) 60%
-  );
-  pointer-events: none;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--neon-green);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: -1;
 }
 
 .curriculo-btn:hover {
+  color: #0a0f0c;
+  box-shadow: 0 0 25px var(--neon-green), inset 0 0 15px rgba(255, 255, 255, 0.4);
+  text-shadow: none;
   transform: translateY(-2px);
-  box-shadow: 0 0 30px rgba(122, 206, 99, 0.7);
-  filter: brightness(1.1);
 }
 
-/* Responsividade para telas menores */
+.curriculo-btn:hover::before {
+  transform: translateX(100%);
+}
+
+/* Responsividade Mobile Fluida */
 @media (max-width: 768px) {
   nav[aria-label="Navegação principal"] {
+    width: 90%;
+    max-width: 400px;
     padding: 16px;
-    border-radius: 12px;
+    border-radius: 6px;
   }
   
   nav[aria-label="Navegação principal"] ul {
+    width: 100%;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
+    align-stretch: stretch;
+  }
+
+  nav[aria-label="Navegação principal"] ul li {
+    width: 100%;
     text-align: center;
   }
 
-  /* Remove o separador '>' em layout vertical mobile para melhor leitura */
-  nav[aria-label="Navegação principal"] ul li:not(:last-child) a::after {
+  nav[aria-label="Navegação principal"] ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(91, 190, 66, 0.1);
+  }
+
+  nav[aria-label="Navegação principal"] ul li a::after {
     display: none;
   }
 }
-
