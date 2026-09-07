@@ -5,97 +5,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mensagem enviada | Kauê Rodrigues Mirom</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      background-color: #0e0e0e;
+      padding: 20px;
+      background-color: #0b0e0c;
       color: #ffffff;
       font-family: 'Montserrat', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      justify-content: space-between;
+      min-height: 100vh;
       text-align: center;
+      background-image: 
+        radial-gradient(circle at 50% 20%, rgba(91, 190, 66, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 10% 90%, rgba(74, 174, 53, 0.05) 0%, transparent 40%);
+    }
+
+    .main-content {
+      max-width: 600px;
+      width: 100%;
+      background: rgba(20, 26, 22, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(91, 190, 66, 0.2);
+      border-top: 4px solid #5BBE42;
+      padding: 40px 24px;
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5),
+                  0 0 20px rgba(91, 190, 66, 0.1);
+      animation: fadeIn 0.8s ease-out;
+      margin: auto;
+    }
+
+    /* Ícone de Sucesso Animado */
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
+      background: rgba(91, 190, 66, 0.15);
+      border: 2px solid #5BBE42;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px rgba(91, 190, 66, 0.4);
+    }
+
+    .success-icon svg {
+      width: 32px;
+      height: 32px;
+      fill: #5BBE42;
     }
 
     h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 49px;
-  color: #5BBE42; /* verde claro */
-  font-weight: 700;
-  -webkit-text-stroke: 0.8px white; /* contorno branco */
-  text-shadow: 1px 1px 3px #000;
-  letter-spacing: 1px;
-  transition: transform 0.3s ease, text-shadow 0.3s ease;
-  cursor: default;
-}
-
-h1:hover {
-  transform: scale(1.05);
-  text-shadow: 0 0 12px #5BBE42, 0 0 24px #5BBE42;
-}
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(24px, 5vw, 36px);
+      color: #5BBE42;
+      font-weight: 700;
+      text-shadow: 0 0 15px rgba(91, 190, 66, 0.3);
+      margin: 0 0 16px 0;
+      letter-spacing: 0.5px;
+    }
 
     p {
-      font-size: 22px;
-      color: #ccc;
-      margin-bottom: 40px;
-      animation: fadeIn 1.5s ease-in-out;
+      font-size: clamp(14px, 2.5vw, 16px);
+      color: #a0a5b5;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .countdown-text {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 24px;
+      font-family: monospace;
     }
 
     .voltar-btn {
-      display: inline-block;
-      padding: 12px 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      max-width: 280px;
+      padding: 14px 24px;
       background: linear-gradient(135deg, #5BBE42, #4AAE35);
       color: #000;
-      font-weight: bold;
-      font-size: 18px;
-      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
       text-decoration: none;
       border-radius: 10px;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeIn 2s ease-in-out;
+      box-shadow: 0 0 15px rgba(91, 190, 66, 0.3);
+      transition: all 0.3s ease;
     }
 
     .voltar-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 12px #5BBE42;
+      transform: translateY(-2px);
+      box-shadow: 0 0 25px rgba(91, 190, 66, 0.6);
+      filter: brightness(1.1);
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(15px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      font-size: 16px;
-      color: #888;
+      padding: 20px;
+      font-size: 13px;
+      color: #666;
     }
-
-    
   </style>
 </head>
 <body>
 
-  <h1>Mensagem enviada com sucesso!</h1>
-  <p>Obrigado por entrar em contato. Em breve responderei com atenção e carinho.</p>
-  <a href="index.html" class="voltar-btn">← Voltar para a página inicial</a>
+  <!-- Espaçador invisível para centralização perfeita -->
+  <div></div>
 
-<script>
-  // Após 10 segundos (10000 ms), redireciona para a página inicial
-  setTimeout(function() {
-    window.location.href = "index.html";
-  }, 10000);
-</script>
+  <div class="main-content">
+    <div class="success-icon">
+      <!-- Ícone Check SVG -->
+      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+    </div>
+
+    <h1>Mensagem Enviada!</h1>
+    <p>Obrigado por entrar em contato. Sua mensagem foi recebida com sucesso e responderei em breve.</p>
+    
+    <div class="countdown-text">
+      Retornando à página inicial em <span id="segundos">10</span> segundos...
+    </div>
+
+    <a href="index.html" class="voltar-btn">← Voltar para o Início</a>
+  </div>
 
   <footer>
-    © 2025 • Portfólio de Kauê Rodrigues Mirom • TI • São Paulo, Brasil
+    &copy; 2026 &bull; Portfólio de Kauê Rodrigues Mirom &bull; São Paulo, Brasil
   </footer>
+
+  <script>
+    let segundosRestantes = 10;
+    const contadorElemento = document.getElementById('segundos');
+
+    const intervalo = setInterval(function() {
+      segundosRestantes--;
+      contadorElemento.textContent = segundosRestantes;
+
+      if (segundosRestantes <= 0) {
+        clearInterval(intervalo);
+        window.location.href = "index.html";
+      }
+    }, 1000);
+  </script>
 
 </body>
 </html>
