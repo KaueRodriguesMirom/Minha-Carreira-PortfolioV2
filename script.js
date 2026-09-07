@@ -842,16 +842,16 @@ function setLanguage(lang) {
  * @param {string} activeLang 
  */
 function updateLanguageUI(activeLang) {
-  const langButtons = document.querySelectorAll('.lang-btn, [data-lang]');
-  langButtons.forEach((btn) => {
-    const lang = btn.getAttribute('data-lang');
-    if (lang === activeLang) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
-  });
+  const flags = { pt: 'fi-br', en: 'fi-us', es: 'fi-es', fr: 'fi-fr', it: 'fi-it' };
+  const btnFlag = document.getElementById('btnFlag');
+  const btnLang = document.getElementById('btnLang');
+  
+  if (btnFlag && btnLang) {
+    btnFlag.className = `fi ${flags[activeLang] || 'fi-br'}`;
+    btnLang.textContent = activeLang.toUpperCase();
+  }
 }
+
 
 // --- EVENT LISTENERS & INICIALIZAÇÃO ---
 
@@ -888,6 +888,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// Adicione as funções globais esperadas pelo HTML
+function changeLanguage(lang) {
+  setLanguage(lang);
+  const dropdown = document.getElementById('langDropdown');
+  if (dropdown) dropdown.style.display = 'none';
+}
+
+function toggleLangMenu() {
+  const dropdown = document.getElementById('langDropdown');
+  if (dropdown) {
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+  }
+}
 
 
   
