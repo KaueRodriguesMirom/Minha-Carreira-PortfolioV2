@@ -5,159 +5,210 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contato | Kauê Rodrigues Mirom</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      background-color: #0e0e0e;
+      width: 100%;
+      overflow-x: hidden;
+      background-color: #0b0e0c;
       color: #ffffff;
       font-family: 'Montserrat', sans-serif;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(91, 190, 66, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(74, 174, 53, 0.04) 0%, transparent 40%);
+    }
+
+    .voltar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 24px 16px 10px;
+      padding: 10px 20px;
+      background: rgba(91, 190, 66, 0.1);
+      border: 1px solid rgba(91, 190, 66, 0.3);
+      color: #5BBE42;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .voltar-btn:hover {
+      background: rgba(91, 190, 66, 0.2);
+      border-color: #5BBE42;
+      transform: translateX(-3px);
     }
 
     header {
       text-align: center;
-      padding: 60px 20px 30px;
-      background-color: #111;
-      border-bottom: 2px solid #5BBE42;
+      padding: 40px 16px 30px;
+      background: linear-gradient(180deg, rgba(17,17,17,0.8) 0%, rgba(11,14,12,0.8) 100%);
+      border-bottom: 1px solid rgba(91, 190, 66, 0.2);
     }
 
     header h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 48px;
+      font-size: clamp(30px, 6vw, 44px);
       color: #5BBE42;
-      -webkit-text-stroke: 0.8px white;
-      text-shadow: 1px 1px 3px #000;
-      transition: transform 0.3s ease, text-shadow 0.3s ease;
-      cursor: default;
+      text-shadow: 0 0 20px rgba(91, 190, 66, 0.2);
+      margin: 0 0 10px 0;
     }
 
-    header h1:hover {
-      transform: scale(1.05);
-      text-shadow: 0 0 12px #5BBE42, 0 0 24px #5BBE42;
+    header p {
+      font-size: clamp(14px, 2.5vw, 16px);
+      color: #a0a5b5;
+      margin: 0;
     }
 
     .contato-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 40px;
-      gap: 40px;
+      padding: 30px 16px;
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    .formulario {
-      flex: 1 1 400px;
-      background-color: #1a1a1a;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    .formulario, .info-contato {
+      flex: 1 1 100%;
+      max-width: 100%;
+      background: rgba(20, 26, 22, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(91, 190, 66, 0.15);
+      border-left: 4px solid #5BBE42;
+      padding: 24px 20px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
 
-    .formulario h2 {
-      font-size: 28px;
+    .formulario h2, .info-contato h2 {
+      font-size: 22px;
       color: #5BBE42;
+      margin-top: 0;
       margin-bottom: 20px;
       font-family: 'Orbitron', sans-serif;
+    }
+
+    .formulario label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #a0a5b5;
+      margin-bottom: 6px;
     }
 
     .formulario input,
     .formulario textarea {
       width: 100%;
-      padding: 14px;
-      margin-bottom: 20px;
-      border: none;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 8px;
-      background-color: #2a2a2a;
+      background-color: rgba(0, 0, 0, 0.3);
       color: #fff;
-      font-size: 16px;
+      font-size: 15px;
       font-family: 'Montserrat', sans-serif;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
     }
 
     .formulario input:focus,
     .formulario textarea:focus {
-      background-color: #333;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-color: #5BBE42;
+      box-shadow: 0 0 10px rgba(91, 190, 66, 0.25);
       outline: none;
     }
 
     .formulario button {
+      width: 100%;
       background: linear-gradient(135deg, #5BBE42, #4AAE35);
       color: #000;
-      padding: 12px 24px;
+      padding: 14px;
       border: none;
       border-radius: 10px;
-      font-size: 18px;
-      font-weight: bold;
+      font-size: 16px;
+      font-weight: 800;
       cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(91, 190, 66, 0.3);
     }
 
     .formulario button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 12px #5BBE42;
+      transform: translateY(-2px);
+      box-shadow: 0 0 25px rgba(91, 190, 66, 0.6);
+      filter: brightness(1.1);
     }
 
-    .info-contato {
-      flex: 1 1 300px;
-      background-color: #1a1a1a;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
 
-    .info-contato h2 {
-      font-size: 28px;
-      color: #5BBE42;
-      margin-bottom: 20px;
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .info-contato p {
-      font-size: 18px;
-      margin-bottom: 15px;
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
       color: #ccc;
+      font-size: 15px;
+      word-break: break-word;
     }
 
-    .info-contato a {
-      color: #5BBE42;
+    .info-item svg {
+      width: 20px;
+      height: 20px;
+      fill: #5BBE42;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .info-item a {
+      color: #fff;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .info-item a:hover {
+      color: #5BBE42;
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      font-size: 16px;
-      color: #888;
+      padding: 30px 16px;
+      font-size: 13px;
+      color: #777;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 20px;
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
+      .formulario, .info-contato {
+        flex: 1 1 440px;
+        padding: 32px;
+      }
+      .formulario button {
+        width: auto;
+        padding: 12px 32px;
+      }
+      .voltar-btn {
+        margin: 30px 40px;
+      }
       .contato-container {
-        flex-direction: column;
-        align-items: center;
+        padding: 40px 20px;
+        gap: 30px;
       }
     }
-
-        .voltar-btn {
-      display: inline-block;
-      margin: 30px 40px;
-      padding: 12px 24px;
-      background: linear-gradient(135deg, #5BBE42, #4AAE35);
-      color: #000;
-      font-weight: bold;
-      font-size: 18px;
-      font-family: 'Montserrat', sans-serif;
-      text-decoration: none;
-      border-radius: 10px;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .voltar-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 12px #5BBE42;
-    }
-
   </style>
 </head>
 <body>
@@ -166,7 +217,7 @@
 
   <header>
     <h1>Fale Comigo</h1>
-    <p>Entre em contato para colaborações, dúvidas ou oportunidades.</p>
+    <p>Entre em contato para colaborações, dúvidas ou oportunidades profissionais.</p>
   </header>
 
   <section class="contato-container">
@@ -174,37 +225,70 @@
     <div class="formulario">
       <h2>Envie uma mensagem</h2>
       <form action="https://formsubmit.co/kauemi.rodrigues@gmail.com" method="POST">
-        <input type="text" name="nome" placeholder="Seu nome" required />
-        <input type="email" name="email" placeholder="Seu e-mail" required />
-        <textarea name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome..." required />
+        
+        <label for="email">Seu e-mail</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+        
+        <label for="mensagem">Sua mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
 
         <!-- Proteção contra spam -->
         <input type="hidden" name="_captcha" value="false">
-
         <!-- Redirecionamento após envio -->
         <input type="hidden" name="_next" value="https://kauerodriguesmirom.github.io/Minha-Carreira-PortfolioV2/obrigado.html">
 
-        <button type="submit">Enviar</button>
+        <button type="submit">Enviar Mensagem</button>
       </form>
     </div>
 
     <!-- Informações de contato -->
     <div class="info-contato">
       <h2>Informações</h2>
-      <p><strong>Email:</strong> <a href="mailto:kauemi.rodrigues@gmail.com">kauemi.rodrigues@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/kauerodriguesmirom" target="_blank">linkedin.com/in/kauerodriguesmirom</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/KaueRodriguesMirom" target="_blank">github.com/KaueRodriguesMirom</a></p>
-      <p><strong>Localização:</strong> São Paulo, Brasil</p>
+      <div class="info-list">
+        <div class="info-item">
+          <!-- Ícone Email -->
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <div>
+            <span style="display:block; font-size:12px; color:#a0a5b5;">E-MAIL</span>
+            <a href="mailto:kauemi.rodrigues@gmail.com">kauemi.rodrigues@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <!-- Ícone LinkedIn -->
+          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.79v8.37H6.46v-8.37M7.86 6.31a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+          <div>
+            <span style="display:block; font-size:12px; color:#a0a5b5;">LINKEDIN</span>
+            <a href="https://linkedin.com/in/kauerodriguesmirom" target="_blank" rel="noopener">linkedin.com/in/kauerodriguesmirom</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <!-- Ícone GitHub -->
+          <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          <div>
+            <span style="display:block; font-size:12px; color:#a0a5b5;">GITHUB</span>
+            <a href="https://github.com/KaueRodriguesMirom" target="_blank" rel="noopener">github.com/KaueRodriguesMirom</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <!-- Ícone Localização -->
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          <div>
+            <span style="display:block; font-size:12px; color:#a0a5b5;">LOCALIZAÇÃO</span>
+            <span style="color: #fff; font-weight: 600;">São Paulo, Brasil</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Kauê Rodrigues Mirom. Todos os direitos reservados.
+    &copy; 2026 Kauê Rodrigues Mirom. Todos os direitos reservados.
   </footer>
 
 </body>
-
 </html>
-
-
-
