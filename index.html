@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Minha Carreira Em Um Site!</title>
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -530,6 +531,17 @@
   <footer>
     © 2026 • Portfólio de Kauê Rodrigues Mirom • TI • São Paulo, Brasil
   </footer>
+
+  <div class="lang-selector">
+  <button class="lang-btn" onclick="toggleLangMenu()" title="Mudar Idioma">🌐 PT</button>
+  <div class="lang-dropdown" id="langDropdown">
+    <a href="#" onclick="changeLanguage('en')"><span class="fi fi-us"></span> English</a>
+    <a href="#" onclick="changeLanguage('es')"><span class="fi fi-es"></span> Español</a>
+    <a href="#" onclick="changeLanguage('it')"><span class="fi fi-it"></span> Italiano</a>
+    <a href="#" onclick="changeLanguage('pt')"><span class="fi fi-br"></span> Português</a>
+  </div>
+</div>
+
 
 <button class="voltar-topo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Voltar ao topo">↑</button>
 
