@@ -2117,5 +2117,221 @@ section.formacao .formacao-item {
 }
 
 }
+/* =========================================================
+   ESTILOS TECH & MODERNO — SEÇÃO DE EXPERIÊNCIA (CYBERPUNK HUD)
+   ========================================================= */
+
+:root {
+  --exp-bg: #090e0b;
+  --exp-card-bg: rgba(13, 20, 16, 0.85);
+  --neon-green: #5BBE42;
+  --neon-glow: rgba(91, 190, 66, 0.4);
+  --text-main: #ffffff;
+  --text-muted: #9aa89d;
+  --border-tech: rgba(91, 190, 66, 0.25);
+}
+
+/* Container Geral da Seção */
+section.experiencia {
+  position: relative;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 40px 24px;
+  background: var(--exp-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-tech);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8),
+              inset 0 0 30px rgba(91, 190, 66, 0.03);
+  overflow: hidden;
+}
+
+/* Efeito de luz superior na seção */
+section.experiencia::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+/* Título Principal da Seção */
+section.experiencia > h3[data-i18n="exp_title"] {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 36px 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+section.experiencia > h3[data-i18n="exp_title"]::before {
+  content: '//';
+  color: var(--neon-green);
+  font-family: monospace;
+  font-size: 1.3rem;
+  text-shadow: 0 0 10px var(--neon-glow);
+}
+
+section.experiencia > h3[data-i18n="exp_title"]::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(91, 190, 66, 0.4), transparent);
+  margin-left: 12px;
+}
+
+/* Grid de Blocos de Experiência */
+.grid-blocos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* Bloco Individual de Experiência */
+.experiencia-bloco {
+  position: relative;
+  background: var(--exp-card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-tech);
+  border-left: 4px solid var(--neon-green);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6),
+              0 0 15px rgba(91, 190, 66, 0.04);
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.experiencia-bloco:hover {
+  border-color: rgba(91, 190, 66, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Cabeçalho do Bloco (Logo e Empresa) */
+.experiencia-header,
+.experiencia-header.centralizado {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(91, 190, 66, 0.15);
+  justify-content: flex-start;
+}
+
+.logo-vivo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(91, 190, 66, 0.3));
+}
+
+.empresa-nome {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--neon-green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  text-shadow: 0 0 8px var(--neon-glow);
+}
+
+/* Informações Centrais do Cargo */
+.info-centralizada .cargo {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+
+.info-centralizada .periodo {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: rgba(91, 190, 66, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(91, 190, 66, 0.2);
+  margin-bottom: 6px;
+}
+
+.info-centralizada .local {
+  font-size: 0.85rem;
+  color: #7b8c80;
+  margin: 0 0 16px 0;
+}
+
+.info-centralizada .descricao {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* Grid Dinâmico de Tópicos / Atividades */
+.topicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.topicos p {
+  background: rgba(10, 15, 12, 0.6);
+  border: 1px solid rgba(91, 190, 66, 0.15);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.topicos p:hover {
+  border-color: var(--neon-green);
+  background: rgba(91, 190, 66, 0.04);
+  box-shadow: 0 0 12px rgba(91, 190, 66, 0.1);
+  transform: translateY(-2px);
+}
+
+.topicos p strong {
+  color: #ffffff;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+  section.experiencia {
+    padding: 24px 16px;
+    margin: 20px 12px;
+    border-radius: 12px;
+  }
+
+  .experiencia-bloco {
+    padding: 20px;
+  }
+
+  .topicos {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
