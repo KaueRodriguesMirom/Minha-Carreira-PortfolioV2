@@ -6,129 +6,207 @@
   <title>Projetos | Kauê Rodrigues Mirom</title>
   <link rel="stylesheet" href="index.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-main: #0a0d0a;
+      --bg-card: rgba(13, 20, 15, 0.9);
+      --bg-header: rgba(10, 13, 10, 0.95);
+      --neon-green: #00ff88;
+      --neon-glow: rgba(0, 255, 136, 0.25);
+      --text-main: #ffffff;
+      --text-muted: #9ca3af;
+      --border-tech: #1b382b;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      background-color: #0e0e0e;
-      color: #ffffff;
+      background-color: var(--bg-main);
+      background-image: radial-gradient(circle at 50% 0%, rgba(0, 255, 136, 0.04) 0%, transparent 60%);
+      color: var(--text-main);
       font-family: 'Montserrat', sans-serif;
     }
 
+    /* Botão Voltar Estilizado */
+    .voltar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 30px 40px;
+      padding: 10px 20px;
+      background: rgba(0, 255, 136, 0.08);
+      color: var(--neon-green);
+      font-weight: 600;
+      font-size: 0.85rem;
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 255, 136, 0.3);
+      box-shadow: 0 0 10px rgba(0, 255, 136, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .voltar-btn:hover {
+      background: var(--neon-green);
+      color: #000000;
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px var(--neon-green);
+    }
+
+    /* Header Estilo HUD */
     header {
+      position: relative;
       text-align: center;
-      padding: 60px 20px 30px;
-      background-color: #111;
-      border-bottom: 2px solid #5BBE42;
+      padding: 50px 20px 40px;
+      background-color: var(--bg-header);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-tech);
+      border-top: 1px solid var(--border-tech);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
     header h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 48px;
-      color: #5BBE42;
-      -webkit-text-stroke: 0.8px white;
-      text-shadow: 1px 1px 3px #000;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--neon-green);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0 0 12px 0;
+      text-shadow: 0 0 12px var(--neon-glow);
       transition: transform 0.3s ease, text-shadow 0.3s ease;
       cursor: default;
+      -webkit-text-stroke: unset;
     }
 
     header h1:hover {
-      transform: scale(1.05);
-      text-shadow: 0 0 12px #5BBE42, 0 0 24px #5BBE42;
+      transform: scale(1.02);
+      text-shadow: 0 0 20px var(--neon-green), 0 0 35px var(--neon-glow);
     }
 
     header p {
-      font-size: 22px;
-      margin-top: 10px;
-      color: #ccc;
+      font-size: 1.05rem;
+      margin: 0;
+      color: var(--text-muted);
     }
 
+    /* Container de Projetos (Grid Tech) */
     .projetos-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
       padding: 40px;
+      max-width: 1250px;
+      margin: 0 auto;
     }
 
+    /* Cartão do Projeto */
     .projeto-card {
-      background-color: #1a1a1a;
+      background-color: var(--bg-card);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       border-radius: 12px;
+      border: 1px solid var(--border-tech);
+      border-left: 3px solid var(--neon-green);
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
     }
 
     .projeto-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+      transform: translateY(-5px);
+      border-color: rgba(0, 255, 136, 0.5);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6),
+                  0 0 15px rgba(0, 255, 136, 0.15);
     }
 
     .projeto-img {
       width: 100%;
-      height: 200px;
+      height: 190px;
       object-fit: cover;
+      border-bottom: 1px solid var(--border-tech);
+      filter: brightness(0.9);
+      transition: filter 0.3s ease;
+    }
+
+    .projeto-card:hover .projeto-img {
+      filter: brightness(1.05);
     }
 
     .projeto-conteudo {
-      padding: 20px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
     .projeto-conteudo h3 {
-      font-size: 24px;
-      color: #5BBE42;
-      margin-bottom: 10px;
+      font-size: 1.15rem;
+      color: #ffffff;
+      margin: 0 0 12px 0;
       font-family: 'Orbitron', sans-serif;
+      letter-spacing: 0.5px;
+      line-height: 1.4;
     }
 
     .projeto-conteudo p {
-      font-size: 18px;
-      color: #ddd;
-      margin-bottom: 15px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0 0 24px 0;
+      flex-grow: 1;
     }
 
+    /* Botão do Projeto */
     .projeto-conteudo a {
-      display: inline-block;
-      background-color: #5BBE42;
-      color: #000;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--neon-green);
+      color: #000000;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      align-self: flex-start;
+      box-shadow: 0 0 8px rgba(0, 255, 136, 0.2);
     }
 
     .projeto-conteudo a:hover {
-      background-color: #6FD850;
+      background-color: #6fd850;
+      box-shadow: 0 0 15px var(--neon-green);
+      transform: translateY(-1px);
     }
 
+    /* Rodapé */
     footer {
       text-align: center;
-      padding: 30px;
-      font-size: 16px;
-      color: #888;
+      padding: 35px 20px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-tech);
+      background-color: var(--bg-header);
     }
 
-    .voltar-btn {
-  display: inline-block;
-  margin: 30px 40px;
-  padding: 12px 24px;
-  background: linear-gradient(135deg, #5BBE42, #4AAE35);
-  color: #000;
-  font-weight: bold;
-  font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
-  border-radius: 10px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.voltar-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 12px #5BBE42;
-}
-
+    @media (max-width: 768px) {
+      .voltar-btn {
+        margin: 20px 20px 0;
+      }
+      .projetos-container {
+        padding: 20px;
+        gap: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -170,7 +248,7 @@
       </div>
     </div>
 
-        <!-- Projeto 4 -->
+    <!-- Projeto 4 -->
     <div class="projeto-card">
       <img src="projeto4.jpg" alt="Projeto 4" class="projeto-img" />
       <div class="projeto-conteudo">
@@ -180,7 +258,7 @@
       </div>
     </div>
 
-            <!-- Projeto 5 -->
+    <!-- Projeto 5 -->
     <div class="projeto-card">
       <img src="projeto5.jpg" alt="Projeto 5" class="projeto-img" />
       <div class="projeto-conteudo">
@@ -190,17 +268,15 @@
       </div>
     </div>
 
-               <!-- Projeto 6 -->
+    <!-- Projeto 6 -->
     <div class="projeto-card">
       <img src="projeto6.jpg" alt="Projeto 6" class="projeto-img" />
       <div class="projeto-conteudo">
-        <h3>Simulador de Jogo Web - Carreira Política Brasileira </h3>
+        <h3>Simulador de Jogo Web - Carreira Política Brasileira</h3>
         <p>O projeto foi construído utilizando HTML, CSS e JavaScript, com uma arquitetura modular que separa a interface, regras de negócio e dados da simulação.</p>
         <a href="https://github.com/KaueRodriguesMirom/Jogo_De_Politica-" target="_blank">Ver Projeto</a>
       </div>
     </div>
-
-    <!-- Adicione mais projetos aqui -->
   </section>
 
   <footer>
@@ -208,5 +284,3 @@
   </footer>
 </body>
 </html>
-
-
