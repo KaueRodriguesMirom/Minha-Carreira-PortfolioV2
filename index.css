@@ -2562,5 +2562,102 @@ footer {
     gap: 20px;
   }
 }
+/* ==========================================================================
+   ESTILOS MODERNOS E TECH — SEÇÃO DE CURSOS COMPLEMENTARES
+   ================================================================          */
+
+.cursos {
+  position: relative;
+  margin: 40px auto;
+  max-width: 1050px;
+  padding: 35px 30px;
+  background: rgba(13, 20, 15, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 14px;
+  border: 1px solid rgba(91, 190, 66, 0.2);
+  border-left: 3px solid #5BBE42;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-family: 'Poppins', sans-serif;
+  color: #f3f4f6;
+}
+
+.cursos:hover {
+  border-color: rgba(91, 190, 66, 0.6);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 15px rgba(91, 190, 66, 0.08);
+}
+
+.cursos h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.35rem;
+  color: #4AAEFD;
+  margin-top: 0;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 10px rgba(74, 174, 253, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cursos p {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #d1d5db;
+  margin-bottom: 20px;
+}
+
+.cursos p strong {
+  color: #5BBE42;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
+
+.cursos ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.cursos ul li {
+  background: rgba(20, 28, 22, 0.6);
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-left: 2px solid #4AAEFD;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #d1d5db;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.cursos ul li:hover {
+  transform: translateX(4px);
+  background: rgba(25, 38, 28, 0.85);
+  border-color: rgba(91, 190, 66, 0.4);
+  border-left-color: #5BBE42;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 10px rgba(91, 190, 66, 0.1);
+}
+
+.cursos ul li strong {
+  color: #5BBE42;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.88rem;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .cursos {
+    margin: 20px 15px;
+    padding: 25px 20px;
+  }
+}
 
 
