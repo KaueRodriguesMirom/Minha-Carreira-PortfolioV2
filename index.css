@@ -1337,4 +1337,49 @@ header .center img {
   color: #00ff88;
 }
 
+/* Botão Voltar ao Topo Moderno */
+.voltar-topo {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(10, 13, 10, 0.75);
+  border: 1px solid rgba(0, 255, 136, 0.4);
+  color: #00ff88;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 255, 136, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 99;
+}
+
+/* Ícone SVG interno */
+.voltar-topo .seta-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Efeito Hover e Interação */
+.voltar-topo:hover {
+  background: #00ff88;
+  color: #0a0d0a;
+  border-color: #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  transform: translateY(-4px);
+}
+
+.voltar-topo:hover .seta-icon {
+  transform: translateY(-2px);
+}
+
+.voltar-topo:active {
+  transform: translateY(0);
+}
 
