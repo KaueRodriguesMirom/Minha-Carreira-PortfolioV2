@@ -16,17 +16,32 @@
 </head>
 <body>
 
-  <div class="conteiner">
-    <nav aria-label="Navegação principal">
-      <ul>
-        <li><a href="index.html">Sobre mim</a></li>
-        <li><a href="project.html">Projetos</a></li>
-        <li><a href="contact.html">Contato</a></li>
-        <li><a href="habilidades.html">Habilidades Técnicas</a></li>
-        <li><a href="conquistas.html">Conquistas</a></li> 
-        <li><a href="meugithub.html">Github</a></li> 
-      </ul>
-    </nav>
+<div class="lang-selector">
+  <button class="lang-btn" onclick="toggleLangMenu()" title="Mudar Idioma">🌐 <span class="lang-text">PT</span></button>
+  <div class="lang-dropdown" id="langDropdown">
+    <a href="#" onclick="changeLanguage('en')"><span class="fi fi-us"></span> English</a>
+    <a href="#" onclick="changeLanguage('es')"><span class="fi fi-es"></span> Español</a>
+    <a href="#" onclick="changeLanguage('it')"><span class="fi fi-it"></span> Italiano</a>
+    <a href="#" onclick="changeLanguage('pt')"><span class="fi fi-br"></span> Português</a>
+  </div>
+</div>
+
+<nav aria-label="Navegação principal">
+  <ul>
+    <li><a href="index.html" data-i18n="nav_about">Sobre mim</a></li>
+    <li><a href="project.html" data-i18n="nav_projects">Projetos</a></li>
+    <li><a href="contact.html" data-i18n="nav_contact">Contato</a></li>
+    <li><a href="habilidades.html" data-i18n="nav_skills">Habilidades Técnicas</a></li>
+    <li><a href="conquistas.html" data-i18n="nav_achievements">Conquistas</a></li> 
+    <li><a href="meugithub.html">Github</a></li> 
+  </ul>
+</nav>
+
+<a href="Curriculo_Kaue.pdf" class="curriculo-btn" download data-i18n="download_cv">Baixar Currículo!</a>
+
+<section class="sobre">
+  <h3 data-i18n="about_title">Sobre mim</h3>
+  </section>
 
     <header>
       <div class="center">
@@ -117,9 +132,6 @@
 
 </div>
 
-
-
-      <a href="Curriculo_Kaue.pdf" class="curriculo-btn" download>Baixar Currículo!</a>
     </header>
 
     <main>
