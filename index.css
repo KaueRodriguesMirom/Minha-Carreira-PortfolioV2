@@ -2333,5 +2333,234 @@ section.experiencia > h3[data-i18n="exp_title"]::after {
   }
 }
 
+/* =========================================================
+   ESTILOS TECH & MODERNO — PÁGINA DE PROJETOS (CYBERPUNK HUD)
+   ========================================================= */
+
+:root {
+  --bg-main: #070b09;
+  --bg-card: rgba(12, 18, 14, 0.85);
+  --bg-header: rgba(10, 15, 12, 0.9);
+  --neon-green: #5BBE42;
+  --neon-glow: rgba(91, 190, 66, 0.4);
+  --text-main: #ffffff;
+  --text-muted: #9aa89d;
+  --border-tech: rgba(91, 190, 66, 0.25);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  background-image: radial-gradient(circle at 50% 0%, rgba(91, 190, 66, 0.05) 0%, transparent 70%);
+  color: var(--text-main);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Botão Voltar Estilizado */
+.voltar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 30px 40px;
+  padding: 10px 20px;
+  background: rgba(91, 190, 66, 0.1);
+  color: var(--neon-green);
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid var(--neon-green);
+  box-shadow: 0 0 10px rgba(91, 190, 66, 0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.voltar-btn:hover {
+  background: var(--neon-green);
+  color: #070b09;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px var(--neon-green);
+  text-shadow: none;
+}
+
+/* Header Estilo HUD */
+header {
+  position: relative;
+  text-align: center;
+  padding: 50px 20px 40px;
+  background-color: var(--bg-header);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-tech);
+  border-top: 1px solid var(--border-tech);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--neon-green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 10px 0;
+  text-shadow: 0 0 15px var(--neon-glow);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  cursor: default;
+  -webkit-text-stroke: unset;
+}
+
+header h1:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 20px var(--neon-green), 0 0 40px var(--neon-glow);
+}
+
+header p {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--text-muted);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Container de Projetos (Grid Tech) */
+.projetos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cartão do Projeto */
+.projeto-card {
+  position: relative;
+  background-color: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid var(--border-tech);
+  border-left: 3px solid var(--neon-green);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.projeto-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(91, 190, 66, 0.6);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8),
+              0 0 20px rgba(91, 190, 66, 0.1);
+}
+
+.projeto-img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-tech);
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.projeto-card:hover .projeto-img {
+  filter: brightness(1.05);
+}
+
+.projeto-conteudo {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.projeto-conteudo h3 {
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.projeto-conteudo p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  flex-grow: 1;
+}
+
+/* Botão do Projeto */
+.projeto-conteudo a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(91, 190, 66, 0.1);
+  color: var(--neon-green);
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: 1px solid var(--neon-green);
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.projeto-conteudo a:hover {
+  background: var(--neon-green);
+  color: #070b09;
+  box-shadow: 0 0 15px var(--neon-green);
+  transform: translateY(-1px);
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.85rem;
+  color: #6c7d71;
+  border-top: 1px solid rgba(91, 190, 66, 0.1);
+  background-color: var(--bg-header);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+  .voltar-btn {
+    margin: 20px 20px 0;
+  }
+
+  header {
+    padding: 35px 16px 25px;
+    margin-top: 15px;
+  }
+
+  .projetos-container {
+    padding: 20px;
+    gap: 20px;
+  }
+}
 
 
