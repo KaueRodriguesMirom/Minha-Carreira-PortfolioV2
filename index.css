@@ -1636,4 +1636,139 @@ div[data-i18n="infra_title"] {
   font-weight: bold;
   text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
 }
+/* =========================================================
+   ESTILOS DE NAVEGAÇÃO E BOTÃO DE CURRÍCULO (ESTILO NEON / SRE)
+   ========================================================= */
+
+:root {
+  --nav-bg: rgba(15, 23, 18, 0.85);
+  --accent-green: #00ff88;
+  --accent-glow: rgba(0, 255, 136, 0.4);
+  --text-main: #f2f2f7;
+  --text-muted: #a0a5b5;
+  --border-neon: rgba(0, 255, 136, 0.25);
+}
+
+/* Container Principal do Menu */
+nav[aria-label="Navegação principal"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-neon);
+  border-radius: 16px;
+  padding: 12px 24px;
+  max-width: 1000px;
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
+              0 0 15px rgba(0, 255, 136, 0.05);
+}
+
+/* Lista de Links */
+nav[aria-label="Navegação principal"] ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links Individuais */
+nav[aria-label="Navegação principal"] ul li a {
+  position: relative;
+  color: var(--text-muted);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: color 0.3s ease;
+}
+
+/* Efeito de separador '>' verde neon inspirado no terminal entre os itens */
+nav[aria-label="Navegação principal"] ul li:not(:last-child) a::after {
+  content: '>';
+  position: absolute;
+  right: -12px;
+  color: var(--accent-green);
+  font-weight: bold;
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* Hover nos Links */
+nav[aria-label="Navegação principal"] ul li a:hover {
+  color: var(--accent-green);
+  text-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* =========================================================
+   BOTÃO DE BAIXAR CURRÍCULO (ESTILO GLOSSY NEON)
+   ========================================================= */
+
+.curriculo-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  background: linear-gradient(180deg, #82c96b 0%, #61a648 100%);
+  color: #000000;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #9ef083;
+  box-shadow: 0 0 20px rgba(122, 206, 99, 0.45);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Reflexo de luz diagonal estilo vidro (Glossy) */
+.curriculo-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 50%;
+  background: linear-gradient(
+    135deg, 
+    rgba(255, 255, 255, 0.45) 0%, 
+    rgba(255, 255, 255, 0) 60%
+  );
+  pointer-events: none;
+}
+
+.curriculo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(122, 206, 99, 0.7);
+  filter: brightness(1.1);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  nav[aria-label="Navegação principal"] {
+    padding: 16px;
+    border-radius: 12px;
+  }
+  
+  nav[aria-label="Navegação principal"] ul {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  /* Remove o separador '>' em layout vertical mobile para melhor leitura */
+  nav[aria-label="Navegação principal"] ul li:not(:last-child) a::after {
+    display: none;
+  }
+}
 
