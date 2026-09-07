@@ -1786,36 +1786,3 @@ nav[aria-label="Navegação principal"] ul li a:hover::after {
   transform: translateX(100%);
 }
 
-/* Responsividade Mobile Fluida */
-@media (max-width: 768px) {
-  nav[aria-label="Navegação principal"] {
-    width: 90%;
-    max-width: 400px;
-    padding: 16px;
-    border-radius: 6px;
-  }
-  
-  nav[aria-label="Navegação principal"] ul {
-    width: 100%;
-    flex-direction: column;
-    gap: 8px;
-    align-stretch: stretch;
-  }
-
-  nav[aria-label="Navegação principal"] ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  nav[aria-label="Navegação principal"] ul li a {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(91, 190, 66, 0.1);
-  }
-
-  nav[aria-label="Navegação principal"] ul li a::after {
-    display: none;
-  }
-}
