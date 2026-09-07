@@ -8,23 +8,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Brawler:wght@700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
-<div class="lang-selector">
-  <button class="lang-btn" onclick="toggleLangMenu()" title="Mudar Idioma"><span class="lang-text">PT</span></button>
-  <div class="lang-dropdown" id="langDropdown">
-    <a href="#" onclick="changeLanguage('en')"><span class="fi fi-us"></span> English</a>
-    <a href="#" onclick="changeLanguage('es')"><span class="fi fi-es"></span> Español</a>
-    <a href="#" onclick="changeLanguage('it')"><span class="fi fi-it"></span> Italiano</a>
-    <a href="#" onclick="changeLanguage('pt')"><span class="fi fi-br"></span> Português</a>
-  </div>
-</div>
 
 <nav aria-label="Navegação principal">
   <ul>
@@ -43,8 +32,7 @@
       </div>
       <h1>Kauê Rodrigues Mirom</h1>
       
-      <!-- Subtítulo e Cargo Profissional -->
-<h2 style="
+      <h2 style="
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 1.15rem;
   font-weight: 500;
@@ -70,33 +58,21 @@
     box-shadow: 0 0 10px rgba(0, 255, 136, 0.15);
   ">
     <span style="height: 6px; width: 6px; background-color: #00ff88; border-radius: 50%; display: inline-block; box-shadow: 0 0 6px #00ff88;"></span>
-    Analista de Suporte a Sistemas Jr
+    <span data-i18n="header_role">Analista de Suporte a Sistemas Jr</span>
   </span>
   <br>
-  Especialista em <strong style="color: #00ff88; font-weight: 700;">SRE & DevOps</strong> na 
+  <span data-i18n="header_spec">Especialista em</span> <strong style="color: #00ff88; font-weight: 700;">SRE & DevOps</strong> <span data-i18n="header_at">na</span> 
   <span style="color: #ffffff; font-weight: 700; border-bottom: 2px solid #00ff88; padding-bottom: 2px;">Vivo (Telefônica Brasil)</span>
 </h2>
 
-<span data-i18n="header_role">Analista de Suporte a Sistemas Jr</span>
-<span data-i18n="header_spec">Especialista em</span> <strong style="...">SRE & DevOps</strong> <span data-i18n="header_at">na</span>
-<div style="...">> Core & Metodologias</div>
-<div style="...">> Observabilidade & Monitoramento</div>
+      <div style="background-color: #0a0d0a; border: 1px solid #1b382b; border-radius: 12px; padding: 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: left; max-width: 100%; box-shadow: 0 4px 20px rgba(0, 255, 128, 0.05); margin: 20px 0;">
 
-<div style="..." data-i18n="core_title">> Core & Metodologias</div>
-<div style="..." data-i18n="obs_title">> Observabilidade & Monitoramento</div>
-
-      <!-- REMOVE O TÍTULO INTERNO PARA NÃO REPETIR COM O QUE JÁ EXISTE FORA -->
-
-<div style="background-color: #0a0d0a; border: 1px solid #1b382b; border-radius: 12px; padding: 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: left; max-width: 100%; box-shadow: 0 4px 20px rgba(0, 255, 128, 0.05); margin: 20px 0;">
-
-  <!-- STATUS ONLINE -->
   <div style="display: flex; align-items: center; justify-content: flex-end; margin-bottom: 12px;">
     <span style="height: 8px; width: 8px; background-color: #00ff88; border-radius: 50%; display: inline-block; margin-right: 6px; box-shadow: 0 0 8px #00ff88;"></span>
     <span style="color: #00ff88; font-size: 0.7rem; font-weight: bold; letter-spacing: 1px; font-family: monospace;">SYSTEM ONLINE</span>
   </div>
 
-  <!-- CORE & METODOLOGIAS -->
-  <div style="color: #6b7280; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">> Core & Metodologias</div>
+  <div style="color: #6b7280; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;" data-i18n="core_title">> Core & Metodologias</div>
   <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
     <span style="background-color: #00ff88; color: #000000; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">DevOps</span>
     <span style="background-color: #00ff88; color: #000000; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">SRE</span>
@@ -105,29 +81,26 @@
     <span style="background-color: #00ff88; color: #000000; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">Full Stack</span>
   </div>
 
-  <!-- OBSERVABILIDADE -->
-  <div style="color: #6b7280; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">> Observabilidade & Monitoramento</div>
+  <div style="color: #6b7280; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;" data-i18n="obs_title">> Observabilidade & Monitoramento</div>
   <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
     <span style="background-color: #00ff88; color: #000000; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">Observability</span>
-    <span style="background-color: #132a1c; color: #00ff88; border: 1px solid #1b4d32; font-size: 0.8rem; padding: 4px 10px; border-radius: 6px;">Monitoramento</span>
+    <span style="background-color: #132a1c; color: #00ff88; border: 1px solid #1b4d32; font-size: 0.8rem; padding: 4px 10px; border-radius: 6px;" data-i18n="tag_monit">Monitoramento</span>
     <span style="background-color: #00ff88; color: #000000; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">Zabbix</span>
     <span style="background-color: #00ff88; color: #000000; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">Elastic</span>
     <span style="background-color: #00ff88; color: #000000; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">Data Analytics</span>
   </div>
 
-  <!-- AUTOMAÇÃO -->
-  <div style="color: #6b7280; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">> Automação & Continuous Delivery</div>
+  <div style="color: #6b7280; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;" data-i18n="auto_title">> Automação & Continuous Delivery</div>
   <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
-    <span style="background-color: #132a1c; color: #00ff88; border: 1px solid #1b4d32; font-size: 0.8rem; padding: 4px 10px; border-radius: 6px;">Automação</span>
+    <span style="background-color: #132a1c; color: #00ff88; border: 1px solid #1b4d32; font-size: 0.8rem; padding: 4px 10px; border-radius: 6px;" data-i18n="tag_auto">Automação</span>
     <span style="background-color: #00ff88; color: #000000; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">Jenkins</span>
     <span style="background-color: #132a1c; color: #00ff88; border: 1px solid #1b4d32; font-size: 0.8rem; padding: 4px 10px; border-radius: 6px;">Control-M</span>
     <span style="background-color: #00ff88; color: #000000; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">Shell</span>
   </div>
 
-  <!-- INFRAESTRUTURA -->
-  <div style="color: #6b7280; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">> Infraestrutura & Base</div>
+  <div style="color: #6b7280; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;" data-i18n="infra_title">> Infraestrutura & Base</div>
   <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-    <span style="background-color: #132a1c; color: #00ff88; border: 1px solid #1b4d32; font-size: 0.8rem; padding: 4px 10px; border-radius: 6px;">Infraestrutura</span>
+    <span style="background-color: #132a1c; color: #00ff88; border: 1px solid #1b4d32; font-size: 0.8rem; padding: 4px 10px; border-radius: 6px;" data-i18n="tag_infra">Infraestrutura</span>
     <span style="background-color: #00ff88; color: #000000; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">Linux</span>
     <span style="background-color: #00ff88; color: #000000; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">Oracle</span>
   </div>
@@ -140,191 +113,182 @@
 
     <main>
 <section class="sobre">
-  <h3>Sobre mim</h3>
-  <p>
+  <h3 data-i18n="about_title">Sobre mim</h3>
+  <p data-i18n="about_p1">
     Minha trajetória na área de Tecnologia da Informação começou com minha formação técnica em Informática e Tecnologia da Informação pela Megatoc, onde construí minha base em desenvolvimento, infraestrutura, sistemas e suporte tecnológico.
   </p>
-  <p>
+  <p data-i18n="about_p2">
     Ao longo de aproximadamente <strong>3 anos de experiência na Vivo (Telefônica Brasil)</strong>, iniciei minha carreira como Jovem Aprendiz em Infraestrutura de Sistemas, no Command Center (Equipe de Produção - B2C), evoluindo posteriormente para Estagiário de Sistemas na Gerência de Observabilidade, com atuação junto ao <strong>Emergency Response Team (ERT)</strong>.
   </p>
-  <p>
+  <p data-i18n="about_p3">
     Durante essa jornada, atuei em <strong>ambientes críticos de produção</strong>, desenvolvendo experiência em observabilidade, monitoramento, resposta a incidentes, análise de logs, gestão de problemas, automação e práticas de <strong>Site Reliability Engineering (SRE)</strong>.
   </p>
-  <p>
+  <p data-i18n="about_p4">
     Minha atuação combina conhecimentos de <strong>desenvolvimento de software, infraestrutura, observabilidade e automação</strong>, buscando transformar processos operacionais em soluções mais eficientes, confiáveis e escaláveis.
   </p>
-  <p>
+  <p data-i18n="about_p5">
     Atualmente, direciono minha formação para <strong>Engenharia de Software</strong>, aprofundando conhecimentos em desenvolvimento Full-Stack, arquitetura de sistemas, Cloud, bancos de dados, segurança, metodologias ágeis e <strong>Inteligência Artificial</strong>.
   </p>
-  <p>
+  <p data-i18n="about_p6">
     Tenho como objetivo continuar evoluindo profissionalmente na interseção entre <strong>Software, SRE, Observabilidade, Automação e Cloud</strong>, utilizando tecnologia para resolver problemas reais, otimizar processos e aumentar a confiabilidade dos ambientes e sistemas.
   </p>
-
-<h3 data-i18n="about_title">Sobre mim</h3>
-<p data-i18n="about_p1">Minha trajetória na área de Tecnologia...</p>
-
 </section>
 
-
-<section class="formacao">
-  <h3>Formação</h3>
-  <!-- UNINOVE -->
+      <section class="formacao">
+  <h3 data-i18n="edu_title">Formação</h3>
   <div class="formacao-item">
     <p>
       <span class="subtitulo">Universidade Nove de Julho</span><br>
-      <span class="curso">Tecnólogo em Análise e Desenvolvimento de Sistemas</span><br>
-      <span class="periodo">jan de 2025 – ago de 2027</span>
+      <span class="curso" data-i18n="edu_c1_title">Tecnólogo em Análise e Desenvolvimento de Sistemas</span><br>
+      <span class="periodo" data-i18n="edu_c1_period">jan de 2025 – ago de 2027</span>
     </p>
-    <p>
+    <p data-i18n="edu_c1_p1">
       Formação voltada à <strong>análise, desenvolvimento e implementação de sistemas
       computacionais</strong>, proporcionando uma base sólida em programação, engenharia
       de software, modelagem de dados, arquitetura de sistemas e desenvolvimento de
       soluções.
     </p>
-    <p>
+    <p data-i18n="edu_c1_p2">
       Ao longo da graduação, desenvolvi projetos acadêmicos e práticos utilizando
       tecnologias como <strong>Java, Python e SQL</strong>, trabalhando desde a análise
       e planejamento até o desenvolvimento e validação de aplicações.
     </p>
-    <p>
+    <p data-i18n="edu_c1_p3">
       Também desenvolvi conhecimentos em <strong>Scrum e Kanban</strong>, aplicados à
       organização e gestão de projetos, além de práticas de desenvolvimento,
       resolução de problemas e trabalho colaborativo.
     </p>
-    <p>
+    <p data-i18n="edu_c1_p4">
       A formação também proporcionou contato com temas como
       <strong>Inteligência Artificial, desenvolvimento mobile e segurança da informação</strong>,
       ampliando minha visão sobre diferentes áreas do ecossistema de tecnologia.
     </p>
     <p>
-      <strong>Principais competências:</strong>
+      <strong data-i18n="edu_skills_title">Principais competências:</strong>
     </p>
     <ul>
-      <li>Programação e desenvolvimento de sistemas</li>
-      <li>Java, Python e SQL</li>
-      <li>Modelagem e desenvolvimento de bancos de dados</li>
-      <li>Engenharia e arquitetura de software</li>
-      <li>Scrum e Kanban</li>
-      <li>Resolução e otimização de problemas computacionais</li>
-      <li>Desenvolvimento de projetos de software</li>
-      <li>Inteligência Artificial e novas tecnologias</li>
-      <li>Desenvolvimento mobile</li>
-      <li>Segurança da informação</li>
+      <li data-i18n="edu_c1_k1">Programação e desenvolvimento de sistemas</li>
+      <li data-i18n="edu_c1_k2">Java, Python e SQL</li>
+      <li data-i18n="edu_c1_k3">Modelagem e desenvolvimento de bancos de dados</li>
+      <li data-i18n="edu_c1_k4">Engenharia e arquitetura de software</li>
+      <li data-i18n="edu_c1_k5">Scrum e Kanban</li>
+      <li data-i18n="edu_c1_k6">Resolução e otimização de problemas computacionais</li>
+      <li data-i18n="edu_c1_k7">Desenvolvimento de projetos de software</li>
+      <li data-i18n="edu_c1_k8">Inteligência Artificial e novas tecnologias</li>
+      <li data-i18n="edu_c1_k9">Desenvolvimento mobile</li>
+      <li data-i18n="edu_c1_k10">Segurança da informação</li>
     </ul>
   </div>
-  <!-- CRUZEIRO DO SUL VIRTUAL -->
   <div class="formacao-item">
     <p>
       <span class="subtitulo">Cruzeiro do Sul Virtual</span><br>
-      <span class="curso">Bacharelado em Engenharia de Software</span><br>
-      <span class="periodo">jan de 2026 – dez de 2029</span>
+      <span class="curso" data-i18n="edu_c2_title">Bacharelado em Engenharia de Software</span><br>
+      <span class="periodo" data-i18n="edu_c2_period">jan de 2026 – dez de 2029</span>
     </p>
-    <p>
+    <p data-i18n="edu_c2_p1">
       Minha formação em <strong>Engenharia de Software</strong> tem como objetivo
       aprofundar conhecimentos técnicos e desenvolver uma visão completa sobre o
       <strong>ciclo de vida do desenvolvimento de software (SDLC)</strong>, desde a
       concepção e arquitetura até desenvolvimento, testes, segurança e evolução
       de sistemas.
     </p>
-    <p>
+    <p data-i18n="edu_c2_p2">
       A formação aborda conceitos de <strong>arquitetura de sistemas escaláveis,
       desenvolvimento Full-Stack, Cloud Computing, bancos de dados, qualidade
       de software, segurança, metodologias ágeis e Inteligência Artificial</strong>.
     </p>
     <p>
-      <strong>Principais áreas de conhecimento:</strong>
+      <strong data-i18n="edu_areas_title">Principais áreas de conhecimento:</strong>
     </p>
     <ul>
-      <li>
+      <li data-i18n="edu_c2_k1">
         <strong>Desenvolvimento Full-Stack:</strong>
         desenvolvimento de aplicações Web e Mobile, abrangendo Front-End,
         Back-End, arquitetura de aplicações e boas práticas de desenvolvimento.
       </li>
-      <li>
+      <li data-i18n="edu_c2_k2">
         <strong>Dados e Sistemas de Informação:</strong>
         modelagem de dados, bancos de dados, Ciência de Dados e desenvolvimento
         de Sistemas de Informação.
       </li>
-      <li>
+      <li data-i18n="edu_c2_k3">
         <strong>Arquitetura e Cloud:</strong>
         fundamentos de computação em nuvem, escalabilidade, disponibilidade,
         arquitetura de sistemas e desenvolvimento de aplicações resilientes.
       </li>
-      <li>
+      <li data-i18n="edu_c2_k4">
         <strong>Qualidade e Segurança:</strong>
         testes de software, qualidade, segurança em ambientes digitais,
         integridade, performance e confiabilidade.
       </li>
-      <li>
+      <li data-i18n="edu_c2_k5">
         <strong>Metodologias e Gestão:</strong>
         aplicação de metodologias ágeis e conceitos de gestão de projetos,
         incluindo Scrum e Kanban.
       </li>
-      <li>
+      <li data-i18n="edu_c2_k6">
         <strong>Inteligência Artificial:</strong>
         Engenharia de Prompt e aplicações de IA voltadas ao desenvolvimento,
         automação e otimização de processos.
       </li>
     </ul>
-    <p>
+    <p data-i18n="edu_c2_p3">
       Durante a formação, desenvolvi uma <strong>ferramenta de automação para
       monitoramento da saúde e disponibilidade de ambientes de produção</strong>,
       com foco em servidores WebLogic e filas de processamento.
     </p>
-    <p>
+    <p data-i18n="edu_c2_p4">
       O projeto transformou um processo de inspeção manual em uma rotina
       automatizada, proporcionando uma redução significativa no tempo necessário
       para a execução do procedimento.
     </p>
     <div class="resultado">
-      <strong>Resultado e Impacto (KPI)</strong>
+      <strong data-i18n="edu_kpi_title">Resultado e Impacto (KPI)</strong>
       <p>
-        <strong>1 hora → 5 minutos</strong><br>
-        Redução de aproximadamente <strong>92% no tempo de inspeção</strong>
-        por meio da execução automatizada.
+        <strong data-i18n="edu_kpi_val">1 hora → 5 minutos</strong><br>
+        <span data-i18n="edu_kpi_desc">Redução de aproximadamente <strong>92% no tempo de inspeção</strong> por meio da execução automatizada.</span>
       </p>
     </div>
     <p>
-      <strong>Competências desenvolvidas:</strong>
+      <strong data-i18n="edu_skills_dev">Competências desenvolvidas:</strong>
     </p>
     <ul>
-      <li>Design de Interfaces (UX/UI)</li>
-      <li>Computação em Nuvem</li>
-      <li>Testes de Software — Unitários e Funcionais</li>
-      <li>Planejamento e Arquitetura de Sistemas</li>
-      <li>Desenvolvimento Front-End e Back-End</li>
-      <li>Automação de Sistemas</li>
-      <li>Qualidade de Software</li>
-      <li>Segurança de Aplicações</li>
-      <li>Inteligência Artificial</li>
-      <li>Metodologias Ágeis</li>
+      <li data-i18n="edu_c2_s1">Design de Interfaces (UX/UI)</li>
+      <li data-i18n="edu_c2_s2">Computação em Nuvem</li>
+      <li data-i18n="edu_c2_s3">Testes de Software — Unitários e Funcionais</li>
+      <li data-i18n="edu_c2_s4">Planejamento e Arquitetura de Sistemas</li>
+      <li data-i18n="edu_c2_s5">Desenvolvimento Front-End e Back-End</li>
+      <li data-i18n="edu_c2_s6">Automação de Sistemas</li>
+      <li data-i18n="edu_c2_s7">Qualidade de Software</li>
+      <li data-i18n="edu_c2_s8">Segurança de Aplicações</li>
+      <li data-i18n="edu_c2_s9">Inteligência Artificial</li>
+      <li data-i18n="edu_c2_s10">Metodologias Ágeis</li>
     </ul>
   </div>
 </section>
 
 
 <section class="cursos">
-  <h3>Cursos</h3>
-  <p>
+  <h3 data-i18n="courses_title">Cursos</h3>
+  <p data-i18n="courses_p1">
     Ao longo da minha trajetória, busquei constantemente aprimorar meus conhecimentos técnicos e comportamentais por meio de formações complementares. Concluí diversos cursos em plataformas reconhecidas como <strong>Alura</strong>, <strong>Fundação Bradesco</strong>, <strong>LinkedIn Learning</strong>, <strong>Enabley UK & ROI</strong>, <strong>Vivae</strong> e também pela <strong>Vivo (Telefônica Brasil)</strong>, abrangendo áreas essenciais da tecnologia e do desenvolvimento profissional.
   </p>
-  <p><strong>Entre os principais temas estudados estão:</strong></p>
+  <p><strong data-i18n="courses_topics_title">Entre os principais temas estudados estão:</strong></p>
   <ul>
-    <li><strong>Programação e Desenvolvimento:</strong> lógica com JavaScript, desenvolvimento back-end em Java, fundamentos de POO, criação de jogos, Git e GitHub, API e integração contínua.</li>
-    <li><strong>Infraestrutura e DevOps:</strong> PowerShell, Docker, Linux (terminal, processos, permissões, CLI), Windows Prompt, redes, ServiceNow, Zabbix, Elastic e Datadog.</li>
-    <li><strong>Orquestração e Contêineres:</strong> Kubernetes (Pods, Services, ConfigMaps, Deployments e Escalabilidade).</li>
-    <li><strong>Banco de Dados:</strong> fundamentos de SQL e gestão de dados.</li>
-    <li><strong>Metodologias Ágeis e Soft Skills:</strong> Scrum/Kanban, postura profissional, controle de impulso, habilidades comportamentais e diversidade.</li>
-    <li><strong>Fundamentos de TI:</strong> sistemas operacionais, engenharia de redes móveis, SDLC (ciclo de vida do desenvolvimento de software), diferenças entre front-end e back-end e carreira de programador.</li>
+    <li data-i18n="courses_t1"><strong>Programação e Desenvolvimento:</strong> lógica com JavaScript, desenvolvimento back-end em Java, fundamentos de POO, criação de jogos, Git e GitHub, API e integração contínua.</li>
+    <li data-i18n="courses_t2"><strong>Infraestrutura e DevOps:</strong> PowerShell, Docker, Linux (terminal, processos, permissões, CLI), Windows Prompt, redes, ServiceNow, Zabbix, Elastic e Datadog.</li>
+    <li data-i18n="courses_t3"><strong>Orquestração e Contêineres:</strong> Kubernetes (Pods, Services, ConfigMaps, Deployments e Escalabilidade).</li>
+    <li data-i18n="courses_t4"><strong>Banco de Dados:</strong> fundamentos de SQL e gestão de dados.</li>
+    <li data-i18n="courses_t5"><strong>Metodologias Ágeis e Soft Skills:</strong> Scrum/Kanban, postura profissional, controle de impulso, habilidades comportamentais e diversidade.</li>
+    <li data-i18n="courses_t6"><strong>Fundamentos de TI:</strong> sistemas operacionais, engenharia de redes móveis, SDLC (ciclo de vida do desenvolvimento de software), diferenças entre front-end e back-end e carreira de programador.</li>
   </ul>
-  <p>
+  <p data-i18n="courses_p2">
     Esses cursos reforçam meu compromisso com a aprendizagem contínua e me proporcionam uma base sólida para atuar com eficiência em projetos de tecnologia, infraestrutura e desenvolvimento de software.
   </p>
 </section>
 <section class="experiencia">
-  <h3>Experiência</h3>
+  <h3 data-i18n="exp_title">Experiência</h3>
   <div class="grid-blocos">
-    <!-- ESTÁGIO -->
     <div class="experiencia-bloco">
       <div class="experiencia-header">
         <img
@@ -337,15 +301,15 @@
       </div>
       <div class="info-centralizada">
         <p class="cargo">
-          <strong>Estagiário de Sistema - Observabilidade & ERT (SRE)</strong>
+          <strong data-i18n="exp1_role">Estagiário de Sistema - Observabilidade & ERT (SRE)</strong>
         </p>
         <p class="periodo">
-          <strong>mar de 2025 – o momento · 1 Ano e 7 Meses</strong>
+          <strong data-i18n="exp1_period">mar de 2025 – o momento · 1 Ano e 7 Meses</strong>
         </p>
         <p class="local">
-          <strong>São Paulo, Brasil · Híbrida</strong>
+          <strong data-i18n="exp1_location">São Paulo, Brasil · Híbrida</strong>
         </p>
-        <p class="descricao">
+        <p class="descricao" data-i18n="exp1_desc">
           Atuação como Estagiário de Sistemas na Gerência de Observabilidade,
           integrando a equipe de Respostas Emergenciais B2C (ERT). Experiência
           direcionada à confiabilidade de ambientes críticos, observabilidade,
@@ -354,76 +318,75 @@
         </p>
       </div>
       <div class="topicos">
-        <p>
+        <p data-i18n="exp1_t1">
           Desenvolvimento e evolução de <strong>alarmes e dashboards</strong>
           utilizando ServiceNow, Elastic e Zabbix.
         </p>
-        <p>
+        <p data-i18n="exp1_t2">
           Monitoramento de ambientes críticos e análise de
           <strong>métricas, eventos e logs</strong> para identificação e
           diagnóstico de falhas.
         </p>
-        <p>
+        <p data-i18n="exp1_t3">
           Participação na <strong>resposta a incidentes críticos B2C</strong>,
           apoiando as etapas de investigação, diagnóstico e resolução.
         </p>
-        <p>
+        <p data-i18n="exp1_t4">
           Realização de <strong>análises de causa raiz (RCA)</strong> para
           investigação de falhas e problemas recorrentes.
         </p>
-        <p>
+        <p data-i18n="exp1_t5">
           Atuação na gestão e evolução de
           <strong>PRBs (Problem Records)</strong>, contribuindo para a
           identificação e tratamento de causas recorrentes.
         </p>
-        <p>
+        <p data-i18n="exp1_t6">
           Desenvolvimento de <strong>workflows para alertas de problemas
           críticos</strong>, contribuindo para maior agilidade e eficiência
           operacional.
         </p>
-        <p>
+        <p data-i18n="exp1_t7">
           Desenvolvimento de automações e aplicações web utilizando
           <strong>HTML, CSS e JavaScript</strong>.
         </p>
-        <p>
+        <p data-i18n="exp1_t8">
           Desenvolvimento de um <strong>Health Check automatizado</strong>
           para validação da saúde e disponibilidade dos servidores.
         </p>
-        <p>
+        <p data-i18n="exp1_t9">
           Desenvolvimento de soluções para acompanhamento de
           <strong>servidores WebLogic e filas de processamento</strong>.
         </p>
-        <p>
+        <p data-i18n="exp1_t10">
           Administração operacional de ambientes utilizando
           <strong>Oracle Server e Jenkins</strong>.
         </p>
-        <p>
+        <p data-i18n="exp1_t11">
           Execução de procedimentos de <strong>Stop/Start, limpeza de cache,
           análise de logs e validação de componentes</strong> em ambientes
           de produção.
         </p>
-        <p>
+        <p data-i18n="exp1_t12">
           Criação de <strong>SharePoint para gestão de projetos em produção
           e treinamento de colaboradores</strong>.
         </p>
-        <p>
+        <p data-i18n="exp1_t13">
           Desenvolvimento de páginas e ferramentas web para facilitar a
           integração entre equipes de <strong>Projetos, Operações e Product
           Owners</strong>.
         </p>
-        <p>
+        <p data-i18n="exp1_t14">
           Atuação como referência na <strong>qualidade de PRBs</strong>,
           realizando análises, feedbacks e treinamentos para aprimorar a
           padronização e maturidade da Gestão de Problemas.
         </p>
-        <p>
+        <p data-i18n="exp1_t15">
           Desenvolvimento de soluções voltadas à
           <strong>automação e otimização de processos operacionais</strong>,
           reduzindo atividades manuais e aumentando a eficiência da equipe.
         </p>
       </div>
     </div>
-    <!-- APRENDIZ -->
     <div class="experiencia-bloco">
       <div class="experiencia-header centralizado">
         <img
@@ -436,15 +399,15 @@
       </div>
       <div class="info-centralizada">
         <p class="cargo">
-          <strong>Jovem Aprendiz - Infraestrutura de Sistemas (PCP)</strong>
+          <strong data-i18n="exp2_role">Jovem Aprendiz - Infraestrutura de Sistemas (PCP)</strong>
         </p>
         <p class="periodo">
-          <strong>set de 2023 – mar de 2025 · 1 ano e 7 meses</strong>
+          <strong data-i18n="exp2_period">set de 2023 – mar de 2025 · 1 ano e 7 meses</strong>
         </p>
         <p class="local">
-          <strong>São Paulo, Brasil · Híbrida</strong>
+          <strong data-i18n="exp2_location">São Paulo, Brasil · Híbrida</strong>
         </p>
-        <p class="descricao">
+        <p class="descricao" data-i18n="exp2_desc">
           Minha primeira experiência profissional em Tecnologia foi na Vivo,
           atuando na área de Infraestrutura de Sistemas, no Command Center
           (PCP B2C). Nesse período, desenvolvi uma base sólida em monitoramento,
@@ -453,66 +416,66 @@
         </p>
       </div>
       <div class="topicos">
-        <p>
+        <p data-i18n="exp2_t1">
           Monitoramento de ambientes B2C utilizando
           <strong>Grafana, Dynatrace, Elastic, Kibana, Splunk e Zabbix</strong>.
         </p>
-        <p>
+        <p data-i18n="exp2_t2">
           Análise de <strong>métricas, eventos e logs</strong> para
           identificação e diagnóstico de falhas.
         </p>
-        <p>
+        <p data-i18n="exp2_t3">
           Gerenciamento e acompanhamento de
           <strong>jobs e malhas de processamento no Control-M</strong>.
         </p>
-        <p>
+        <p data-i18n="exp2_t4">
           Extração de relatórios e gerenciamento de acessos utilizando
           <strong>SiTef Web</strong>.
         </p>
-        <p>
+        <p data-i18n="exp2_t5">
           Tratamento e acompanhamento de solicitações e incidentes através
           do <strong>ServiceNow</strong>.
         </p>
-        <p>
+        <p data-i18n="exp2_t6">
           Execução de <strong>checklists operacionais diários</strong> para
           validação da saúde dos ambientes.
         </p>
-        <p>
+        <p data-i18n="exp2_t7">
           Monitoramento dos processos de
           <strong>Recovery da Portabilidade em ambientes Linux</strong>,
           acompanhando logs e filas de processamento.
         </p>
-        <p>
+        <p data-i18n="exp2_t8">
           Acompanhamento do processamento das filas referentes aos ambientes
           de <strong>São Paulo e demais regiões do Brasil</strong>.
         </p>
-        <p>
+        <p data-i18n="exp2_t9">
           Validação de <strong>componentes e nodes do Siebel</strong>,
           contribuindo para a estabilidade e disponibilidade do sistema.
         </p>
-        <p>
+        <p data-i18n="exp2_t10">
           Comunicação e escalonamento de
           <strong>alertas operacionais</strong> para as equipes responsáveis.
         </p>
-        <p>
+        <p data-i18n="exp2_t11">
           Análise e tratamento de problemas, utilizando informações de
           <strong>logs e indicadores</strong> para apoiar a identificação
           da causa raiz.
         </p>
-        <p>
+        <p data-i18n="exp2_t12">
           Criação e manutenção de
           <strong>documentações, automações e fluxos operacionais</strong>.
         </p>
-        <p>
+        <p data-i18n="exp2_t13">
           Apoio na integração e
           <strong>treinamento de novos colaboradores</strong>, compartilhando
           conhecimentos sobre sistemas internos e processos de monitoramento.
         </p>
-        <p>
+        <p data-i18n="exp2_t14">
           Acesso e operação de <strong>ambientes Linux</strong> para análise
           de logs e acompanhamento de processos de recuperação.
         </p>
-        <p>
+        <p data-i18n="exp2_t15">
           Acompanhamento da saúde dos ambientes e comunicação de ocorrências
           para suporte à continuidade da operação.
         </p>
@@ -548,27 +511,26 @@
 
   </div>
   
-  <footer>
+  <footer data-i18n="footer_rights">
     © 2026 • Portfólio de Kauê Rodrigues Mirom • TI • São Paulo, Brasil
   </footer>
 
-<footer data-i18n="footer_rights">
-  © 2026 • Portfólio de Kauê Rodrigues Mirom • TI • São Paulo, Brasil
-</footer>
-
-
-<button class="lang-btn" onclick="toggleLangMenu()" title="Mudar Idioma">🌐 PT</button>
-
-<button class="lang-btn" onclick="toggleLangMenu()" title="Mudar Idioma">
-  <span class="fi fi-br" id="btnFlag"></span> <span class="lang-text" id="btnLang">PT</span>
-</button>
-
+  <div class="lang-selector">
+  <button class="lang-btn" onclick="toggleLangMenu()" title="Mudar Idioma">
+    <span class="fi fi-br" id="btnFlag"></span> <span class="lang-text" id="btnLang">PT</span>
+  </button>
+  <div class="lang-dropdown" id="langDropdown">
+    <a href="#" onclick="changeLanguage('en')"><span class="fi fi-us"></span> English</a>
+    <a href="#" onclick="changeLanguage('es')"><span class="fi fi-es"></span> Español</a>
+    <a href="#" onclick="changeLanguage('it')"><span class="fi fi-it"></span> Italiano</a>
+    <a href="#" onclick="changeLanguage('pt')"><span class="fi fi-br"></span> Português</a>
+  </div>
+</div>
 
 <button class="voltar-topo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Voltar ao topo">↑</button>
   <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
