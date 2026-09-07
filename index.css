@@ -1386,4 +1386,61 @@ header .center img {
    ESTILIZAÇÃO MODERNA DOS BLOCOS, CARDS E /* ==========================================================================
    THEME TECH / CYBER PUNK / SRE DASHBOARD
    ========================================================================== */
+/* =========================================================
+   1. BOTÃO DE BAIXAR CURRÍCULO
+   ========================================================= */
+.curriculo-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #00ff88;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid #00ff88;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.curriculo-btn:hover {
+  background-color: transparent;
+  color: #00ff88;
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   2. TÍTULOS E SÍMBOLO '>' DO CARD DE HABILIDADES (TOPPER)
+   ========================================================= */
+/* Estilo aplicado às divs com os títulos do topper */
+div[data-i18n="core_title"],
+div[data-i18n="obs_title"],
+div[data-i18n="auto_title"],
+div[data-i18n="infra_title"] {
+  color: #00ff88 !important; /* Cor verde neon para destacar o '>' e o texto */
+  font-family: 'Courier New', Courier, monospace, sans-serif;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Garante o ajuste correto em dispositivos móveis */
+@media (max-width: 768px) {
+  .curriculo-btn {
+    width: 80%;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
 
