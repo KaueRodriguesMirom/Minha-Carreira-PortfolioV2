@@ -1584,3 +1584,117 @@ section h3::before {
   color: #0a0d12;
   box-shadow: 0 0 15px var(--neon-green);
 }
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg-main: #0a0e17;
+  --bg-card: rgba(16, 23, 38, 0.75);
+  --border-card: rgba(0, 255, 136, 0.15);
+  --accent-green: #00ff88;
+  --accent-blue: #00d2ff;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+/* Título de seção com estilo terminal */
+.section-title, h2 {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--accent-green);
+  background: rgba(0, 255, 136, 0.05);
+  border-left: 3px solid var(--accent-green);
+  padding: 8px 16px;
+  border-radius: 0 8px 8px 0;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+.card, .experience-card, .education-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-card);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(0, 255, 136, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px 0 rgba(0, 255, 136, 0.1);
+}
+
+/* Subtítulos dentro dos cards */
+.card h3, .card h4 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+/* Badges de data/status */
+.date-badge {
+  font-family: var(--font-mono);
+  color: var(--accent-green);
+  font-size: 0.85rem;
+  background: rgba(0, 255, 136, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* Texto descritivo */
+p {
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Ícones de lista ($) refinados */
+ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+ul li::before {
+  content: ">";
+  font-family: var(--font-mono);
+  position: absolute;
+  left: 0;
+  color: var(--accent-green);
+  font-weight: bold;
+}
+
+.lang-btn, .scroll-top-btn {
+  background: rgba(16, 23, 38, 0.85) !important;
+  border: 1px solid var(--border-card) !important;
+  backdrop-filter: blur(8px);
+  color: var(--text-primary) !important;
+  border-radius: 30px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.2s ease-in-out;
+}
+
+.lang-btn:hover, .scroll-top-btn:hover {
+  border-color: var(--accent-green) !important;
+  color: var(--accent-green) !important;
+}
+
+
+
+
+
