@@ -2659,5 +2659,39 @@ footer {
     padding: 25px 20px;
   }
 }
+/* ==========================================================================
+   ESTILOS MODERNOS E TECH — RODAPÉ (FOOTER)
+   ================================================================          */
+
+footer {
+  position: relative;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 0.85rem;
+  color: #9ca3af;
+  background-color: rgba(10, 14, 11, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(91, 190, 66, 0.2);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #5BBE42, transparent);
+  box-shadow: 0 0 10px rgba(91, 190, 66, 0.5);
+}
+
+footer:hover {
+  color: #f3f4f6;
+}
 
 
