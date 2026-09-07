@@ -1971,5 +1971,92 @@ nav[aria-label="Navegação principal"] ul li a:hover::after {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================================
+   ESTILOS TECH & MODERNO — SEÇÃO DA FORMAÇÃO (CYBER HUD WRAPPER)
+   ========================================================= */
+
+:root {
+  --section-bg: #090e0b;
+  --neon-green: #5BBE42;
+  --neon-glow: rgba(91, 190, 66, 0.4);
+  --text-dim: #8fa394;
+}
+
+/* Container Geral da Seção de Formação */
+section.formacao {
+  position: relative;
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 40px 24px;
+  background: var(--section-bg);
+  border-radius: 16px;
+  border: 1px solid rgba(91, 190, 66, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7),
+              inset 0 0 30px rgba(91, 190, 66, 0.03);
+  overflow: hidden;
+}
+
+/* Detalhe de luz de fundo futurista (Glow superior) */
+section.formacao::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+/* Título Principal da Seção (Estilo Terminal / HUD) */
+section.formacao > h3[data-i18n="edu_title"] {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 32px 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Ícone de terminal gerado por código antes do título */
+section.formacao > h3[data-i18n="edu_title"]::before {
+  content: '//';
+  color: var(--neon-green);
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px var(--neon-glow);
+}
+
+/* Linha separadora discreta após o título */
+section.formacao > h3[data-i18n="edu_title"]::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(91, 190, 66, 0.4), transparent);
+  margin-left: 12px;
+}
+
+/* Ajuste do container do item dentro da seção para fluidez perfeita */
+section.formacao .formacao-item {
+  margin: 0 auto;
+  border-left-color: var(--neon-green);
+  box-shadow: none; /* Deixa a responsabilidade visual para a seção pai ou mantém limpo */
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+  section.formacao {
+    padding: 24px 16px;
+    margin: 20px 12px;
+    border-radius: 12px;
+  }
+}
 
 
