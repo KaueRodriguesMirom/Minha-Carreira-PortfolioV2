@@ -203,7 +203,66 @@ h1:hover {
   transform: scale(1.05);
   text-shadow: 0 0 12px #5BBE42, 0 0 24px #5BBE42;
 }
+/* =========================================================
+   ESTILOS TECH & MODERNO — CAIXA DE KPI / IMPACTO
+   ========================================================= */
 
+.formacao-item .resultado {
+  background: linear-gradient(135deg, rgba(91, 190, 66, 0.08) 0%, rgba(10, 15, 12, 0.8) 100%);
+  border: 1px solid var(--neon-green);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 24px;
+  box-shadow: inset 0 0 15px rgba(91, 190, 66, 0.05),
+              0 0 15px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+
+.formacao-item .resultado::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--neon-green);
+  box-shadow: 0 0 10px var(--neon-green);
+}
+
+.formacao-item .resultado > strong {
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--neon-green);
+  margin-bottom: 8px;
+}
+
+.formacao-item .resultado p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.formacao-item .resultado p strong:first-of-type {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px var(--neon-glow);
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.formacao-item .resultado span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+    
   </style>
 </head>
 <body>
