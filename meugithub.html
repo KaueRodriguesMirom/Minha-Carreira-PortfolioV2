@@ -44,9 +44,45 @@
             min-height: 100vh;
         }
 
+        /* Botão de Voltar ao Início no Topo */
+        .top-nav {
+            max-width: 1000px;
+            margin: 24px auto 0;
+            padding: 0 16px;
+        }
+
+        .voltar-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.25);
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 13px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .voltar-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+            transition: transform 0.3s ease;
+        }
+
+        .voltar-btn:hover {
+            background: rgba(0, 255, 136, 0.15);
+            border-color: var(--accent);
+            transform: translateX(-3px);
+            box-shadow: 0 0 12px rgba(0, 255, 136, 0.2);
+        }
+
         header {
             max-width: 1000px;
-            margin: 36px auto 24px;
+            margin: 20px auto 24px;
             padding: 0 16px;
             text-align: center;
         }
@@ -128,44 +164,53 @@
         .actions {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
         }
 
-        /* Botão no estilo Glossy Neon */
+        /* Botões Modernos e Polidos */
         .btn {
             position: relative;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 10px 18px;
+            gap: 8px;
+            padding: 10px 20px;
             border-radius: 10px;
-            border: 1px solid #9ef083;
-            background: linear-gradient(180deg, #82c96b 0%, #61a648 100%);
-            color: #000;
-            font-weight: 800;
+            border: 1px solid rgba(0, 255, 136, 0.4);
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 200, 100, 0.05));
+            color: var(--accent);
+            font-weight: 700;
             font-size: 13px;
             text-decoration: none;
             cursor: pointer;
             overflow: hidden;
-            transition: all 0.25 ease;
-            box-shadow: 0 0 15px rgba(122, 206, 99, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.1);
         }
 
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -50%;
-            width: 200%;
-            height: 50%;
-            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 60%);
-            pointer-events: none;
+        .btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* Variante de Botão Primário Destacado */
+        .btn.primary {
+            background: linear-gradient(135deg, #00ff88, #00cc6a);
+            color: #0a0d0a;
+            border-color: #00ff88;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(122, 206, 99, 0.6);
+            border-color: #00ff88;
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
             filter: brightness(1.1);
+        }
+
+        .btn.primary:hover {
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.6);
         }
 
         .placeholder {
@@ -245,6 +290,14 @@
     </style>
 </head>
 <body>
+    <!-- Botão de Voltar para a Página Inicial -->
+    <div class="top-nav">
+        <a href="index.html" class="voltar-btn">
+            <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            Voltar à página inicial
+        </a>
+    </div>
+
     <header>
         <span class="badge">⚡ SHOWCASE • GITHUB</span>
         <h1>Meu GitHub, Kauê Rodrigues</h1>
@@ -262,10 +315,14 @@
                 </div>
                 
                 <div class="actions">
-                    <a class="btn" href="https://github.com/KaueRodriguesMirom" target="_blank" rel="noopener">
+                    <a class="btn primary" href="https://github.com/KaueRodriguesMirom" target="_blank" rel="noopener">
+                        <!-- Ícone GitHub -->
+                        <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
                         Ir para meu perfil
                     </a>
                     <a class="btn" href="https://github.com/KaueRodriguesMirom?tab=repositories" target="_blank" rel="noopener">
+                        <!-- Ícone Repositórios / Pasta -->
+                        <svg viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg>
                         Ver repositórios
                     </a>
                 </div>
