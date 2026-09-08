@@ -2740,3 +2740,22 @@ footer:hover {
   box-shadow: 0 4px 20px rgba(0, 255, 128, 0.05);
 }
 
+/* Fundo padrão para celulares e telas menores */
+body {
+  /* Se no celular você usa uma cor sólida ou outra imagem, mantenha aqui. 
+     Exemplo para cor sólida escura: */
+  background-color: #060a08;
+}
+
+/* Fundo exclusivo para Desktop (telas a partir de 768px ou 1024px de largura) */
+@media (min-width: 1024px) {
+  body {
+    background-image: url('FundoHTML.png');
+    background-size: cover;       /* Faz a imagem cobrir toda a tela */
+    background-position: center;  /* Centraliza a imagem */
+    background-attachment: fixed; /* Deixa o fundo fixo ao rolar a página (opcional) */
+    background-repeat: no-repeat;
+  }
+}
+
+
