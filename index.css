@@ -2773,6 +2773,42 @@ body {
     background-repeat: no-repeat !important;
   }
 }
+/* */
+
+/* Ajustes exclusivos para Desktop */
+@media (min-width: 1024px) {
+  /* Garante o fundo e evita repetição da imagem */
+  body {
+    background-image: url('FundoHTML.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Dá um fundo escuro sólido para o bloco de habilidades não sumir na imagem */
+  .skills-container-box, 
+  div[style*="max-width: 750px"] {
+    background-color: rgba(10, 13, 10, 0.92) !important; /* Fundo escuro com leve transparência */
+    backdrop-filter: blur(6px);
+  }
+
+  /* Aplica um fundo sólido elegante nas seções de texto (Sobre mim, Cursos, Formação, Experiência) */
+  section.sobre,
+  section.cursos,
+  section.experiencia,
+  .formacao-item,
+  .experiencia-bloco {
+    background-color: rgba(10, 13, 10, 0.90) !important;
+    border: 1px solid rgba(27, 56, 43, 0.8);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  }
+}
+
+
 
 
 
