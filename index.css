@@ -2693,5 +2693,21 @@ footer::before {
 footer:hover {
   color: #f3f4f6;
 }
+/* Centraliza a barra de navegação no desktop */
+.desktop-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+}
 
 
