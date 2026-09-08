@@ -2710,4 +2710,33 @@ footer:hover {
   margin: 20px auto;
 }
 
+/* Centraliza perfeitamente o menu no topo do desktop */
+.desktop-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Centraliza o bloco de habilidades e define um limite elegante de largura */
+.skills-container-box {
+  background-color: #0a0d0a;
+  border: 1px solid #1b382b;
+  border-radius: 12px;
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-align: left;
+  max-width: 650px;
+  margin: 25px auto; /* O 'auto' nas laterais garante a centralização no desktop */
+  box-shadow: 0 4px 20px rgba(0, 255, 128, 0.05);
+}
 
