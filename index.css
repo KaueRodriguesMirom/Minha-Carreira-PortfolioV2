@@ -2852,6 +2852,67 @@ body {
     align-items: center;
   }
 }
+@media (min-width: 1024px) {
+  /* Fundo do desktop fixo */
+  body {
+    background-image: url('FundoHTML.png') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    background-color: #060a08 !important;
+  }
+
+  /* Container principal que centraliza e limita a largura na tela inteira */
+  .desktop-wrapper {
+    max-width: 850px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 20px;
+  }
+
+  /* Padroniza o cabeçalho de navegação para respeitar o limite e o design */
+  .main-header {
+    background-color: rgba(10, 13, 10, 0.94) !important;
+    border: 1px solid #1b382b !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    margin-bottom: 25px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(8px);
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .desktop-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Demais seções e modais */
+  section.sobre,
+  section.cursos,
+  section.experiencia,
+  .formacao-item,
+  .experiencia-bloco,
+  .skills-container-box,
+  header:not(.main-header) {
+    background-color: rgba(10, 13, 10, 0.94) !important;
+    border: 1px solid #1b382b !important;
+    border-radius: 12px !important;
+    padding: 30px !important;
+    margin-bottom: 25px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(8px);
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
 
 
 
