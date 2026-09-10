@@ -115,6 +115,60 @@
 </div>
 
       <a href="Curriculo_Kaue.pdf" class="curriculo-btn" download data-i18n="download_cv">Baixar Currículo!</a>
+      <div style="display: flex; justify-content: center; width: 100%; margin-top: 15px;">
+        <button onclick="openVideoModal()" style="
+          background: rgba(0, 255, 136, 0.1);
+          border: 1px solid #00ff88;
+          color: #00ff88;
+          padding: 10px 20px;
+          border-radius: 8px;
+          font-weight: bold;
+          cursor: pointer;
+          font-family: inherit;
+          transition: all 0.3s ease;
+        ">Ver Vídeo de Efetivação</button>
+      </div>
+
+      <div id="videoModal" style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+      ">
+        <div style="
+          position: relative;
+          width: 90%;
+          max-width: 700px;
+          background: #0a0d0a;
+          border: 1px solid #1b4d32;
+          border-radius: 12px;
+          padding: 20px;
+          box-shadow: 0 4px 25px rgba(0, 255, 128, 0.2);
+        ">
+          <span onclick="closeVideoModal()" style="
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #00ff88;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+          ">&times;</span>
+          
+          <h3 style="color: #fff; margin-bottom: 15px; font-family: inherit; text-align: center;">Vídeo de Efetivação</h3>
+          
+          <video id="efetivacaoVideo" controls style="width: 100%; border-radius: 8px;">
+            <source src="./video-efetivacao.mp4" type="video/mp4">
+            Seu navegador não suporta a exibição de vídeos.
+          </video>
+        </div>
+      </div>
 
     </header>
 
