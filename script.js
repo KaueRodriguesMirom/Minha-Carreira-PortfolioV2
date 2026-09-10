@@ -726,3 +726,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// Funções para controlar o Modal do Vídeo
+function openVideoModal() {
+  const modal = document.getElementById('videoModal');
+  const video = document.getElementById('efetivacaoVideo');
+  modal.style.display = 'flex';
+  video.currentTime = 0;
+  video.play();
+}
+
+function closeVideoModal() {
+  const modal = document.getElementById('videoModal');
+  const video = document.getElementById('efetivacaoVideo');
+  modal.style.display = 'none';
+  video.pause();
+}
+
+// Fecha o modal ao clicar fora da caixa do vídeo
+window.onclick = function(event) {
+  const modal = document.getElementById('videoModal');
+  if (event.target === modal) {
+    closeVideoModal();
+  }
+}
