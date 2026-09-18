@@ -101,6 +101,7 @@
       padding: 40px;
       max-width: 1250px;
       margin: 0 auto;
+      align-items: stretch; /* Padroniza a altura de todos os cards */
     }
 
     /* Cartão do Projeto */
@@ -116,6 +117,7 @@
       transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
+      height: 100%;
     }
 
     .projeto-card:hover {
@@ -143,6 +145,7 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      justify-content: space-between;
     }
 
     .projeto-conteudo h3 {
@@ -162,7 +165,7 @@
       flex-grow: 1;
     }
 
-    /* Botão do Projeto */
+    /* Botão do Projeto Centralizado e Padronizado */
     .projeto-conteudo a {
       display: inline-flex;
       align-items: center;
@@ -178,8 +181,9 @@
       letter-spacing: 1px;
       text-decoration: none;
       transition: all 0.3s ease;
-      align-self: flex-start;
+      align-self: center; /* Alinha o botão no centro do card */
       box-shadow: 0 0 8px rgba(0, 255, 136, 0.2);
+      margin-top: auto;
     }
 
     .projeto-conteudo a:hover {
@@ -280,29 +284,27 @@
 
     <!-- Projeto 7 -->
     <div class="projeto-card">
-      <img src="projeto7.jpg" alt="Projeto 6" class="projeto-img" />
+      <img src="projeto7.jpg" alt="Projeto 7" class="projeto-img" />
       <div class="projeto-conteudo">
         <h3>CareerTech Platform em Java</h3>
         <p>Plataforma inteligente de gestão e inteligência de carreira desenvolvida para conectar profissionais a oportunidades de forma ágil, contando com uma arquitetura moderna baseada em microsserviços e APIs de alta confiabilidade.</p>
         <a href="https://github.com/KaueRodriguesMirom/Career-Intelligence" target="_blank">Ver Projeto</a>
       </div>
     </div>
-  </section>
 
-  <!-- Projeto 8 -->
+    <!-- Projeto 8 -->
     <div class="projeto-card">
-      <img src="projeto8.jpg" alt="Projeto 6" class="projeto-img" />
+      <img src="projeto8.jpg" alt="Projeto 8" class="projeto-img" />
       <div class="projeto-conteudo">
         <h3>Pac-Man Tech Pro — Arcade Edition</h3>
         <p>Desenvolvimento Web com JavaScript.</p>
         <a href="https://github.com/KaueRodriguesMirom/Pacman-tech" target="_blank">Ver Projeto</a>
       </div>
     </div>
-  </section>
 
-  <!-- Projeto 9 -->
+    <!-- Projeto 9 -->
     <div class="projeto-card">
-      <img src="projeto9.jpg" alt="Projeto 6" class="projeto-img" />
+      <img src="projeto9.jpg" alt="Projeto 9" class="projeto-img" />
       <div class="projeto-conteudo">
         <h3>Monitoramento em tempo real da saúde, latência e SLA de microsserviços de telecom...</h3>
         <p>Como Analista de Sistemas, sei o quanto é importante garantir a estabilidade dos nossos serviços. Nas minhas horas vagas, criei o OmniWatch: um dashboard em React e Tailwind que simula o monitoramento em tempo real da saúde, latência e SLA de microsserviços de telecom...</p>
