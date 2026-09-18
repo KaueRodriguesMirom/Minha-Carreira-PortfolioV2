@@ -2959,6 +2959,45 @@ body {
   min-width: 140px;
 }
 
+/* Estilo base (Telemóvel): Mantém exatamente a estrutura atual */
+.badge-card {
+  background: rgba(15, 35, 24, 0.95);
+  border: 1px solid rgba(0, 255, 136, 0.4);
+  border-radius: 10px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 255, 136, 0.12);
+}
+
+.badge-card img {
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Regra exclusiva para Computador (ecrãs a partir de 1024px) */
+@media (min-width: 1024px) {
+  .certificacoes-grid {
+    max-width: 800px !important; /* Expande o tamanho do grid no PC */
+    gap: 20px !important;
+  }
+
+  .badge-card {
+    padding: 12px !important;
+    border-radius: 14px !important;
+  }
+
+  .badge-card img {
+    width: 100% !important; /* Faz a imagem preencher o card expandido no PC */
+    height: 100% !important;
+  }
+}
+
 
 
 
