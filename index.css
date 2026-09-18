@@ -2914,6 +2914,51 @@ body {
   }
 }
 
+/* Garante alinhamento central em elementos inline/block */
+.curriculo-btn {
+  display: block !important;
+  margin: 25px auto !important;
+  text-align: center;
+  max-width: fit-content;
+}
+
+/* Container dos cards em Grid regular */
+.projetos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: stretch; /* Força todos os cards a terem a mesma altura */
+}
+
+/* Card individual */
+.projeto-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Conteúdo interno do card */
+.projeto-conteudo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between; /* Mantém o botão sempre no rodapé do card */
+}
+
+.projeto-conteudo p {
+  flex-grow: 1; /* Faz o texto preencher o espaço restante */
+  margin-bottom: 20px;
+}
+
+/* Botão "Ver Projeto" centralizado e padronizado */
+.projeto-conteudo a {
+  align-self: center !important; /* Centraliza o botão dentro do card */
+  margin-top: auto;
+  text-align: center;
+  width: auto;
+  min-width: 140px;
+}
+
 
 
 
