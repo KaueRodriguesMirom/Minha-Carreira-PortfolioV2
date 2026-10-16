@@ -2,227 +2,589 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>PDI 2026/2027 - Kauê Rodrigues Mirom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDI - Kauê Rodrigues Mirom [SYSTEM: SRE_NODE]</title>
   <style>
+    /* =========================================
+       TEMA TECH / NEON GREEN (MATRIX/CYBERPUNK)
+       ========================================= */
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600;700&display=swap');
+
     :root {
-      --bg: #0f172a;
-      --card-bg: #1e293b;
-      --accent-blue: #38bdf8;
-      --accent-purple: #a855f7;
-      --accent-green: #34d399;
-      --text: #f8fafc;
-      --text-muted: #94a3b8;
-      --border: #334155;
+      --bg-color: #030a05; /* Fundo extremamente escuro, levemente esverdeado */
+      --grid-line: rgba(0, 255, 0, 0.05);
+      --neon-green: #39ff14;
+      --neon-glow: 0 0 10px rgba(57, 255, 20, 0.5), 0 0 20px rgba(57, 255, 20, 0.3);
+      --dark-green: #0a2411;
+      --border-color: #1b4f26;
+      --text-main: #c8e6c9;
+      --text-highlight: #ffffff;
+      --font-tech: 'Fira Code', 'Courier New', monospace;
     }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 40px;
-      display: flex;
-      justify-content: center;
+      padding: 0;
     }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font-tech);
+      line-height: 1.6;
+      /* Fundo com efeito de Grid de Radar */
+      background-image: 
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 30px 30px;
+      padding-bottom: 100px;
+    }
+
+    /* BARRA DE NAVEGAÇÃO SUPERIOR */
+    .top-nav {
+      background: var(--dark-green);
+      border-bottom: 1px solid var(--neon-green);
+      padding: 15px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0, 255, 0, 0.1);
+      backdrop-filter: blur(5px);
+    }
+
+    .top-nav .logo {
+      color: var(--neon-green);
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-shadow: var(--neon-glow);
+    }
+
+    .top-nav .status {
+      font-size: 0.85rem;
+      color: var(--text-main);
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: var(--neon-green);
+      border-radius: 50%;
+      margin-right: 8px;
+      box-shadow: var(--neon-glow);
+      animation: blink 1.5s infinite alternate;
+    }
+
+    @keyframes blink {
+      from { opacity: 0.5; }
+      to { opacity: 1; }
+    }
+
+    /* CONTAINER PRINCIPAL */
     .container {
       max-width: 1200px;
-      width: 100%;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 20px;
-    }
-    header h1 {
-      font-size: 2.2rem;
-      color: var(--accent-blue);
-      margin: 0 0 10px 0;
-    }
-    header p {
-      color: var(--text-muted);
-      font-size: 1.1rem;
-      margin: 0;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-    .cycle-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
+
+    /* TERMINAL HEADER */
+    .terminal-header {
+      background: #000;
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--neon-green);
       padding: 20px;
-      position: relative;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      margin-bottom: 50px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
     }
-    .cycle-card::before {
+
+    .terminal-header p {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    .cmd-line::before {
+      content: "root@vivo-ert:~# ";
+      color: var(--neon-green);
+    }
+
+    /* TÍTULOS DE SEÇÃO */
+    .section-title {
+      font-size: 1.8rem;
+      color: var(--text-highlight);
+      margin-bottom: 30px;
+      border-bottom: 1px dashed var(--border-color);
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: inline-block;
+    }
+
+    .section-title::before {
+      content: "[+] ";
+      color: var(--neon-green);
+    }
+
+    /* GRID DO ROADMAP (EXTENSO) */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .cycle-panel {
+      background: rgba(10, 36, 17, 0.7);
+      border: 1px solid var(--border-color);
+      padding: 30px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .cycle-panel:hover {
+      border-color: var(--neon-green);
+      box-shadow: 0 0 20px rgba(57, 255, 20, 0.1);
+      transform: translateX(10px);
+    }
+
+    .cycle-panel::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
+      top: 0; left: 0; width: 5px; height: 100%;
+      background: var(--neon-green);
     }
-    .c1::before { background: var(--accent-blue); }
-    .c2::before { background: var(--accent-purple); }
-    .c3::before { background: var(--accent-green); }
-    .c4::before { background: #f43f5e; }
 
-    .cycle-title {
-      font-size: 1.1rem;
-      font-weight: bold;
-      margin-bottom: 15px;
-      color: var(--text);
+    .cycle-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
     }
-    .section-title {
+
+    .cycle-header h3 {
+      font-size: 1.5rem;
+      color: var(--text-highlight);
+    }
+
+    .cycle-time {
+      background: var(--border-color);
+      padding: 5px 15px;
       font-size: 0.85rem;
+      color: var(--neon-green);
+      border: 1px solid var(--neon-green);
+    }
+
+    .cycle-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .module {
+      background: #000;
+      padding: 15px;
+      border: 1px dotted var(--border-color);
+    }
+
+    .module h4 {
+      color: var(--neon-green);
+      margin-bottom: 10px;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    .module ul {
+      list-style-type: none;
+    }
+
+    .module ul li {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .module ul li::before {
+      content: ">";
+      color: var(--neon-green);
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    /* MATRIZ DE CERTIFICAÇÕES */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .cert-card {
+      background: #000;
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .cert-card:hover {
+      border-color: var(--neon-green);
+      box-shadow: inset 0 0 10px rgba(57, 255, 20, 0.1);
+    }
+
+    .cert-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: var(--neon-green);
+    }
+
+    .cert-name {
+      font-weight: bold;
+      color: var(--text-highlight);
+      margin-bottom: 10px;
+    }
+
+    .cert-status {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      border-radius: 20px;
+      border: 1px solid;
+    }
+
+    .status-done {
+      color: var(--bg-color);
+      background: var(--neon-green);
+      border-color: var(--neon-green);
+      box-shadow: var(--neon-glow);
+    }
+
+    .status-plan {
+      color: var(--neon-green);
+      background: transparent;
+      border-color: var(--neon-green);
+    }
+
+    /* LINHA DO TEMPO ACADÊMICA */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 60px;
+      position: relative;
+      padding-left: 30px;
+      border-left: 2px dashed var(--border-color);
+    }
+
+    .timeline-item {
+      position: relative;
+      background: rgba(10, 36, 17, 0.5);
+      border: 1px solid var(--border-color);
+      padding: 20px;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: -37px;
+      width: 12px;
+      height: 12px;
+      background: var(--bg-color);
+      border: 2px solid var(--neon-green);
+      border-radius: 50%;
+    }
+
+    .timeline-item:hover::before {
+      background: var(--neon-green);
+      box-shadow: var(--neon-glow);
+    }
+
+    .timeline-date {
+      color: var(--neon-green);
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .timeline-title {
+      color: var(--text-highlight);
+      font-size: 1.2rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    /* BOTÃO FLUTUANTE (VOLTAR PARA INDEX) */
+    .fab-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--bg-color);
+      color: var(--neon-green);
+      text-decoration: none;
+      padding: 15px 25px;
+      border: 1px solid var(--neon-green);
+      font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: var(--text-muted);
-      margin-top: 15px;
-      margin-bottom: 8px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    li {
-      font-size: 0.9rem;
-      margin-bottom: 6px;
-      position: relative;
-      padding-left: 15px;
-    }
-    li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--accent-blue);
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid var(--accent-blue);
-      color: var(--accent-blue);
-      padding: 4px 8px;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      margin-bottom: 6px;
-      width: calc(100% - 18px);
-    }
-    .acad-container {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 25px;
       display: flex;
-      justify-content: space-around;
       align-items: center;
-      text-align: center;
+      gap: 10px;
+      transition: all 0.3s;
+      z-index: 1000;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     }
-    .acad-step {
-      flex: 1;
+
+    .fab-btn:hover {
+      background: var(--neon-green);
+      color: var(--bg-color);
+      box-shadow: var(--neon-glow);
     }
-    .acad-step h3 {
-      margin: 0 0 5px 0;
-      color: var(--accent-green);
+
+    /* Scrollbar personalizada */
+    ::-webkit-scrollbar {
+      width: 10px;
     }
-    .acad-step p {
-      margin: 0;
-      color: var(--text-muted);
-      font-size: 0.9rem;
+    ::-webkit-scrollbar-track {
+      background: var(--bg-color);
+      border-left: 1px solid var(--border-color);
     }
-    .arrow {
-      color: var(--border);
-      font-size: 1.5rem;
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--neon-green);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI)</h1>
-      <p><b>Kauê Rodrigues Mirom</b> | Trajetória SRE, DevOps & Cloud Architecture</p>
-    </header>
 
-    <div class="grid">
+  <!-- NAVBAR -->
+  <nav class="top-nav">
+    <div class="logo">SYS:// PDI_TRACKER</div>
+    <div class="status"><span class="status-dot"></span> CONNECTION: SECURE | ROLE: SRE/DEVOPS</div>
+  </nav>
+
+  <!-- BOTÃO FLUTUANTE DE VOLTAR -->
+  <a href="index.html" class="fab-btn">
+    <span>⮌</span> Voltar para Index.html
+  </a>
+
+  <div class="container">
+    
+    <!-- TERMINAL INIT -->
+    <div class="terminal-header">
+      <p class="cmd-line">./init_profile.sh</p>
+      <p style="color: #666;">[OK] Carregando módulos de memória...</p>
+      <p style="color: #666;">[OK] Sincronizando repositórios de Nuvem...</p>
+      <br>
+      <p><span style="color: var(--neon-green);">USER:</span> Kauê Rodrigues Mirom</p>
+      <p><span style="color: var(--neon-green);">CURRENT_ROLE:</span> Estagiário de Sistemas / ERT B2C @ Vivo</p>
+      <p><span style="color: var(--neon-green);">TARGET_ROLE:</span> Analista SRE / Engenheiro DevOps Cloud</p>
+      <p><span style="color: var(--neon-green);">STACK:</span> Observability (Elastic, Dynatrace, Zabbix), Python, Node.js, IaC, Cloud</p>
+      <p class="cmd-line blink">_</p>
+    </div>
+
+    <!-- SESSÃO: ROADMAP DE EXECUÇÃO -->
+    <h2 class="section-title">Roadmap de Execução (12 Meses)</h2>
+    <div class="roadmap-grid">
+      
       <!-- Ciclo 1 -->
-      <div class="cycle-card c1">
-        <div class="cycle-title">Ciclo 1: Meses 1 - 3</div>
-        <div class="section-title">Foco Prático</div>
-        <ul>
-          <li>Automação & Scripting</li>
-          <li>IaC com Terraform</li>
-          <li>O11y as Code & OTel</li>
-        </ul>
-        <div class="section-title">Certificações</div>
-        <div class="badge">Zabbix Certified User</div>
-        <div class="badge">OCI Foundations</div>
-        <div class="badge">AWS Cloud Practitioner</div>
+      <div class="cycle-panel">
+        <div class="cycle-header">
+          <h3>CICLO 01: O11y as Code & Fundamentos</h3>
+          <span class="cycle-time">Meses 01 - 03</span>
+        </div>
+        <div class="cycle-content">
+          <div class="module">
+            <h4>Hard Skills</h4>
+            <ul>
+              <li>Automação Avançada (Python/Shell)</li>
+              <li>Infrastructure as Code (Terraform)</li>
+              <li>OpenTelemetry (OTel) Instrumentação</li>
+            </ul>
+          </div>
+          <div class="module">
+            <h4>Entregável Prático</h4>
+            <ul>
+              <li>Repo GitHub: Ecossistema de monitoramento provisionado 100% via Terraform.</li>
+            </ul>
+          </div>
+          <div class="module">
+            <h4>Alvos de Certificação</h4>
+            <ul>
+              <li>[ ] Zabbix Certified User (CU)</li>
+              <li>[ ] OCI Foundations</li>
+              <li>[ ] AWS Cloud Practitioner</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <!-- Ciclo 2 -->
-      <div class="cycle-card c2">
-        <div class="cycle-title">Ciclo 2: Meses 4 - 6</div>
-        <div class="section-title">Foco Prático</div>
-        <ul>
-          <li>Docker & Kubernetes</li>
-          <li>Pipelines CI/CD (GitHub)</li>
-          <li>Estratégia Multi-Cloud</li>
-        </ul>
-        <div class="section-title">Certificações</div>
-        <div class="badge">Azure AZ-900</div>
-        <div class="badge">AWS AI Practitioner</div>
+      <div class="cycle-panel">
+        <div class="cycle-header">
+          <h3>CICLO 02: Cloud Native & CI/CD</h3>
+          <span class="cycle-time">Meses 04 - 06</span>
+        </div>
+        <div class="cycle-content">
+          <div class="module">
+            <h4>Hard Skills</h4>
+            <ul>
+              <li>Docker & Multi-stage builds</li>
+              <li>Kubernetes Core (Pods, Deployments)</li>
+              <li>Pipelines CI/CD (GitHub Actions/GitLab)</li>
+            </ul>
+          </div>
+          <div class="module">
+            <h4>Entregável Prático</h4>
+            <ul>
+              <li>Deploy de microsserviço com esteira CI/CD automatizada integrando SonarQube.</li>
+            </ul>
+          </div>
+          <div class="module">
+            <h4>Alvos de Certificação</h4>
+            <ul>
+              <li>[ ] Microsoft Azure AZ-900</li>
+              <li>[ ] AWS Certified AI Practitioner</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <!-- Ciclo 3 -->
-      <div class="cycle-card c3">
-        <div class="cycle-title">Ciclo 3: Meses 7 - 9</div>
-        <div class="section-title">Foco Prático</div>
-        <ul>
-          <li>Gestão de SLI/SLO</li>
-          <li>Chaos Engineering</li>
-          <li>Agentes e RAG na AWS</li>
-        </ul>
-        <div class="section-title">Certificações</div>
-        <div class="badge">AWS Agentic AI Micro.</div>
+      <div class="cycle-panel">
+        <div class="cycle-header">
+          <h3>CICLO 03: SRE Avançado & IA Agêntica</h3>
+          <span class="cycle-time">Meses 07 - 09</span>
+        </div>
+        <div class="cycle-content">
+          <div class="module">
+            <h4>Hard Skills</h4>
+            <ul>
+              <li>Definição de SLI/SLO e Error Budgets</li>
+              <li>Chaos Engineering Básico</li>
+              <li>Orquestração com AWS Bedrock Agents</li>
+            </ul>
+          </div>
+          <div class="module">
+            <h4>Entregável Prático</h4>
+            <ul>
+              <li>Agente inteligente para resposta e triagem automática de alertas de logs críticos.</li>
+            </ul>
+          </div>
+          <div class="module">
+            <h4>Alvos de Certificação</h4>
+            <ul>
+              <li>[ ] AWS Microcredential - Agentic AI</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <!-- Ciclo 4 -->
-      <div class="cycle-card c4">
-        <div class="cycle-title">Ciclo 4: Meses 10 - 12</div>
-        <div class="section-title">Foco Prático</div>
-        <ul>
-          <li>Arquitetura Microsserviços</li>
-          <li>FinOps & Governança</li>
-          <li>Tech Shares & Mentoria</li>
-        </ul>
-        <div class="section-title">Certificações</div>
-        <div class="badge">AWS Solutions Architect</div>
+      <div class="cycle-panel">
+        <div class="cycle-header">
+          <h3>CICLO 04: Arquitetura Cloud & Liderança</h3>
+          <span class="cycle-time">Meses 10 - 12</span>
+        </div>
+        <div class="cycle-content">
+          <div class="module">
+            <h4>Hard Skills</h4>
+            <ul>
+              <li>Padrões de Resiliência (Circuit Breaker)</li>
+              <li>FinOps (Otimização de Custos)</li>
+              <li>Liderança em Post-Mortems Blameless</li>
+            </ul>
+          </div>
+          <div class="module">
+            <h4>Entregável Prático</h4>
+            <ul>
+              <li>Portfólio de Defesa: Apresentação de impacto em MTTR e horas automatizadas (Tech Share).</li>
+            </ul>
+          </div>
+          <div class="module">
+            <h4>Alvos de Certificação</h4>
+            <ul>
+              <li>[ ] AWS Solutions Architect Associate</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SESSÃO: MATRIZ DE CERTIFICAÇÕES -->
+    <h2 class="section-title">Database de Certificações</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🛡️</div>
+        <div class="cert-name">AWS Incident Response</div>
+        <div class="cert-status status-done">✔ Concluído</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📊</div>
+        <div class="cert-name">Zabbix Certified User</div>
+        <div class="cert-status status-plan">Em Planejamento</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">☁️</div>
+        <div class="cert-name">OCI Foundations</div>
+        <div class="cert-status status-plan">Em Planejamento</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">☁️</div>
+        <div class="cert-name">AWS Cloud Practitioner</div>
+        <div class="cert-status status-plan">Em Planejamento</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">⚡</div>
+        <div class="cert-name">Microsoft Azure AZ-900</div>
+        <div class="cert-status status-plan">Em Planejamento</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🤖</div>
+        <div class="cert-name">AWS AI Practitioner</div>
+        <div class="cert-status status-plan">Em Planejamento</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">⚙️</div>
+        <div class="cert-name">AWS Agentic AI</div>
+        <div class="cert-status status-plan">Em Planejamento</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🏗️</div>
+        <div class="cert-name">AWS Solutions Architect</div>
+        <div class="cert-status status-plan">Meta Final (Ciclo 4)</div>
       </div>
     </div>
 
-    <!-- Trilha Acadêmica -->
-    <div class="acad-container">
-      <div class="acad-step">
-        <h3>Tecnólogo ADS</h3>
-        <p>Uninove (2025 - 2027)</p>
+    <!-- SESSÃO: TIMELINE ACADÊMICA -->
+    <h2 class="section-title">Timeline Acadêmica Estratégica</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2025 - 2027</div>
+        <div class="timeline-title">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
+        <div class="timeline-desc">Instituição: Uninove. Foco em lógica, estrutura de dados, linguagens backend e banco de dados. Construção da base em desenvolvimento.</div>
       </div>
-      <div class="arrow">➔</div>
-      <div class="acad-step">
-        <h3>Bacharelado Eng. Software</h3>
-        <p>Cruzeiro do Sul (2026 - 2029)</p>
+      <div class="timeline-item">
+        <div class="timeline-date">2026 - 2029</div>
+        <div class="timeline-title">Bacharelado em Engenharia de Software</div>
+        <div class="timeline-desc">Instituição: Cruzeiro do Sul Virtual. Foco em arquitetura de sistemas, design patterns, resiliência e engenharia contínua.</div>
       </div>
-      <div class="arrow">➔</div>
-      <div class="acad-step">
-        <h3>Pós-Graduação</h3>
-        <p>FIAP DevOps & Cloud Architecture</p>
+      <div class="timeline-item">
+        <div class="timeline-date">Pós-2027 (Meta Alvo)</div>
+        <div class="timeline-title">Pós-Graduação em DevOps & Arquitetura em Cloud</div>
+        <div class="timeline-desc">Instituição: FIAP. O selo definitivo para consolidação em Cloud Native, Governança DevOps e SRE de Alta Performance.</div>
       </div>
     </div>
+    
   </div>
+
 </body>
 </html>
