@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>PDI 2026/2027 - Kauê Rodrigues Mirom</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent-blue: #38bdf8;
+      --accent-purple: #a855f7;
+      --accent-green: #34d399;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 1200px;
+      width: 100%;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      color: var(--accent-blue);
+      margin: 0 0 10px 0;
+    }
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .cycle-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    }
+    .cycle-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    .c1::before { background: var(--accent-blue); }
+    .c2::before { background: var(--accent-purple); }
+    .c3::before { background: var(--accent-green); }
+    .c4::before { background: #f43f5e; }
+
+    .cycle-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: var(--text);
+    }
+    .section-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-top: 15px;
+      margin-bottom: 8px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 15px;
+    }
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-blue);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid var(--accent-blue);
+      color: var(--accent-blue);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+      width: calc(100% - 18px);
+    }
+    .acad-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+    }
+    .acad-step {
+      flex: 1;
+    }
+    .acad-step h3 {
+      margin: 0 0 5px 0;
+      color: var(--accent-green);
+    }
+    .acad-step p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .arrow {
+      color: var(--border);
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>PLANO DE DESENVOLVIMENTO INDIVIDUAL (PDI)</h1>
+      <p><b>Kauê Rodrigues Mirom</b> | Trajetória SRE, DevOps & Cloud Architecture</p>
+    </header>
+
+    <div class="grid">
+      <!-- Ciclo 1 -->
+      <div class="cycle-card c1">
+        <div class="cycle-title">Ciclo 1: Meses 1 - 3</div>
+        <div class="section-title">Foco Prático</div>
+        <ul>
+          <li>Automação & Scripting</li>
+          <li>IaC com Terraform</li>
+          <li>O11y as Code & OTel</li>
+        </ul>
+        <div class="section-title">Certificações</div>
+        <div class="badge">Zabbix Certified User</div>
+        <div class="badge">OCI Foundations</div>
+        <div class="badge">AWS Cloud Practitioner</div>
+      </div>
+
+      <!-- Ciclo 2 -->
+      <div class="cycle-card c2">
+        <div class="cycle-title">Ciclo 2: Meses 4 - 6</div>
+        <div class="section-title">Foco Prático</div>
+        <ul>
+          <li>Docker & Kubernetes</li>
+          <li>Pipelines CI/CD (GitHub)</li>
+          <li>Estratégia Multi-Cloud</li>
+        </ul>
+        <div class="section-title">Certificações</div>
+        <div class="badge">Azure AZ-900</div>
+        <div class="badge">AWS AI Practitioner</div>
+      </div>
+
+      <!-- Ciclo 3 -->
+      <div class="cycle-card c3">
+        <div class="cycle-title">Ciclo 3: Meses 7 - 9</div>
+        <div class="section-title">Foco Prático</div>
+        <ul>
+          <li>Gestão de SLI/SLO</li>
+          <li>Chaos Engineering</li>
+          <li>Agentes e RAG na AWS</li>
+        </ul>
+        <div class="section-title">Certificações</div>
+        <div class="badge">AWS Agentic AI Micro.</div>
+      </div>
+
+      <!-- Ciclo 4 -->
+      <div class="cycle-card c4">
+        <div class="cycle-title">Ciclo 4: Meses 10 - 12</div>
+        <div class="section-title">Foco Prático</div>
+        <ul>
+          <li>Arquitetura Microsserviços</li>
+          <li>FinOps & Governança</li>
+          <li>Tech Shares & Mentoria</li>
+        </ul>
+        <div class="section-title">Certificações</div>
+        <div class="badge">AWS Solutions Architect</div>
+      </div>
+    </div>
+
+    <!-- Trilha Acadêmica -->
+    <div class="acad-container">
+      <div class="acad-step">
+        <h3>Tecnólogo ADS</h3>
+        <p>Uninove (2025 - 2027)</p>
+      </div>
+      <div class="arrow">➔</div>
+      <div class="acad-step">
+        <h3>Bacharelado Eng. Software</h3>
+        <p>Cruzeiro do Sul (2026 - 2029)</p>
+      </div>
+      <div class="arrow">➔</div>
+      <div class="acad-step">
+        <h3>Pós-Graduação</h3>
+        <p>FIAP DevOps & Cloud Architecture</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
