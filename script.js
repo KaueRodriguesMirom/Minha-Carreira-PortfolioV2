@@ -1,6 +1,6 @@
 /**
  * Dicionário Completo de Traduções (i18n)
- * Mapeamento baseado no HTML de Kauê Rodrigues Mirom
+ * Mapeamento completo baseado no HTML de Kauê Rodrigues Mirom
  * Idiomas: PT, EN, ES, FR, IT
  */
 const translations = {
@@ -89,7 +89,7 @@ const translations = {
     exp3_t9: "Elaboração de <strong>documentações técnicas, runbooks e guias operacionais</strong> para padronização de automações e rotinas de sustentação da equipe.",
     exp3_t10: "Atuação em <strong>liderança, plenárias e mentoria</strong>, apresentando resultados em plenárias mensais da diretoria e orientando o desenvolvimento técnico de estagiários e aprendizes.",
     exp1_role: "Estagiário de Sistema - Observabilidade & ERT (SRE)",
-    exp1_period: "mar de 2025 – out de 2026 · 1 Ano e 8 Meses",
+    exp1_period: "mar de 2025 – nov de 2026 · 1 Ano e 9 Meses",
     exp1_location: "São Paulo, Brasil · Híbrida",
     exp1_desc: "Atuação como Estagiário de Sistemas na Gerência de Observabilidade, integrando a equipe de Respostas Emergenciais B2C (ERT). Experiência direcionada à confiabilidade de ambientes críticos, observabilidade, automação, análise de incidentes e melhoria contínua dos processos operacionais.",
     exp1_t1: "Desenvolvimento e evolução de <strong>alarmes e dashboards</strong> utilizando ServiceNow, Elastic e Zabbix.",
@@ -213,7 +213,7 @@ const translations = {
     exp3_t9: "Creating <strong>technical documentation, runbooks, and SOPs</strong> to standardize automations and team maintenance routines.",
     exp3_t10: "Involvement in <strong>leadership, executive plenaries, and mentorship</strong>, presenting monthly board results and mentoring interns and apprentices.",
     exp1_role: "Systems Intern - Observability & ERT (SRE)",
-    exp1_period: "Mar 2025 – Oct 2026 · 1 Year 8 Months",
+    exp1_period: "Mar 2025 – Nov 2026 · 1 Year 9 Months",
     exp1_location: "São Paulo, Brazil · Hybrid",
     exp1_desc: "Acting as Systems Intern in Observability Management, integrated into the B2C Emergency Response Team (ERT). Experience focused on critical environment reliability, observability, automation, incident analysis, and operational continuous improvement.",
     exp1_t1: "Development and evolution of <strong>alerts and dashboards</strong> using ServiceNow, Elastic, and Zabbix.",
@@ -337,7 +337,7 @@ const translations = {
     exp3_t9: "Elaboración de <strong>documentación técnica, runbooks y guías operativas</strong>.",
     exp3_t10: "Participación en <strong>liderazgo, plenarias y mentoría</strong> de pasantes y aprendices.",
     exp1_role: "Pasante de Sistemas - Observabilidad & ERT (SRE)",
-    exp1_period: "mar de 2025 – oct de 2026 · 1 Año y 8 Meses",
+    exp1_period: "mar de 2025 – nov de 2026 · 1 Año y 9 Meses",
     exp1_location: "São Paulo, Brasil · Híbrida",
     exp1_desc: "Actuación como pasante en la Gerencia de Observabilidad (ERT B2C), enfocado en confiabilidad, automatización y análisis de incidentes.",
     exp1_t1: "Desarrollo de <strong>alarmas y dashboards</strong> en ServiceNow, Elastic y Zabbix.",
@@ -461,7 +461,7 @@ const translations = {
     exp3_t9: "Rédaction de <strong>documentations techniques, runbooks et guides opérationnels</strong>.",
     exp3_t10: "Rôle de <strong>leadership, présentations en plénière et mentorat</strong> des stagiaires.",
     exp1_role: "Stagiaire Systèmes - Observabilité & ERT (SRE)",
-    exp1_period: "mars 2025 – oct. 2026 · 1 an 8 mois",
+    exp1_period: "mars 2025 – nov. 2026 · 1 an 9 mois",
     exp1_location: "São Paulo, Brésil · Hybride",
     exp1_desc: "Support à la fiabilité des environnements B2C au sein de l'ERT.",
     exp1_t1: "Dashboards et alertes avec ServiceNow, Elastic, Zabbix.",
@@ -585,7 +585,7 @@ const translations = {
     exp3_t9: "Redazione di <strong>documentazione tecnica, runbook e linee guida operative</strong>.",
     exp3_t10: "Incarichi di <strong>leadership, presentazioni direzionali e tutoraggio</strong> per stagisti e apprendisti.",
     exp1_role: "Stagista Sistemi - Osservabilità & ERT (SRE)",
-    exp1_period: "mar 2025 – ott 2026 · 1 Anno e 8 Mesi",
+    exp1_period: "mar 2025 – nov 2026 · 1 Anno e 9 Mesi",
     exp1_location: "San Paolo, Brasile · Ibrido",
     exp1_desc: "Operatività nell'ERT B2C per la gestione dell'affidabilità e automazione.",
     exp1_t1: "Creazione dashboard con ServiceNow, Elastic e Zabbix.",
@@ -648,7 +648,7 @@ function setLanguage(lang) {
     document.title = translations[lang].doc_title;
   }
 
-  // Atualiza elementos com o atributo data-i18n usando innerHTML
+  // Atualiza elementos com o atributo data-i18n usando innerHTML para tags HTML funcionarem
   const elements = document.querySelectorAll('[data-i18n]');
   elements.forEach((element) => {
     const key = element.getAttribute('data-i18n');
