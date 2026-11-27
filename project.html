@@ -5,27 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projetos | Kauê Rodrigues Mirom</title>
   <link rel="stylesheet" href="index.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-main: #0a0d0a;
-      --bg-card: rgba(13, 20, 15, 0.9);
+      --bg-card: rgba(13, 20, 15, 0.92);
       --bg-header: rgba(10, 13, 10, 0.95);
       --neon-green: #00ff88;
       --neon-glow: rgba(0, 255, 136, 0.25);
       --text-main: #ffffff;
-      --text-muted: #9ca3af;
+      --text-muted: #a1aab5;
       --border-tech: #1b382b;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
       background-color: var(--bg-main);
-      background-image: radial-gradient(circle at 50% 0%, rgba(0, 255, 136, 0.04) 0%, transparent 60%);
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(0, 255, 136, 0.07) 0%, transparent 55%),
+        linear-gradient(rgba(0, 255, 136, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 136, 0.025) 1px, transparent 1px);
+      background-size: 100% 100%, 36px 36px, 36px 36px;
       color: var(--text-main);
       font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Barra Superior */
+    .top-bar {
+      max-width: 1250px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 40px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
 
     /* Botão Voltar Estilizado */
@@ -33,34 +56,45 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin: 30px 40px;
-      padding: 10px 20px;
+      padding: 10px 18px;
       background: rgba(0, 255, 136, 0.08);
       color: var(--neon-green);
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-family: 'Orbitron', sans-serif;
       text-transform: uppercase;
       letter-spacing: 1px;
       text-decoration: none;
       border-radius: 8px;
-      border: 1px solid rgba(0, 255, 136, 0.3);
+      border: 1px solid rgba(0, 255, 136, 0.35);
       box-shadow: 0 0 10px rgba(0, 255, 136, 0.1);
-      transition: all 0.3s ease;
+      transition: all 0.25s ease;
     }
 
     .voltar-btn:hover {
       background: var(--neon-green);
       color: #000000;
       transform: translateY(-2px);
-      box-shadow: 0 0 15px var(--neon-green);
+      box-shadow: 0 0 16px var(--neon-green);
+    }
+
+    .projeto-contador {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 1.2px;
+      color: var(--neon-green);
+      background: rgba(0, 255, 136, 0.07);
+      border: 1px solid var(--border-tech);
+      padding: 8px 14px;
+      border-radius: 999px;
     }
 
     /* Header Estilo HUD */
     header {
       position: relative;
       text-align: center;
-      padding: 50px 20px 40px;
+      margin-top: 18px;
+      padding: 44px 20px 38px;
       background-color: var(--bg-header);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -76,7 +110,7 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       margin: 0 0 12px 0;
-      text-shadow: 0 0 12px var(--neon-glow);
+      text-shadow: 0 0 14px var(--neon-glow);
       transition: transform 0.3s ease, text-shadow 0.3s ease;
       cursor: default;
       -webkit-text-stroke: unset;
@@ -84,24 +118,30 @@
 
     header h1:hover {
       transform: scale(1.02);
-      text-shadow: 0 0 20px var(--neon-green), 0 0 35px var(--neon-glow);
+      text-shadow: 0 0 22px var(--neon-green), 0 0 35px var(--neon-glow);
     }
 
     header p {
-      font-size: 1.05rem;
-      margin: 0;
+      font-size: 1.02rem;
+      max-width: 680px;
+      margin: 0 auto;
       color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    main {
+      flex: 1;
     }
 
     /* Container de Projetos (Grid Tech) */
     .projetos-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
       gap: 30px;
       padding: 40px;
       max-width: 1250px;
       margin: 0 auto;
-      align-items: stretch; /* Padroniza a altura de todos os cards */
+      align-items: stretch;
     }
 
     /* Cartão do Projeto */
@@ -113,8 +153,8 @@
       border: 1px solid var(--border-tech);
       border-left: 3px solid var(--neon-green);
       overflow: hidden;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -122,26 +162,72 @@
 
     .projeto-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(0, 255, 136, 0.5);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6),
-                  0 0 15px rgba(0, 255, 136, 0.15);
+      border-color: rgba(0, 255, 136, 0.55);
+      border-left-color: var(--neon-green);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.65),
+                  0 0 18px rgba(0, 255, 136, 0.16);
+    }
+
+    /* Moldura da Imagem */
+    .projeto-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background-color: #060907;
+      border-bottom: 1px solid var(--border-tech);
+      cursor: zoom-in;
+    }
+
+    .projeto-img-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13, 20, 15, 0.72) 0%, transparent 45%);
+      pointer-events: none;
     }
 
     .projeto-img {
       width: 100%;
-      height: 190px;
+      height: 100%;
       object-fit: cover;
-      border-bottom: 1px solid var(--border-tech);
-      filter: brightness(0.9);
-      transition: filter 0.3s ease;
+      object-position: top center;
+      display: block;
+      filter: brightness(0.95) contrast(1.03);
+      transition: transform 0.35s ease, filter 0.35s ease;
     }
 
     .projeto-card:hover .projeto-img {
-      filter: brightness(1.05);
+      transform: scale(1.04);
+      filter: brightness(1.04) contrast(1.06);
+    }
+
+    .zoom-badge {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      z-index: 2;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: rgba(10, 13, 10, 0.82);
+      border: 1px solid rgba(0, 255, 136, 0.35);
+      padding: 5px 9px;
+      border-radius: 6px;
+      opacity: 0.88;
+      transition: all 0.25s ease;
+    }
+
+    .projeto-card:hover .zoom-badge {
+      opacity: 1;
+      border-color: var(--neon-green);
+      color: var(--neon-green);
     }
 
     .projeto-conteudo {
-      padding: 24px;
+      padding: 22px 24px 24px;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -149,18 +235,18 @@
     }
 
     .projeto-conteudo h3 {
-      font-size: 1.15rem;
+      font-size: 1.08rem;
       color: #ffffff;
       margin: 0 0 12px 0;
       font-family: 'Orbitron', sans-serif;
       letter-spacing: 0.5px;
-      line-height: 1.4;
+      line-height: 1.42;
     }
 
     .projeto-conteudo p {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.62;
       margin: 0 0 24px 0;
       flex-grow: 1;
     }
@@ -172,7 +258,7 @@
       justify-content: center;
       background-color: var(--neon-green);
       color: #000000;
-      padding: 10px 18px;
+      padding: 10px 20px;
       border-radius: 6px;
       font-family: 'Orbitron', sans-serif;
       font-size: 0.75rem;
@@ -180,22 +266,89 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       text-decoration: none;
-      transition: all 0.3s ease;
-      align-self: center; /* Alinha o botão no centro do card */
-      box-shadow: 0 0 8px rgba(0, 255, 136, 0.2);
+      transition: all 0.25s ease;
+      align-self: center;
+      box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
       margin-top: auto;
     }
 
     .projeto-conteudo a:hover {
       background-color: #6fd850;
-      box-shadow: 0 0 15px var(--neon-green);
+      box-shadow: 0 0 16px var(--neon-green);
       transform: translateY(-1px);
+    }
+
+    /* Modal Lightbox para Ampliar Imagem */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(4, 7, 5, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .lightbox.ativo {
+      display: flex;
+    }
+
+    .lightbox-box {
+      position: relative;
+      max-width: 960px;
+      width: 100%;
+      background: #0d140f;
+      border: 1px solid rgba(0, 255, 136, 0.45);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 255, 136, 0.15);
+    }
+
+    .lightbox-img {
+      width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+      background: #060907;
+    }
+
+    .lightbox-caption {
+      margin-top: 12px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.85rem;
+      color: var(--neon-green);
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+
+    .lightbox-fechar {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: rgba(10, 13, 10, 0.9);
+      color: #ffffff;
+      border: 1px solid rgba(0, 255, 136, 0.4);
+      border-radius: 6px;
+      width: 34px;
+      height: 34px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lightbox-fechar:hover {
+      background: var(--neon-green);
+      color: #000000;
     }
 
     /* Rodapé */
     footer {
       text-align: center;
-      padding: 35px 20px;
+      padding: 32px 20px;
       font-size: 0.85rem;
       color: var(--text-muted);
       border-top: 1px solid var(--border-tech);
@@ -203,148 +356,243 @@
     }
 
     @media (max-width: 768px) {
+      .top-bar {
+        padding: 18px 20px 0;
+      }
       .voltar-btn {
-        margin: 20px 20px 0;
+        padding: 9px 14px;
+        font-size: 0.72rem;
       }
       .projetos-container {
-        padding: 20px;
+        padding: 24px 20px 36px;
         gap: 20px;
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-  <a href="index.html" class="voltar-btn">← Voltar para a página inicial</a>
+  <div class="top-bar">
+    <a href="index.html" class="voltar-btn">← Voltar para a página inicial</a>
+    <span class="projeto-contador" id="total-projetos">12 Projetos</span>
+  </div>
 
   <header>
     <h1>Meus Projetos</h1>
-    <p>Veja os trabalhos que desenvolvi com dedicação, criatividade e tecnologia.</p>
+    <p>Veja os trabalhos que desenvolvi com dedicação, criatividade e tecnologia. Clique em qualquer imagem para ampliar.</p>
   </header>
 
-<section class="projetos-container">
-    <!-- Projeto 12 -->
-    <div class="projeto-card">
-      <img src="projeto12.jpg" alt="Projeto 12" class="projeto-img" />
-      <div class="projeto-conteudo">
-        <h3>SRE AI - Inteligência artificial focada em metodologias SRE </h3>
-        <p>AI_SRE é um assistente de inteligência artificial para apoiar práticas de SRE, engenharia de software e operações de negócio. O projeto oferece uma interface de chat própria, consulta documentos internos em Markdown e roda localmente com Ollama e Llama 3.2.</p>
-        <a href="https://github.com/KaueRodriguesMirom/SRE_AI_APP" target="_blank">Ver Projeto</a>
+  <main>
+    <section class="projetos-container">
+      <!-- Projeto 12 -->
+      <div class="projeto-card">
+        <div class="projeto-img-wrap">
+          <img src="projeto12.jpg" alt="SRE AI - Inteligência artificial focada em metodologias SRE" class="projeto-img" />
+          <span class="zoom-badge">Ampliar</span>
+        </div>
+        <div class="projeto-conteudo">
+          <h3>SRE AI - Inteligência artificial focada em metodologias SRE</h3>
+          <p>AI_SRE é um assistente de inteligência artificial para apoiar práticas de SRE, engenharia de software e operações de negócio. O projeto oferece uma interface de chat própria, consulta documentos internos em Markdown e roda localmente com Ollama e Llama 3.2.</p>
+          <a href="https://github.com/KaueRodriguesMirom/SRE_AI_APP" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto 11 -->
-    <div class="projeto-card">
-      <img src="projeto11.jpg" alt="Projeto 11" class="projeto-img" />
-      <div class="projeto-conteudo">
-        <h3>ERP Financeiro Modular</h3>
-        <p>Sistema ERP Financeiro focado no controle de contas a pagar, contas a receber, fluxo de caixa diário e mensal, status de pagamento (pendente, pago e atrasado) e conciliação de contas bancárias separadas por instituição.</p>
-        <a href="https://github.com/KaueRodriguesMirom/erp-financeiro-modular" target="_blank">Ver Projeto</a>
+      <!-- Projeto 11 -->
+      <div class="projeto-card">
+        <div class="projeto-img-wrap">
+          <img src="projeto11.jpg" alt="ERP Financeiro Modular" class="projeto-img" />
+          <span class="zoom-badge">Ampliar</span>
+        </div>
+        <div class="projeto-conteudo">
+          <h3>ERP Financeiro Modular</h3>
+          <p>Sistema ERP Financeiro focado no controle de contas a pagar, contas a receber, fluxo de caixa diário e mensal, status de pagamento (pendente, pago e atrasado) e conciliação de contas bancárias separadas por instituição.</p>
+          <a href="https://github.com/KaueRodriguesMirom/erp-financeiro-modular" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto 10 -->
-    <div class="projeto-card">
-      <img src="projeto10.jpg" alt="Projeto 10" class="projeto-img" />
-      <div class="projeto-conteudo">
-        <h3>M🎮 SAMPA ROLE V2 — Desenvolvimento de um mundo aberto urbano com Unity e C#</h3>
-        <p>O SAMPA ROLE V2 é um projeto independente de desenvolvimento de jogos criado com o objetivo de construir uma experiência de mundo aberto inspirada no ambiente urbano de São Paulo, combinando programação, simulação, exploração e interatividade.</p>
-        <a href="https://github.com/KaueRodriguesMirom?tab=repositories" target="_blank">Ver Projeto</a>
+      <!-- Projeto 10 -->
+      <div class="projeto-card">
+        <div class="projeto-img-wrap">
+          <img src="projeto10.jpg" alt="SAMPA ROLE V2 — Desenvolvimento de um mundo aberto urbano com Unity e C#" class="projeto-img" />
+          <span class="zoom-badge">Ampliar</span>
+        </div>
+        <div class="projeto-conteudo">
+          <h3>M🎮 SAMPA ROLE V2 — Desenvolvimento de um mundo aberto urbano com Unity e C#</h3>
+          <p>O SAMPA ROLE V2 é um projeto independente de desenvolvimento de jogos criado com o objetivo de construir uma experiência de mundo aberto inspirada no ambiente urbano de São Paulo, combinando programação, simulação, exploração e interatividade.</p>
+          <a href="https://github.com/KaueRodriguesMirom?tab=repositories" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto 9 -->
-    <div class="projeto-card">
-      <img src="projeto9.jpg" alt="Projeto 9" class="projeto-img" />
-      <div class="projeto-conteudo">
-        <h3>Monitoramento em tempo real da saúde, latência e SLA de microsserviços de telecom...</h3>
-        <p>Como Analista de Sistemas, sei o quanto é importante garantir a estabilidade dos nossos serviços. Nas minhas horas vagas, criei o OmniWatch: um dashboard em React e Tailwind que simula o monitoramento em tempo real da saúde, latência e SLA de microsserviços de telecom...</p>
-        <a href="https://github.com/KaueRodriguesMirom/omniwatch-observability-dashboard" target="_blank">Ver Projeto</a>
+      <!-- Projeto 9 -->
+      <div class="projeto-card">
+        <div class="projeto-img-wrap">
+          <img src="projeto9.jpg" alt="Monitoramento em tempo real da saúde, latência e SLA de microsserviços de telecom" class="projeto-img" />
+          <span class="zoom-badge">Ampliar</span>
+        </div>
+        <div class="projeto-conteudo">
+          <h3>Monitoramento em tempo real da saúde, latência e SLA de microsserviços de telecom...</h3>
+          <p>Como Analista de Sistemas, sei o quanto é importante garantir a estabilidade dos nossos serviços. Nas minhas horas vagas, criei o OmniWatch: um dashboard em React e Tailwind que simula o monitoramento em tempo real da saúde, latência e SLA de microsserviços de telecom...</p>
+          <a href="https://github.com/KaueRodriguesMirom/omniwatch-observability-dashboard" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto 8 -->
-    <div class="projeto-card">
-      <img src="projeto8.jpg" alt="Projeto 8" class="projeto-img" />
-      <div class="projeto-conteudo">
-        <h3>Pac-Man Tech Pro — Arcade Edition</h3>
-        <p>Desenvolvimento Web com Html/Css e JavaScript. Feito pelo Gemini Plus uma ferramente com diversas oportunidades de desenvolvimento de sistema.</p>
-        <a href="https://github.com/KaueRodriguesMirom/Pacman-tech" target="_blank">Ver Projeto</a>
+      <!-- Projeto 8 -->
+      <div class="projeto-card">
+        <div class="projeto-img-wrap">
+          <img src="projeto8.jpg" alt="Pac-Man Tech Pro — Arcade Edition" class="projeto-img" />
+          <span class="zoom-badge">Ampliar</span>
+        </div>
+        <div class="projeto-conteudo">
+          <h3>Pac-Man Tech Pro — Arcade Edition</h3>
+          <p>Desenvolvimento Web com Html/Css e JavaScript. Feito pelo Gemini Plus uma ferramente com diversas oportunidades de desenvolvimento de sistema.</p>
+          <a href="https://github.com/KaueRodriguesMirom/Pacman-tech" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto 7 -->
-    <div class="projeto-card">
-      <img src="projeto7.jpg" alt="Projeto 7" class="projeto-img" />
-      <div class="projeto-conteudo">
-        <h3>CareerTech Platform em Java</h3>
-        <p>Plataforma inteligente de gestão e inteligência de carreira desenvolvida para conectar profissionais a oportunidades de forma ágil, contando com uma arquitetura moderna baseada em microsserviços e APIs de alta confiabilidade.</p>
-        <a href="https://github.com/KaueRodriguesMirom/Career-Intelligence" target="_blank">Ver Projeto</a>
+      <!-- Projeto 7 -->
+      <div class="projeto-card">
+        <div class="projeto-img-wrap">
+          <img src="projeto7.jpg" alt="CareerTech Platform em Java" class="projeto-img" />
+          <span class="zoom-badge">Ampliar</span>
+        </div>
+        <div class="projeto-conteudo">
+          <h3>CareerTech Platform em Java</h3>
+          <p>Plataforma inteligente de gestão e inteligência de carreira desenvolvida para conectar profissionais a oportunidades de forma ágil, contando com uma arquitetura moderna baseada em microsserviços e APIs de alta confiabilidade.</p>
+          <a href="https://github.com/KaueRodriguesMirom/Career-Intelligence" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto 6 -->
-    <div class="projeto-card">
-      <img src="projeto6.jpg" alt="Projeto 6" class="projeto-img" />
-      <div class="projeto-conteudo">
-        <h3>Simulador de Jogo Web - Carreira Política Brasileira</h3>
-        <p>O projeto foi construído utilizando HTML, CSS e JavaScript, com uma arquitetura modular que separa a interface, regras de negócio e dados da simulação.</p>
-        <a href="https://github.com/KaueRodriguesMirom/Jogo_De_Politica-" target="_blank">Ver Projeto</a>
+      <!-- Projeto 6 -->
+      <div class="projeto-card">
+        <div class="projeto-img-wrap">
+          <img src="projeto6.jpg" alt="Simulador de Jogo Web - Carreira Política Brasileira" class="projeto-img" />
+          <span class="zoom-badge">Ampliar</span>
+        </div>
+        <div class="projeto-conteudo">
+          <h3>Simulador de Jogo Web - Carreira Política Brasileira</h3>
+          <p>O projeto foi construído utilizando HTML, CSS e JavaScript, com uma arquitetura modular que separa a interface, regras de negócio e dados da simulação.</p>
+          <a href="https://github.com/KaueRodriguesMirom/Jogo_De_Politica-" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto 5 -->
-    <div class="projeto-card">
-      <img src="projeto5.jpg" alt="Projeto 5" class="projeto-img" />
-      <div class="projeto-conteudo">
-        <h3>Protótipo - Mapeamento de Jornada Do Usuário</h3>
-        <p>Atividade desenvolvida na faculdade na disciplina Jornada e Interface do Usuário, com foco na aplicação de conceitos de UX/UI Design, experiência do usuário e construção de interfaces digitais.</p>
-        <a href="https://www.figma.com/file/8NwSJByolJA6mN5CPSzeiN?node-id=0:1&locale=pt-br&type=design-" target="_blank">Ver Projeto</a>
+      <!-- Projeto 5 -->
+      <div class="projeto-card">
+        <div class="projeto-img-wrap">
+          <img src="projeto5.jpg" alt="Protótipo - Mapeamento de Jornada Do Usuário" class="projeto-img" />
+          <span class="zoom-badge">Ampliar</span>
+        </div>
+        <div class="projeto-conteudo">
+          <h3>Protótipo - Mapeamento de Jornada Do Usuário</h3>
+          <p>Atividade desenvolvida na faculdade na disciplina Jornada e Interface do Usuário, com foco na aplicação de conceitos de UX/UI Design, experiência do usuário e construção de interfaces digitais.</p>
+          <a href="https://www.figma.com/file/8NwSJByolJA6mN5CPSzeiN?node-id=0:1&locale=pt-br&type=design-" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto 4 -->
-    <div class="projeto-card">
-      <img src="projeto4.jpg" alt="Projeto 4" class="projeto-img" />
-      <div class="projeto-conteudo">
-        <h3>Automação Linux com Telegram: CPU, Memória, Disco e Mais!</h3>
-        <p>Agora consigo acompanhar o uso de CPU, memória, disco, conexão com a internet e até processos críticos — tudo em tempo real, direto no meu celular 📱. O script roda no Linux (via WSL) e está agendado com cron para verificar o sistema a cada 5 minutos. Se algo ultrapassa os limites definidos, recebo uma notificação instantânea no Telegram</p>
-        <a href="https://github.com/KaueRodriguesMirom/Monitoramento-CPU-DISCO-PROCESSO-e-CONEX-O-via-via-WSL-Pelo-Telegram-" target="_blank">Ver Projeto</a>
+      <!-- Projeto 4 -->
+      <div class="projeto-card">
+        <div class="projeto-img-wrap">
+          <img src="projeto4.jpg" alt="Automação Linux com Telegram: CPU, Memória, Disco e Mais!" class="projeto-img" />
+          <span class="zoom-badge">Ampliar</span>
+        </div>
+        <div class="projeto-conteudo">
+          <h3>Automação Linux com Telegram: CPU, Memória, Disco e Mais!</h3>
+          <p>Agora consigo acompanhar o uso de CPU, memória, disco, conexão com a internet e até processos críticos — tudo em tempo real, direto no meu celular 📱. O script roda no Linux (via WSL) e está agendado com cron para verificar o sistema a cada 5 minutos. Se algo ultrapassa os limites definidos, recebo uma notificação instantânea no Telegram</p>
+          <a href="https://github.com/KaueRodriguesMirom/Monitoramento-CPU-DISCO-PROCESSO-e-CONEX-O-via-via-WSL-Pelo-Telegram-" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto 3 -->
-    <div class="projeto-card">
-      <img src="projeto3.jpg" alt="Projeto 3" class="projeto-img" />
-      <div class="projeto-conteudo">
-        <h3>Portfólio Profissional em HTML, CSS e JavaScript (Versão 3.0)</h3>
-        <p>Evoluí o meu portfólio pessoal para a sua terceira versão, adotando uma identidade visual de nível corporativo e voltada para sistemas (SRE/Observabilidade).</p>
-        <a href="https://github.com/KaueRodriguesMirom/Minha-Carreira-PortfolioV2" target="_blank">Ver Projeto</a>
+      <!-- Projeto 3 -->
+      <div class="projeto-card">
+        <div class="projeto-img-wrap">
+          <img src="projeto3.jpg" alt="Portfólio Profissional em HTML, CSS e JavaScript (Versão 3.0)" class="projeto-img" />
+          <span class="zoom-badge">Ampliar</span>
+        </div>
+        <div class="projeto-conteudo">
+          <h3>Portfólio Profissional em HTML, CSS e JavaScript (Versão 3.0)</h3>
+          <p>Evoluí o meu portfólio pessoal para a sua terceira versão, adotando uma identidade visual de nível corporativo e voltada para sistemas (SRE/Observabilidade).</p>
+          <a href="https://github.com/KaueRodriguesMirom/Minha-Carreira-PortfolioV2" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto 2 -->
-    <div class="projeto-card">
-      <img src="projeto2.jpg" alt="Projeto 2" class="projeto-img" />
-      <div class="projeto-conteudo">
-        <h3>Analisador OTZ – Otimização e Monitoramento de Sistema</h3>
-        <p>Uma aplicação desktop voltada para otimização e análise de desempenho de sistemas Windows, com foco em eficiência, leveza e usabilidade. O projeto nasceu da necessidade de automatizar tarefas de manutenção e oferecer uma visão clara do comportamento do sistema em tempo real.</p>
-        <a href="https://github.com/KaueRodriguesMirom/-Analisador-OTZ-Otimiza-o-e-Monitoramento-de-Sistema" target="_blank">Ver Projeto</a>
+      <!-- Projeto 2 -->
+      <div class="projeto-card">
+        <div class="projeto-img-wrap">
+          <img src="projeto2.jpg" alt="Analisador OTZ – Otimização e Monitoramento de Sistema" class="projeto-img" />
+          <span class="zoom-badge">Ampliar</span>
+        </div>
+        <div class="projeto-conteudo">
+          <h3>Analisador OTZ – Otimização e Monitoramento de Sistema</h3>
+          <p>Uma aplicação desktop voltada para otimização e análise de desempenho de sistemas Windows, com foco em eficiência, leveza e usabilidade. O projeto nasceu da necessidade de automatizar tarefas de manutenção e oferecer uma visão clara do comportamento do sistema em tempo real.</p>
+          <a href="https://github.com/KaueRodriguesMirom/-Analisador-OTZ-Otimiza-o-e-Monitoramento-de-Sistema" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Projeto 1 -->
-    <div class="projeto-card">
-      <img src="projeto1.jpg" alt="Projeto 1" class="projeto-img" />
-      <div class="projeto-conteudo">
-        <h3>Resumo Inteligente de E-mails com Python + HTML + JS</h3>
-        <p>Desenvolvi uma aplicação web que resume e organiza e-mails automaticamente, separando mensagens relevantes de spams e exibindo gráficos interativos com estatísticas de envio.</p>
-        <a href="https://github.com/KaueRodriguesMirom/API---Resumo-Inteligente-de-E-mails-com-Python-HTML-JS" target="_blank">Ver Projeto</a>
+      <!-- Projeto 1 -->
+      <div class="projeto-card">
+        <div class="projeto-img-wrap">
+          <img src="projeto1.jpg" alt="Resumo Inteligente de E-mails com Python + HTML + JS" class="projeto-img" />
+          <span class="zoom-badge">Ampliar</span>
+        </div>
+        <div class="projeto-conteudo">
+          <h3>Resumo Inteligente de E-mails com Python + HTML + JS</h3>
+          <p>Desenvolvi uma aplicação web que resume e organiza e-mails automaticamente, separando mensagens relevantes de spams e exibindo gráficos interativos com estatísticas de envio.</p>
+          <a href="https://github.com/KaueRodriguesMirom/API---Resumo-Inteligente-de-E-mails-com-Python-HTML-JS" target="_blank" rel="noopener noreferrer">Ver Projeto</a>
+        </div>
       </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-box">
+      <button type="button" class="lightbox-fechar" id="lightbox-fechar" aria-label="Fechar imagem">×</button>
+      <img src="" alt="" class="lightbox-img" id="lightbox-img" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
-  </section>
+  </div>
 
   <footer>
     &copy; 2026 Kauê Rodrigues Mirom. Todos os direitos reservados.
   </footer>
+
+  <script>
+    const totalCards = document.querySelectorAll('.projeto-card').length;
+    const contadorEl = document.getElementById('total-projetos');
+    if (contadorEl) {
+      contadorEl.textContent = `${totalCards} ${totalCards === 1 ? 'Projeto' : 'Projetos'}`;
+    }
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const fecharBtn = document.getElementById('lightbox-fechar');
+
+    document.querySelectorAll('.projeto-img-wrap').forEach((wrap) => {
+      wrap.addEventListener('click', () => {
+        const img = wrap.querySelector('.projeto-img');
+        const titulo = wrap.closest('.projeto-card')?.querySelector('h3')?.textContent || img.alt;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = titulo;
+        lightbox.classList.add('ativo');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    function fecharLightbox() {
+      lightbox.classList.remove('ativo');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+    }
+
+    fecharBtn.addEventListener('click', fecharLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) fecharLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('ativo')) {
+        fecharLightbox();
+      }
+    });
+  </script>
 </body>
 </html>
